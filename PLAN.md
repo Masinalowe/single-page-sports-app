@@ -112,6 +112,26 @@ Mitigations:
   bar, rather than vanishing. `fetch_data.py` reports every miss so the alias
   table can grow.
 
+**Measured, not assumed:** on a real 19-fixture window the join scored 15/15 —
+100% — on every fixture that *could* match. The four misses were all `FINISHED`
+matches, which brings us to the constraint below.
+
+## 4c. Odds expire at kickoff
+
+The Odds API only prices **upcoming** events. Once a match kicks off it leaves
+the feed entirely, so its probabilities become unrecoverable — there is no
+historical odds endpoint on the free tier.
+
+Two consequences for the daily job:
+
+- **It must run before the day's first kickoff.** Premier League matches start
+  as early as 11:30 UTC, so the cron should fire around 06:00 UTC to be safe.
+- **`fetch_data.py` must merge, not overwrite.** If it re-runs mid-afternoon,
+  matches already in play will have no odds in the response. It reads the
+  existing `data/matches.json` first and keeps any probability it already
+  captured, rather than blanking the bar on every live match — exactly the ones
+  a viewer is most likely to be looking at.
+
 ---
 
 ## 5. Build phases
@@ -129,11 +149,19 @@ Each phase is independently reviewable. Nothing is committed without your review
       current season (*"Free plans do not have access to this season, try from
       2022 to 2024"*), which kills the "matches happening today" premise.
       Provider switched to football-data.org + The Odds API.
-- [ ] Register both free keys, add to `.env` (gitignored):
-      `FOOTBALL_DATA_TOKEN`, `ODDS_API_KEY`.
-- [ ] Re-run verification against the two new APIs: confirm current-season PL
-      fixtures return, capture the real crest URLs, and check how many of a
-      matchday's fixtures the name-matching actually joins to odds.
+- [x] Both free keys registered and verified via `scripts/verify_providers.py`.
+- [x] Current season confirmed live: 2026-08-21 → 2027-05-30, matchday 2.
+- [x] All 20 clubs returned with crest URLs — team logos come from the same
+      call as the fixtures, no second lookup.
+- [x] **Name join measured: 15/15 (100%)** of joinable fixtures. The alias
+      table in `verify_providers.py` is already sufficient.
+- [x] Confirmed football-data.org's own `odds` field is paywalled
+      (*"Activate Odds-Package"*), so The Odds API is genuinely required.
+- [x] `data/stadiums.json` re-keyed to football-data ids and validated 20/20
+      against the live league list.
+- [x] Found that their venue names are stale (Brentford still listed at Griffin
+      Park, left 2020) — we display our own names, not theirs.
+- [x] Found that odds expire at kickoff → see §4c.
 
 ### Phase 1 — Static shell
 - [ ] `index.html` + `styles.css`: full-viewport map, England-fitted bounds,
