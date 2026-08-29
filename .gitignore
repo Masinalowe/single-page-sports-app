@@ -1,0 +1,11 @@
+# API credentials — never commit these
+.env
+.env.*
+!.env.example
+
+# scratch
+*.tmp
+data/*.json.tmp
+
+# macOS
+.DS_Store

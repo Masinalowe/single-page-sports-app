@@ -1,0 +1,297 @@
+{
+  "generated_at": "2026-08-29T20:53:49Z",
+  "season": 2026,
+  "mock": true,
+  "today": [
+    {
+      "id": 9001,
+      "kickoff_utc": "2026-08-29T20:13:49Z",
+      "venue": {
+        "name": "Emirates Stadium",
+        "city": "London",
+        "lat": 51.5549,
+        "lon": -0.1084
+      },
+      "home": {
+        "id": 42,
+        "name": "Arsenal",
+        "logo": "https://media.api-sports.io/football/teams/42.png"
+      },
+      "away": {
+        "id": 33,
+        "name": "Manchester United",
+        "logo": "https://media.api-sports.io/football/teams/33.png"
+      },
+      "probability": {
+        "home": 47,
+        "draw": 28,
+        "away": 25
+      },
+      "score": null,
+      "status": "scheduled"
+    },
+    {
+      "id": 9002,
+      "kickoff_utc": "2026-08-29T19:38:49Z",
+      "venue": {
+        "name": "Anfield",
+        "city": "Liverpool",
+        "lat": 53.4308,
+        "lon": -2.9608
+      },
+      "home": {
+        "id": 40,
+        "name": "Liverpool",
+        "logo": "https://media.api-sports.io/football/teams/40.png"
+      },
+      "away": {
+        "id": 50,
+        "name": "Manchester City",
+        "logo": "https://media.api-sports.io/football/teams/50.png"
+      },
+      "probability": {
+        "home": 38,
+        "draw": 30,
+        "away": 32
+      },
+      "score": null,
+      "status": "scheduled"
+    },
+    {
+      "id": 9003,
+      "kickoff_utc": "2026-08-29T23:53:49Z",
+      "venue": {
+        "name": "Tottenham Hotspur Stadium",
+        "city": "London",
+        "lat": 51.6043,
+        "lon": -0.0666
+      },
+      "home": {
+        "id": 47,
+        "name": "Tottenham Hotspur",
+        "logo": "https://media.api-sports.io/football/teams/47.png"
+      },
+      "away": {
+        "id": 49,
+        "name": "Chelsea",
+        "logo": "https://media.api-sports.io/football/teams/49.png"
+      },
+      "probability": {
+        "home": 41,
+        "draw": 27,
+        "away": 32
+      },
+      "score": null,
+      "status": "scheduled"
+    },
+    {
+      "id": 9004,
+      "kickoff_utc": "2026-08-30T02:23:49Z",
+      "venue": {
+        "name": "Villa Park",
+        "city": "Birmingham",
+        "lat": 52.5092,
+        "lon": -1.8848
+      },
+      "home": {
+        "id": 66,
+        "name": "Aston Villa",
+        "logo": "https://media.api-sports.io/football/teams/66.png"
+      },
+      "away": {
+        "id": 34,
+        "name": "Newcastle United",
+        "logo": "https://media.api-sports.io/football/teams/34.png"
+      },
+      "probability": {
+        "home": 52,
+        "draw": 25,
+        "away": 23
+      },
+      "score": null,
+      "status": "scheduled"
+    },
+    {
+      "id": 9005,
+      "kickoff_utc": "2026-08-29T16:53:49Z",
+      "venue": {
+        "name": "Amex Stadium",
+        "city": "Brighton",
+        "lat": 50.8616,
+        "lon": -0.0837
+      },
+      "home": {
+        "id": 51,
+        "name": "Brighton",
+        "logo": "https://media.api-sports.io/football/teams/51.png"
+      },
+      "away": {
+        "id": 35,
+        "name": "Bournemouth",
+        "logo": "https://media.api-sports.io/football/teams/35.png"
+      },
+      "probability": {
+        "home": 55,
+        "draw": 24,
+        "away": 21
+      },
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "status": "finished"
+    }
+  ],
+  "recent": [
+    {
+      "id": 8901,
+      "kickoff_utc": "2026-08-27T20:53:49Z",
+      "venue": {
+        "name": "The City Ground",
+        "city": "Nottingham",
+        "lat": 52.94,
+        "lon": -1.1329
+      },
+      "home": {
+        "id": 65,
+        "name": "Nottingham Forest",
+        "logo": "https://media.api-sports.io/football/teams/65.png"
+      },
+      "away": {
+        "id": 45,
+        "name": "Everton",
+        "logo": "https://media.api-sports.io/football/teams/45.png"
+      },
+      "probability": {
+        "home": 44,
+        "draw": 29,
+        "away": 27
+      },
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "status": "finished"
+    },
+    {
+      "id": 8902,
+      "kickoff_utc": "2026-08-26T20:53:49Z",
+      "venue": {
+        "name": "Gtech Community Stadium",
+        "city": "London",
+        "lat": 51.4907,
+        "lon": -0.2887
+      },
+      "home": {
+        "id": 55,
+        "name": "Brentford",
+        "logo": "https://media.api-sports.io/football/teams/55.png"
+      },
+      "away": {
+        "id": 52,
+        "name": "Crystal Palace",
+        "logo": "https://media.api-sports.io/football/teams/52.png"
+      },
+      "probability": {
+        "home": 49,
+        "draw": 26,
+        "away": 25
+      },
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "status": "finished"
+    },
+    {
+      "id": 8903,
+      "kickoff_utc": "2026-08-25T20:53:49Z",
+      "venue": {
+        "name": "Elland Road",
+        "city": "Leeds",
+        "lat": 53.7778,
+        "lon": -1.5722
+      },
+      "home": {
+        "id": 63,
+        "name": "Leeds United",
+        "logo": "https://media.api-sports.io/football/teams/63.png"
+      },
+      "away": {
+        "id": 44,
+        "name": "Burnley",
+        "logo": "https://media.api-sports.io/football/teams/44.png"
+      },
+      "probability": {
+        "home": 58,
+        "draw": 23,
+        "away": 19
+      },
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "status": "finished"
+    },
+    {
+      "id": 8904,
+      "kickoff_utc": "2026-08-24T20:53:49Z",
+      "venue": {
+        "name": "London Stadium",
+        "city": "London",
+        "lat": 51.5387,
+        "lon": -0.0166
+      },
+      "home": {
+        "id": 48,
+        "name": "West Ham United",
+        "logo": "https://media.api-sports.io/football/teams/48.png"
+      },
+      "away": {
+        "id": 36,
+        "name": "Fulham",
+        "logo": "https://media.api-sports.io/football/teams/36.png"
+      },
+      "probability": {
+        "home": 43,
+        "draw": 30,
+        "away": 27
+      },
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "status": "finished"
+    },
+    {
+      "id": 8905,
+      "kickoff_utc": "2026-08-23T20:53:49Z",
+      "venue": {
+        "name": "Stadium of Light",
+        "city": "Sunderland",
+        "lat": 54.9145,
+        "lon": -1.3882
+      },
+      "home": {
+        "id": 746,
+        "name": "Sunderland",
+        "logo": "https://media.api-sports.io/football/teams/746.png"
+      },
+      "away": {
+        "id": 39,
+        "name": "Wolverhampton",
+        "logo": "https://media.api-sports.io/football/teams/39.png"
+      },
+      "probability": {
+        "home": 46,
+        "draw": 28,
+        "away": 26
+      },
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "status": "finished"
+    }
+  ]
+}

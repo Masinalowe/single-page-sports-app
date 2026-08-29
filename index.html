@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Premier League Match Map</title>
+
+  <link rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="map" role="application" aria-label="Map of England showing today's Premier League matches"></div>
+
+  <header id="titlebar">
+    <h1>Premier League <span>Match Map</span></h1>
+    <p id="subtitle">—</p>
+  </header>
+
+  <!-- Results for the week, docked upper right -->
+  <aside id="results-panel" aria-labelledby="results-heading">
+    <button id="results-toggle" aria-expanded="true" aria-controls="results-body">
+      <h2 id="results-heading">This Week's Results</h2>
+      <span class="chevron" aria-hidden="true"></span>
+    </button>
+    <div id="results-body">
+      <table id="results-table">
+        <caption class="visually-hidden">Premier League matches concluded this week</caption>
+        <tbody><!-- rendered by app.js --></tbody>
+      </table>
+    </div>
+  </aside>
+
+  <!-- Hover card, moved and filled by app.js -->
+  <div id="hovercard" role="tooltip" aria-hidden="true"></div>
+
+  <div id="empty-state" hidden>
+    <strong>No Premier League matches today.</strong>
+    <span>Pins appear here on match days.</span>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+          crossorigin=""></script>
+  <script src="app.js"></script>
+</body>
+</html>
