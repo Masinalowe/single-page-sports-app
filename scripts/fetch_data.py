@@ -233,15 +233,15 @@ def main():
                                prob))
 
     # 3 -------------------------------- probabilities captured on earlier runs
-    previous = {}
+    previous, old_payload = {}, None
     if OUT.exists():
         try:
-            old = json.loads(OUT.read_text())
-            for m in old.get("today", []) + old.get("recent", []):
+            old_payload = json.loads(OUT.read_text())
+            for m in old_payload.get("today", []) + old_payload.get("recent", []):
                 if m.get("probability"):
                     previous[m["id"]] = m["probability"]
         except (json.JSONDecodeError, KeyError):
-            pass   # a corrupt previous file must not block a fresh one
+            old_payload = None   # a corrupt previous file must not block a fresh one
 
     # 4 ------------------------------------------------------------- join
     today, recent, problems = [], [], []
@@ -286,6 +286,17 @@ def main():
         "today": sorted(today, key=lambda m: m["kickoff_utc"]),
         "recent": sorted(recent, key=lambda m: m["kickoff_utc"], reverse=True),
     }
+
+    # generated_at changes on every run, so comparing whole files would report
+    # a change every time and the scheduled job would commit ~13 times a day
+    # with nothing but a new timestamp. Compare the actual match data instead
+    # and leave the file alone when it is identical.
+    if old_payload is not None:
+        def content(d):
+            return {k: v for k, v in d.items() if k != "generated_at"}
+        if content(old_payload) == content(payload):
+            print(f"\n{OUT.relative_to(ROOT)} unchanged; left untouched")
+            return
 
     tmp = OUT.with_suffix(".json.tmp")
     tmp.write_text(json.dumps(payload, indent=2) + "\n")
