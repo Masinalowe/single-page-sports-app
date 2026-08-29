@@ -76,7 +76,6 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 const card = document.getElementById('hovercard');
 
 function cardHTML(match, status) {
-  const p = normalized(match.probability);
   const kickoff = new Date(match.kickoff_utc);
 
   const label = status === 'live' ? 'Live now'
@@ -86,6 +85,24 @@ function cardHTML(match, status) {
   const middle = match.score
     ? `<div class="hc-vs score">${match.score.home}&ndash;${match.score.away}</div>`
     : `<div class="hc-vs">vs</div>`;
+
+  // The Odds API drops an event at kickoff, so a match we first saw after it
+  // started has no prices to show. Omit the bar rather than faking one.
+  const p = match.probability ? normalized(match.probability) : null;
+  const probBlock = p ? `
+    <div class="hc-prob-label">Win probability</div>
+    <div class="hc-bar">
+      <span class="b-home" style="width:${p.home}%"></span>
+      <span class="b-draw" style="width:${p.draw}%"></span>
+      <span class="b-away" style="width:${p.away}%"></span>
+    </div>
+    <div class="hc-pcts">
+      <div class="p-home"><b>${p.home}%</b><span class="lbl">HOME</span></div>
+      <div class="p-draw"><b>${p.draw}%</b><span class="lbl">DRAW</span></div>
+      <div class="p-away"><b>${p.away}%</b><span class="lbl">AWAY</span></div>
+    </div>` : `
+    <div class="hc-prob-label">Win probability</div>
+    <div class="hc-noprob">No odds published for this match</div>`;
 
   return `
     <div class="hc-status ${status === 'live' ? 'live' : ''}">${label}</div>
@@ -102,17 +119,7 @@ function cardHTML(match, status) {
       </div>
     </div>
 
-    <div class="hc-prob-label">Win probability</div>
-    <div class="hc-bar">
-      <span class="b-home" style="width:${p.home}%"></span>
-      <span class="b-draw" style="width:${p.draw}%"></span>
-      <span class="b-away" style="width:${p.away}%"></span>
-    </div>
-    <div class="hc-pcts">
-      <div class="p-home"><b>${p.home}%</b><span class="lbl">HOME</span></div>
-      <div class="p-draw"><b>${p.draw}%</b><span class="lbl">DRAW</span></div>
-      <div class="p-away"><b>${p.away}%</b><span class="lbl">AWAY</span></div>
-    </div>
+    ${probBlock}
 
     <div class="hc-meta">
       <div class="venue">${esc(match.venue.name)}</div>

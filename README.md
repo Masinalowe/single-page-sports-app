@@ -29,17 +29,35 @@ has to be served over HTTP.
 Stop the server with `Ctrl-C`, or `pkill -f "http.server 8000"` if you
 backgrounded it.
 
-## Refresh the demo data
+## Refresh the data
 
-The app currently runs on mock fixtures. Kickoff times are generated relative to
-the moment you run the script, so there's always one match in play, one still to
-come, and finished matches to fill the results table:
+Real fixtures, scores, and win probabilities:
+
+```bash
+python3 scripts/fetch_data.py
+```
+
+Needs `FOOTBALL_DATA_TOKEN` and `ODDS_API_KEY` in a local `.env` (gitignored).
+Three API requests per run, well inside both free tiers.
+
+**Run it before the day's first kickoff.** The Odds API only prices *upcoming*
+matches — once a match starts it leaves the feed and its probabilities are
+unrecoverable. The script carries forward any probability it captured on an
+earlier run, so a later re-run won't blank the bars, but a match first seen
+after kickoff will never have odds.
+
+### Demo data
+
+Most days you can't see every UI state from real fixtures — matches are only
+live for two hours. This regenerates fixtures relative to *now*, so there's
+always one in play, one still to come, and one with no odds:
 
 ```bash
 python3 scripts/make_mock.py
 ```
 
-Re-run it any time the fixtures look stale, then reload the page.
+It **overwrites** `data/matches.json`. Run `fetch_data.py` again to get real
+data back.
 
 ## Project layout
 

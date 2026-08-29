@@ -210,6 +210,13 @@ html, body {
 .hc-pcts .p-draw { text-align: center; }
 .hc-pcts .p-away { text-align: right; }
 
+.hc-noprob {
+  font-size: 11px;
+  color: var(--ink-dim);
+  font-style: italic;
+  padding: 2px 0 1px;
+}
+
 .hc-meta {
   margin-top: 13px;
   padding-top: 11px;

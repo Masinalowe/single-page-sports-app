@@ -25,7 +25,7 @@ def team(team_id):
     return {
         "id": team_id,
         "name": info["team"],
-        "logo": f"https://media.api-sports.io/football/teams/{team_id}.png",
+        "logo": f"https://crests.football-data.org/{team_id}.png",
     }
 
 
@@ -58,33 +58,34 @@ def main():
 
     today = [
         # in play right now — kicked off 40 minutes ago
-        match(9001, 42, 33, now - timedelta(minutes=40),
+        match(9001, 57, 66, now - timedelta(minutes=40),
               {"home": 47, "draw": 28, "away": 25}),
         # also in play, deep into the second half
-        match(9002, 40, 50, now - timedelta(minutes=75),
+        match(9002, 64, 65, now - timedelta(minutes=75),
               {"home": 38, "draw": 30, "away": 32}),
         # still to come
-        match(9003, 47, 49, now + timedelta(hours=3),
+        match(9003, 73, 61, now + timedelta(hours=3),
               {"home": 41, "draw": 27, "away": 32}),
-        match(9004, 66, 34, now + timedelta(hours=5, minutes=30),
+        match(9004, 58, 67, now + timedelta(hours=5, minutes=30),
               {"home": 52, "draw": 25, "away": 23}),
-        # finished earlier today
-        match(9005, 51, 35, now - timedelta(hours=4),
+        # finished earlier today, but odds were captured before kickoff
+        match(9005, 397, 1044, now - timedelta(hours=4),
               {"home": 55, "draw": 24, "away": 21},
               {"home": 2, "away": 0}),
+        # finished and never priced — exercises the "no odds" card state
+        match(9006, 402, 354, now - timedelta(hours=6),
+              None, {"home": 1, "away": 3}),
     ]
 
     recent = [
-        match(8901, 65, 45, now - timedelta(days=2),
+        match(8901, 351, 62, now - timedelta(days=2),
               {"home": 44, "draw": 29, "away": 27}, {"home": 1, "away": 1}),
-        match(8902, 55, 52, now - timedelta(days=3),
+        match(8902, 341, 71, now - timedelta(days=3),
               {"home": 49, "draw": 26, "away": 25}, {"home": 3, "away": 1}),
-        match(8903, 63, 44, now - timedelta(days=4),
+        match(8903, 63, 349, now - timedelta(days=4),
               {"home": 58, "draw": 23, "away": 19}, {"home": 0, "away": 2}),
-        match(8904, 48, 36, now - timedelta(days=5),
+        match(8904, 1076, 322, now - timedelta(days=5),
               {"home": 43, "draw": 30, "away": 27}, {"home": 2, "away": 2}),
-        match(8905, 746, 39, now - timedelta(days=6),
-              {"home": 46, "draw": 28, "away": 26}, {"home": 1, "away": 0}),
     ]
 
     payload = {
