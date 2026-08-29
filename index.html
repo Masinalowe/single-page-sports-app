@@ -20,6 +20,25 @@
     <p id="subtitle">—</p>
   </header>
 
+  <!-- League table, docked upper left under the title -->
+  <aside id="standings-panel" aria-labelledby="standings-heading">
+    <button id="standings-toggle" aria-expanded="true" aria-controls="standings-body">
+      <h2 id="standings-heading">League Table</h2>
+      <span class="chevron" aria-hidden="true"></span>
+    </button>
+    <div id="standings-body">
+      <table id="standings-table">
+        <caption class="visually-hidden">Premier League standings</caption>
+        <thead>
+          <tr><th scope="col" class="st-pos">#</th><th scope="col">Team</th>
+              <th scope="col" class="st-num">P</th><th scope="col" class="st-num">GD</th>
+              <th scope="col" class="st-num">Pts</th></tr>
+        </thead>
+        <tbody><!-- rendered by app.js --></tbody>
+      </table>
+    </div>
+  </aside>
+
   <!-- Results for the week, docked upper right -->
   <aside id="results-panel" aria-labelledby="results-heading">
     <button id="results-toggle" aria-expanded="true" aria-controls="results-body">

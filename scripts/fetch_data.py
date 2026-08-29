@@ -221,6 +221,28 @@ def main():
                    {"X-Auth-Token": fd_token}).get("matches", [])
     print(f"fixtures : {len(fixtures)} from {monday} to {today_uk}")
 
+    # 1b ---------------------------------------------------------- standings
+    # Free tier covers league tables. Fetched on every run, including
+    # --scores-only, since the table moves whenever a match finishes.
+    table = get(f"{FD_BASE}/competitions/PL/standings",
+                {"X-Auth-Token": fd_token}).get("standings", [])
+    total = next((t["table"] for t in table if t.get("type") == "TOTAL"), [])
+    standings = [{
+        "position": r["position"],
+        "team": {
+            "id": r["team"]["id"],
+            "name": r["team"].get("shortName") or r["team"]["name"],
+            "crest": r["team"].get("crest"),
+        },
+        "played": r["playedGames"],
+        "won": r["won"],
+        "draw": r["draw"],
+        "lost": r["lost"],
+        "gd": r["goalDifference"],
+        "points": r["points"],
+    } for r in total]
+    print(f"standings: {len(standings)} teams")
+
     # 2 ------------------------------------------------------------- odds
     if scores_only:
         events = []
@@ -294,6 +316,7 @@ def main():
     payload = {
         "generated_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "season": monday.year,
+        "standings": standings,
         "today": sorted(today, key=lambda m: m["kickoff_utc"]),
         "recent": sorted(recent, key=lambda m: m["kickoff_utc"], reverse=True),
     }

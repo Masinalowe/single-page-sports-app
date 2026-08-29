@@ -92,6 +92,46 @@ fetch('data/england.geojson', { cache: 'no-store' })
   })
   .catch((err) => console.error('[match-map] could not load England outline', err));
 
+/* City labels. Removing the basemap took the tile labels with it, so these are
+ * drawn from data/cities.json instead. Own pane, below the markers, so a label
+ * can never sit on top of a pin or intercept a hover. */
+map.createPane('labels');
+map.getPane('labels').style.zIndex = 450;
+map.getPane('labels').style.pointerEvents = 'none';
+
+const cityLabels = [];
+
+fetch('data/cities.json', { cache: 'no-store' })
+  .then((r) => r.json())
+  .then(({ cities }) => {
+    for (const c of cities) {
+      const marker = L.marker([c.lat, c.lon], {
+        pane: 'labels',
+        interactive: false,
+        keyboard: false,
+        icon: L.divIcon({
+          className: '',
+          html: `<div class="city-label"><i></i><span>${esc(c.name)}</span></div>`,
+          iconSize: [0, 0],
+        }),
+      }).addTo(map);
+      cityLabels.push({ rank: c.rank, marker });
+    }
+    updateCityLabels();
+  })
+  .catch((err) => console.error('[match-map] could not load city labels', err));
+
+/** Show only the major cities at England-wide zoom; reveal the rest closer in. */
+function updateCityLabels() {
+  const z = map.getZoom();
+  for (const { rank, marker } of cityLabels) {
+    const el = marker.getElement();
+    if (el) el.style.display = (rank === 1 || z >= 7) ? '' : 'none';
+  }
+}
+
+map.on('zoomend', updateCityLabels);
+
 /* ------------------------------------------------------------- hovercard */
 
 const card = document.getElementById('hovercard');
@@ -323,14 +363,14 @@ function toggleResultRow(row) {
 }
 
 // Delegated, so it survives re-rendering the table.
-document.querySelector('#results-table tbody')
-  .addEventListener('click', (e) => {
+const resultsBody = document.querySelector('#results-table tbody');
+if (resultsBody) {
+  resultsBody.addEventListener('click', (e) => {
     const row = e.target.closest('.rt-row');
     if (row) toggleResultRow(row);
   });
 
-document.querySelector('#results-table tbody')
-  .addEventListener('keydown', (e) => {
+  resultsBody.addEventListener('keydown', (e) => {
     if (e.key !== 'Enter' && e.key !== ' ') return;
     const row = e.target.closest('.rt-row');
     if (row) {
@@ -338,13 +378,71 @@ document.querySelector('#results-table tbody')
       toggleResultRow(row);
     }
   });
+}
 
-document.getElementById('results-toggle').addEventListener('click', () => {
-  const panel = document.getElementById('results-panel');
-  const collapsed = panel.classList.toggle('collapsed');
-  document.getElementById('results-toggle')
-          .setAttribute('aria-expanded', String(!collapsed));
-});
+/* Wire a panel's collapse button.
+ *
+ * Guarded because a browser can serve a cached index.html against a fresh
+ * app.js. When that happened locally the missing element threw at top level
+ * and took init() with it, so the map lost its pins and results too. A stale
+ * panel should cost you that panel, not the whole page. */
+function wirePanelToggle(toggleId, panelId) {
+  const toggle = document.getElementById(toggleId);
+  const panel = document.getElementById(panelId);
+  if (!toggle || !panel) {
+    console.warn(`[match-map] ${toggleId}/${panelId} missing — stale HTML?`);
+    return;
+  }
+  toggle.addEventListener('click', () => {
+    const collapsed = panel.classList.toggle('collapsed');
+    toggle.setAttribute('aria-expanded', String(!collapsed));
+  });
+}
+
+wirePanelToggle('results-toggle', 'results-panel');
+
+/* -------------------------------------------------------- league table */
+
+function renderStandings(rows) {
+  const panel = document.getElementById('standings-panel');
+  const tbody = document.querySelector('#standings-table tbody');
+  if (!panel || !tbody) return;          // stale HTML; see wirePanelToggle
+
+  if (!rows || !rows.length) {
+    panel.hidden = true;          // no table yet (preseason, or mock data)
+    return;
+  }
+  panel.hidden = false;
+
+  tbody.innerHTML = rows.map((r) => {
+    // European places and the drop zone, by position
+    const zone = r.position <= 4 ? 'ucl'
+               : r.position === 5 ? 'uel'
+               : r.position >= 18 ? 'rel' : '';
+    return `
+      <tr class="${zone}">
+        <td class="st-pos">${r.position}</td>
+        <td class="st-team">
+          ${r.team.crest
+            ? `<img src="${esc(r.team.crest)}" alt="" loading="lazy">` : ''}
+          <span>${esc(r.team.name)}</span>
+        </td>
+        <td class="st-num">${r.played}</td>
+        <td class="st-num">${r.gd > 0 ? '+' : ''}${r.gd}</td>
+        <td class="st-num st-pts">${r.points}</td>
+      </tr>`;
+  }).join('');
+
+  // Twenty rows crowd out the map on a phone, and the map is the point.
+  // Start collapsed there; the header stays tappable.
+  if (window.innerWidth <= 640) {
+    panel.classList.add('collapsed');
+    document.getElementById('standings-toggle')
+      ?.setAttribute('aria-expanded', 'false');
+  }
+}
+
+wirePanelToggle('standings-toggle', 'standings-panel');
 
 /* ------------------------------------------------------------------ boot */
 
@@ -366,6 +464,7 @@ async function init() {
   deoverlap();
   map.on('zoomend', deoverlap);
   renderResults(data.recent ?? []);
+  renderStandings(data.standings ?? []);
 
   document.getElementById('empty-state').hidden = today.length > 0;
 

@@ -354,6 +354,101 @@ html, body {
   line-height: 1.35;
 }
 
+/* ------------------------------------------------------------ city labels */
+
+.city-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  /* Sits below its dot: stadiums are in city centres, so a label level with
+     the point ends up underneath the match pin. */
+  transform: translate(-3px, 9px);
+  white-space: nowrap;
+  font-size: 10.5px;
+  color: rgba(255, 255, 255, .82);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .85);
+  letter-spacing: .1px;
+}
+.city-label i {
+  width: 3px; height: 3px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .6);
+  flex: none;
+}
+
+/* -------------------------------------------------------- standings panel */
+
+#standings-panel {
+  position: absolute;
+  top: 74px; left: 18px;
+  z-index: 600;
+  width: 244px;
+  background: var(--panel);
+  border: 1px solid var(--panel-edge);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+#standings-panel[hidden] { display: none; }
+
+#standings-toggle {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%;
+  padding: 11px 13px;
+  background: none; border: 0;
+  color: var(--ink);
+  font-family: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+#standings-toggle:hover { background: rgba(255, 255, 255, .04); }
+#standings-toggle h2 {
+  margin: 0;
+  font-size: 11.5px; font-weight: 700;
+  letter-spacing: .5px; text-transform: uppercase;
+}
+#standings-panel.collapsed #standings-body { display: none; }
+#standings-panel.collapsed .chevron { transform: rotate(-135deg) translate(-1px, -1px); }
+
+#standings-body { max-height: 46vh; overflow-y: auto; }
+
+#standings-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+#standings-table thead th {
+  position: sticky; top: 0;
+  background: var(--panel);
+  padding: 5px 6px;
+  font-size: 9px; font-weight: 700;
+  letter-spacing: .5px; text-transform: uppercase;
+  color: var(--ink-dim);
+  text-align: right;
+  border-bottom: 1px solid var(--panel-edge);
+}
+#standings-table thead th:nth-child(2) { text-align: left; }
+#standings-table td { padding: 4px 6px; vertical-align: middle; }
+#standings-table tbody tr:hover { background: rgba(255, 255, 255, .04); }
+
+.st-pos {
+  width: 22px; text-align: right;
+  color: var(--ink-dim);
+  font-variant-numeric: tabular-nums;
+}
+.st-team { display: flex; align-items: center; gap: 6px; padding-left: 8px !important; }
+.st-team img { width: 15px; height: 15px; object-fit: contain; flex: none; }
+.st-team span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.st-num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-dim);
+  width: 26px;
+}
+.st-pts { color: var(--ink); font-weight: 700; }
+
+/* Qualification zones, marked with a left edge rather than a fill so the
+   rows stay legible. */
+#standings-table tbody tr.ucl .st-pos { box-shadow: inset 2px 0 0 var(--title); }
+#standings-table tbody tr.uel .st-pos { box-shadow: inset 2px 0 0 var(--accent); }
+#standings-table tbody tr.rel .st-pos { box-shadow: inset 2px 0 0 var(--away); }
+
 /* ------------------------------------------------------------ empty state */
 
 #empty-state {
@@ -377,8 +472,18 @@ html, body {
 
 /* --------------------------------------------------------------- narrow vp */
 
+@media (max-width: 860px) {
+  #standings-panel { width: 210px; top: 70px; left: 14px; }
+  #standings-body  { max-height: 38vh; }
+  #results-panel   { width: 232px; top: 14px; right: 14px; }
+}
+
 @media (max-width: 640px) {
-  #results-panel { width: auto; left: 14px; right: 14px; top: auto; bottom: 14px; }
-  #results-body  { max-height: 168px; }
-  #titlebar      { top: 14px; left: 14px; }
+  /* Stack rather than overlap: results along the bottom, table collapsed
+     under the title so the map itself stays visible. */
+  #results-panel   { width: auto; left: 14px; right: 14px; top: auto; bottom: 14px; }
+  #results-body    { max-height: 168px; }
+  #titlebar        { top: 14px; left: 14px; }
+  #standings-panel { width: auto; left: 14px; right: 14px; top: 66px; }
+  #standings-body  { max-height: 30vh; }
 }
