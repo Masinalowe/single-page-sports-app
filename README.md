@@ -59,6 +59,43 @@ python3 scripts/make_mock.py
 It **overwrites** `data/matches.json`. Run `fetch_data.py` again to get real
 data back.
 
+## The monogram wash
+
+### Changing the artwork
+
+Replace **`assets/monogram.png`**. That's the whole procedure — no CSS to edit.
+`styles.css` tiles that one file twice with a half-tile offset, so the file
+only needs to contain a single mark.
+
+It currently holds the Premier League lion, no text. Two things matter if you
+swap it:
+
+- **A silhouette in one flat colour, transparent background.** The page
+  multiplies the mark over the map, so a white mark vanishes. The `grayscale()`
+  filter in the CSS neutralises colour first — without it the lion's purple
+  would tint the water purple instead of darkening it.
+- **Scale is tied to the artwork.** The lion fills its frame where a lettermark
+  is mostly whitespace, so it needed a much smaller tile (78px vs 160px) and
+  far less opacity (.22 vs .5) to read as texture rather than swamping the
+  coastline. Expect to retune `background-size` and `opacity` for any new mark.
+
+The lion is a registered trademark and this repo is public.
+
+### How the effect works
+
+The wash is a viewport-fixed layer using `mix-blend-mode: multiply`, not two
+layers clipped to the coastline. Multiply darkens whatever sits beneath it, so
+grey water darkens to grey and purple land darkens to purple on its own, per
+pixel. A mark straddling the coast is genuinely split mid-glyph.
+
+The clipping approach is the obvious one and it doesn't work: Leaflet animates
+the coastline path during zoom, so a clip path visibly lags and tears
+mid-animation. Blending has nothing to keep in sync and stays correct at any
+zoom.
+
+Tuning: `opacity` (`.5`, `.45` on phones) and `background-size` (160px, 120px
+on phones) on `#monogram`.
+
 ## Project layout
 
 ```

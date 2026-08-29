@@ -1,0 +1,28 @@
+{
+  "_comment": "Reference labels for the map. The basemap was removed so England could be drawn alone, which took the tile labels with it; these replace them. Every city hosting a Premier League club, plus a few others purely for orientation. rank 1 draws at all zooms, rank 2 only when zoomed in, so the map stays uncluttered at England-wide view.",
+  "cities": [
+    { "name": "London",     "lat": 51.5074, "lon": -0.1278, "rank": 1 },
+    { "name": "Manchester", "lat": 53.4808, "lon": -2.2426, "rank": 1 },
+    { "name": "Liverpool",  "lat": 53.4084, "lon": -2.9916, "rank": 1 },
+    { "name": "Birmingham", "lat": 52.4862, "lon": -1.8904, "rank": 1 },
+    { "name": "Leeds",      "lat": 53.8008, "lon": -1.5491, "rank": 1 },
+    { "name": "Newcastle",  "lat": 54.9783, "lon": -1.6178, "rank": 1 },
+    { "name": "Sheffield",  "lat": 53.3811, "lon": -1.4701, "rank": 1 },
+    { "name": "Bristol",    "lat": 51.4545, "lon": -2.5879, "rank": 1 },
+    { "name": "Nottingham", "lat": 52.9548, "lon": -1.1581, "rank": 1 },
+    { "name": "Norwich",    "lat": 52.6309, "lon":  1.2974, "rank": 1 },
+    { "name": "Plymouth",   "lat": 50.3755, "lon": -4.1427, "rank": 1 },
+
+    { "name": "Sunderland",  "lat": 54.9069, "lon": -1.3838, "rank": 2 },
+    { "name": "Hull",        "lat": 53.7676, "lon": -0.3274, "rank": 2 },
+    { "name": "Coventry",    "lat": 52.4068, "lon": -1.5197, "rank": 2 },
+    { "name": "Ipswich",     "lat": 52.0567, "lon":  1.1482, "rank": 2 },
+    { "name": "Southampton", "lat": 50.9097, "lon": -1.4044, "rank": 2 },
+    { "name": "Brighton",    "lat": 50.8225, "lon": -0.1372, "rank": 2 },
+    { "name": "Bournemouth", "lat": 50.7192, "lon": -1.8808, "rank": 2 },
+    { "name": "Leicester",   "lat": 52.6369, "lon": -1.1398, "rank": 2 },
+    { "name": "Carlisle",    "lat": 54.8951, "lon": -2.9382, "rank": 2 },
+    { "name": "York",        "lat": 53.9600, "lon": -1.0873, "rank": 2 },
+    { "name": "Exeter",      "lat": 50.7184, "lon": -3.5339, "rank": 2 }
+  ]
+}

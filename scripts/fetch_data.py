@@ -162,15 +162,26 @@ def build_match(m, stadiums, prob):
     if not ground:
         return None, f"no stadium entry for team id {home['id']} ({home['name']})"
 
-    ft = (m.get("score") or {}).get("fullTime") or {}
+    score_obj = m.get("score") or {}
+    ft = score_obj.get("fullTime") or {}
     score = ({"home": ft["home"], "away": ft["away"]}
              if ft.get("home") is not None and ft.get("away") is not None
              else None)
+
+    # Half-time is the most detail the free tier gives. Goals, bookings and
+    # substitutions all come back null, so the expandable result rows show
+    # this instead of scorers.
+    ht = score_obj.get("halfTime") or {}
+    half_time = ({"home": ht["home"], "away": ht["away"]}
+                 if ht.get("home") is not None and ht.get("away") is not None
+                 else None)
 
     return {
         "id": m["id"],
         "kickoff_utc": m["utcDate"],
         "status": normalize_status(m["status"]),
+        "matchday": m.get("matchday"),
+        "half_time": half_time,
         "venue": {
             "name": ground["venue"],
             "city": ground["city"],
@@ -209,6 +220,28 @@ def main():
     fixtures = get(f"{FD_BASE}/competitions/PL/matches?{q}",
                    {"X-Auth-Token": fd_token}).get("matches", [])
     print(f"fixtures : {len(fixtures)} from {monday} to {today_uk}")
+
+    # 1b ---------------------------------------------------------- standings
+    # Free tier covers league tables. Fetched on every run, including
+    # --scores-only, since the table moves whenever a match finishes.
+    table = get(f"{FD_BASE}/competitions/PL/standings",
+                {"X-Auth-Token": fd_token}).get("standings", [])
+    total = next((t["table"] for t in table if t.get("type") == "TOTAL"), [])
+    standings = [{
+        "position": r["position"],
+        "team": {
+            "id": r["team"]["id"],
+            "name": r["team"].get("shortName") or r["team"]["name"],
+            "crest": r["team"].get("crest"),
+        },
+        "played": r["playedGames"],
+        "won": r["won"],
+        "draw": r["draw"],
+        "lost": r["lost"],
+        "gd": r["goalDifference"],
+        "points": r["points"],
+    } for r in total]
+    print(f"standings: {len(standings)} teams")
 
     # 2 ------------------------------------------------------------- odds
     if scores_only:
@@ -283,6 +316,7 @@ def main():
     payload = {
         "generated_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "season": monday.year,
+        "standings": standings,
         "today": sorted(today, key=lambda m: m["kickoff_utc"]),
         "recent": sorted(recent, key=lambda m: m["kickoff_utc"], reverse=True),
     }

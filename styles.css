@@ -2,6 +2,14 @@
    Dark map, pins for today's fixtures, hover card, weekly results panel. */
 
 :root {
+  /* Map. --land is my read of the purple swatch; adjust this one value if it
+     is off. --title is a lighter tint of Premier League purple (#3D195B),
+     which at 1.6:1 on this background would have been unreadable. */
+  --water:         #23262b;
+  --land:          #7b3fe4;
+  --land-edge:     #9463ee;
+  --title:         #a97bf5;
+
   --bg:            #0b1020;
   --panel:         #141b30;
   --panel-edge:    #263154;
@@ -27,7 +35,7 @@ html, body {
   overflow: hidden;
 }
 
-#map { position: absolute; inset: 0; background: var(--bg); z-index: 0; }
+#map { position: absolute; inset: 0; background: var(--water); z-index: 0; }
 
 /* Leaflet's default attribution is bright white; tone it into the theme */
 .leaflet-control-attribution {
@@ -59,7 +67,7 @@ html, body {
   letter-spacing: -.2px;
   text-shadow: 0 2px 12px rgba(0, 0, 0, .8);
 }
-#titlebar h1 span { color: var(--accent); font-weight: 500; }
+#titlebar h1 span { color: var(--title); font-weight: 600; }
 
 #subtitle {
   margin: 3px 0 0;
@@ -286,6 +294,211 @@ html, body {
   color: var(--ink-dim);
 }
 
+/* expandable rows */
+.rt-row { cursor: pointer; }
+.rt-row:hover { background: rgba(255, 255, 255, .04); }
+.rt-row:focus-visible {
+  outline: 2px solid var(--title);
+  outline-offset: -2px;
+}
+
+.rt-day { position: relative; padding-right: 24px !important; }
+.rt-caret {
+  position: absolute;
+  right: 12px; top: 50%;
+  width: 5px; height: 5px;
+  margin-top: -4px;
+  border-right: 1.5px solid var(--ink-dim);
+  border-bottom: 1.5px solid var(--ink-dim);
+  transform: rotate(45deg);
+  transition: transform .18s ease;
+}
+.rt-row[aria-expanded="true"] .rt-caret {
+  transform: rotate(-135deg);
+  margin-top: -2px;
+}
+.rt-row[aria-expanded="true"] { background: rgba(255, 255, 255, .05); }
+
+.rt-detail > td {
+  padding: 0 13px 12px !important;
+  background: rgba(0, 0, 0, .22);
+}
+.rt-teams {
+  font-size: 11px;
+  color: var(--ink-dim);
+  padding: 9px 0 8px;
+  line-height: 1.4;
+}
+.rt-teams b { color: var(--ink); font-variant-numeric: tabular-nums; }
+
+.rt-kv {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 3px 12px;
+  margin: 0;
+  font-size: 11px;
+}
+.rt-kv dt { color: var(--ink-dim); }
+.rt-kv dd {
+  margin: 0;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.rt-note {
+  margin: 9px 0 0;
+  font-size: 9.5px;
+  font-style: italic;
+  color: var(--ink-dim);
+  opacity: .75;
+  line-height: 1.35;
+}
+
+/* -------------------------------------------------------------- monogram */
+
+/* A repeating PL lettermark washed over the whole page.
+ *
+ * It is fixed to the viewport, not the map, and blended with multiply rather
+ * than clipped to the coastline. Multiply darkens whatever sits beneath it:
+ * grey water darkens to grey, purple land darkens to purple, with no second
+ * layer and no clip path to keep in sync. Because the map pans and zooms
+ * underneath a stationary pattern, each mark recolours on its own as the
+ * coastline crosses it — which is the effect asked for, and it costs nothing
+ * to maintain.
+ *
+ * Sits above the map but below the panels (600) and title (500), so only the
+ * map is tinted.
+ *
+ * The mark is a lettermark I drew, not the Premier League lion — see README.
+ * Swapping in a real asset is a change to this one URL. */
+#monogram {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  opacity: .22;
+
+  /* The same file twice, the second offset by half a tile, so a single mark
+     in assets/monogram.png produces a half-drop pattern. Swap that file to
+     change the artwork; nothing here needs editing.
+
+     grayscale() matters here: the lion ships in Premier League purple, and
+     multiplying that over the map would tint the water purple instead of
+     darkening it. Neutralised first, it shades both surfaces in their own
+     hue — darker grey on water, darker purple on land. */
+  background-image: url("assets/monogram.png"), url("assets/monogram.png");
+  /* The lion fills its tile where the old lettermark was mostly whitespace,
+     so it needs a much smaller tile and far less opacity to stay a texture
+     rather than swamping the coastline. */
+  background-size: 78px 78px, 78px 78px;
+  background-position: 0 0, 39px 39px;
+  filter: grayscale(1);
+}
+
+@media (max-width: 640px) {
+  #monogram {
+    background-size: 58px 58px, 58px 58px;
+    background-position: 0 0, 29px 29px;
+    opacity: .2;
+  }
+}
+
+/* ------------------------------------------------------------ city labels */
+
+.city-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  /* Sits below its dot: stadiums are in city centres, so a label level with
+     the point ends up underneath the match pin. */
+  transform: translate(-3px, 9px);
+  white-space: nowrap;
+  font-size: 10.5px;
+  color: rgba(255, 255, 255, .82);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .85);
+  letter-spacing: .1px;
+}
+.city-label i {
+  width: 3px; height: 3px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .6);
+  flex: none;
+}
+
+/* -------------------------------------------------------- standings panel */
+
+#standings-panel {
+  position: absolute;
+  top: 74px; left: 18px;
+  z-index: 600;
+  width: 244px;
+  background: var(--panel);
+  border: 1px solid var(--panel-edge);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+#standings-panel[hidden] { display: none; }
+
+#standings-toggle {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%;
+  padding: 11px 13px;
+  background: none; border: 0;
+  color: var(--ink);
+  font-family: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+#standings-toggle:hover { background: rgba(255, 255, 255, .04); }
+#standings-toggle h2 {
+  margin: 0;
+  font-size: 11.5px; font-weight: 700;
+  letter-spacing: .5px; text-transform: uppercase;
+}
+#standings-panel.collapsed #standings-body { display: none; }
+#standings-panel.collapsed .chevron { transform: rotate(-135deg) translate(-1px, -1px); }
+
+#standings-body { max-height: 46vh; overflow-y: auto; }
+
+#standings-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+#standings-table thead th {
+  position: sticky; top: 0;
+  background: var(--panel);
+  padding: 5px 6px;
+  font-size: 9px; font-weight: 700;
+  letter-spacing: .5px; text-transform: uppercase;
+  color: var(--ink-dim);
+  text-align: right;
+  border-bottom: 1px solid var(--panel-edge);
+}
+#standings-table thead th:nth-child(2) { text-align: left; }
+#standings-table td { padding: 4px 6px; vertical-align: middle; }
+#standings-table tbody tr:hover { background: rgba(255, 255, 255, .04); }
+
+.st-pos {
+  width: 22px; text-align: right;
+  color: var(--ink-dim);
+  font-variant-numeric: tabular-nums;
+}
+.st-team { display: flex; align-items: center; gap: 6px; padding-left: 8px !important; }
+.st-team img { width: 15px; height: 15px; object-fit: contain; flex: none; }
+.st-team span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.st-num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-dim);
+  width: 26px;
+}
+.st-pts { color: var(--ink); font-weight: 700; }
+
+/* Qualification zones, marked with a left edge rather than a fill so the
+   rows stay legible. */
+#standings-table tbody tr.ucl .st-pos { box-shadow: inset 2px 0 0 var(--title); }
+#standings-table tbody tr.uel .st-pos { box-shadow: inset 2px 0 0 var(--accent); }
+#standings-table tbody tr.rel .st-pos { box-shadow: inset 2px 0 0 var(--away); }
+
 /* ------------------------------------------------------------ empty state */
 
 #empty-state {
@@ -309,8 +522,18 @@ html, body {
 
 /* --------------------------------------------------------------- narrow vp */
 
+@media (max-width: 860px) {
+  #standings-panel { width: 210px; top: 70px; left: 14px; }
+  #standings-body  { max-height: 38vh; }
+  #results-panel   { width: 232px; top: 14px; right: 14px; }
+}
+
 @media (max-width: 640px) {
-  #results-panel { width: auto; left: 14px; right: 14px; top: auto; bottom: 14px; }
-  #results-body  { max-height: 168px; }
-  #titlebar      { top: 14px; left: 14px; }
+  /* Stack rather than overlap: results along the bottom, table collapsed
+     under the title so the map itself stays visible. */
+  #results-panel   { width: auto; left: 14px; right: 14px; top: auto; bottom: 14px; }
+  #results-body    { max-height: 168px; }
+  #titlebar        { top: 14px; left: 14px; }
+  #standings-panel { width: auto; left: 14px; right: 14px; top: 66px; }
+  #standings-body  { max-height: 30vh; }
 }

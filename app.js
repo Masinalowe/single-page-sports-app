@@ -64,23 +64,73 @@ const map = L.map('map', {
 
 L.control.zoom({ position: 'bottomright' }).addTo(map);
 
-// Esri's Dark Gray Canvas: genuinely dark and keyless, unlike CARTO's dark
-// basemap which now requires one. An earlier version inverted light OSM tiles
-// in CSS instead, but filtering the tile pane composites every 256px tile
-// separately and left visible seams across the map. A natively dark basemap
-// needs no filter, so there are no seams to hide.
-//
-// Base carries no labels — the reference layer draws place names over it.
-const ESRI = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas';
+map.attributionControl.addAttribution(
+  'Boundary: <a href="https://www.naturalearthdata.com/">Natural Earth</a>');
 
-L.tileLayer(`${ESRI}/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}`, {
-  attribution: 'Esri, HERE, Garmin, &copy; OpenStreetMap contributors',
-  maxZoom: 11,
-}).addTo(map);
+/* There is no basemap. Earlier versions drew raster tiles — OSM inverted by a
+ * CSS filter, then Esri's dark canvas — but every tile set draws the whole of
+ * Europe, and the brief is England alone on water. So the map renders a single
+ * GeoJSON polygon and nothing else: everything that is not England simply is
+ * not drawn.
+ *
+ * Colors are read from the CSS custom properties so the palette stays in one
+ * place, in styles.css, rather than being split across two files. */
+const css = getComputedStyle(document.documentElement);
 
-L.tileLayer(`${ESRI}/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}`, {
-  maxZoom: 11,
-}).addTo(map);
+fetch('data/england.geojson', { cache: 'no-store' })
+  .then((r) => r.json())
+  .then((geo) => {
+    L.geoJSON(geo, {
+      interactive: false,          // never steal a hover from a pin
+      style: {
+        fillColor: css.getPropertyValue('--land').trim(),
+        fillOpacity: 1,
+        color: css.getPropertyValue('--land-edge').trim(),
+        weight: 1,
+      },
+    }).addTo(map);
+  })
+  .catch((err) => console.error('[match-map] could not load England outline', err));
+
+/* City labels. Removing the basemap took the tile labels with it, so these are
+ * drawn from data/cities.json instead. Own pane, below the markers, so a label
+ * can never sit on top of a pin or intercept a hover. */
+map.createPane('labels');
+map.getPane('labels').style.zIndex = 450;
+map.getPane('labels').style.pointerEvents = 'none';
+
+const cityLabels = [];
+
+fetch('data/cities.json', { cache: 'no-store' })
+  .then((r) => r.json())
+  .then(({ cities }) => {
+    for (const c of cities) {
+      const marker = L.marker([c.lat, c.lon], {
+        pane: 'labels',
+        interactive: false,
+        keyboard: false,
+        icon: L.divIcon({
+          className: '',
+          html: `<div class="city-label"><i></i><span>${esc(c.name)}</span></div>`,
+          iconSize: [0, 0],
+        }),
+      }).addTo(map);
+      cityLabels.push({ rank: c.rank, marker });
+    }
+    updateCityLabels();
+  })
+  .catch((err) => console.error('[match-map] could not load city labels', err));
+
+/** Show only the major cities at England-wide zoom; reveal the rest closer in. */
+function updateCityLabels() {
+  const z = map.getZoom();
+  for (const { rank, marker } of cityLabels) {
+    const el = marker.getElement();
+    if (el) el.style.display = (rank === 1 || z >= 7) ? '' : 'none';
+  }
+}
+
+map.on('zoomend', updateCityLabels);
 
 /* ------------------------------------------------------------- hovercard */
 
@@ -265,8 +315,13 @@ function renderResults(recent) {
   tbody.innerHTML = recent
     .slice()
     .sort((a, b) => Date.parse(b.kickoff_utc) - Date.parse(a.kickoff_utc))
-    .map((m) => `
-      <tr>
+    .map((m, i) => {
+      const ht = m.half_time
+        ? `${m.half_time.home}&ndash;${m.half_time.away}` : '&mdash;';
+      return `
+      <tr class="rt-row" tabindex="0" role="button"
+          aria-expanded="false" aria-controls="rt-detail-${i}"
+          aria-label="${esc(m.home.name)} ${m.score.home}, ${esc(m.away.name)} ${m.score.away}. Show details">
         <td>
           <div class="rt-match">
             <img src="${esc(m.home.logo)}" alt="${esc(m.home.name)}" loading="lazy">
@@ -274,17 +329,113 @@ function renderResults(recent) {
             <img src="${esc(m.away.logo)}" alt="${esc(m.away.name)}" loading="lazy">
           </div>
         </td>
-        <td class="rt-day">${esc(paDay.format(new Date(m.kickoff_utc)))}</td>
-      </tr>`)
+        <td class="rt-day">
+          ${esc(paDay.format(new Date(m.kickoff_utc)))}
+          <span class="rt-caret" aria-hidden="true"></span>
+        </td>
+      </tr>
+      <tr class="rt-detail" id="rt-detail-${i}" hidden>
+        <td colspan="2">
+          <div class="rt-teams">
+            ${esc(m.home.name)} <b>${m.score.home}&ndash;${m.score.away}</b> ${esc(m.away.name)}
+          </div>
+          <dl class="rt-kv">
+            <dt>Half time</dt><dd>${ht}</dd>
+            <dt>Full time</dt><dd>${m.score.home}&ndash;${m.score.away}</dd>
+            ${m.matchday ? `<dt>Matchday</dt><dd>${m.matchday}</dd>` : ''}
+            <dt>Venue</dt><dd>${esc(m.venue.name)}</dd>
+            <dt>Kickoff</dt><dd>${esc(paTime.format(new Date(m.kickoff_utc)))}</dd>
+          </dl>
+          <p class="rt-note">Goal scorers aren't included in the free data plan.</p>
+        </td>
+      </tr>`;
+    })
     .join('');
 }
 
-document.getElementById('results-toggle').addEventListener('click', () => {
-  const panel = document.getElementById('results-panel');
-  const collapsed = panel.classList.toggle('collapsed');
-  document.getElementById('results-toggle')
-          .setAttribute('aria-expanded', String(!collapsed));
-});
+/** Expand or collapse one result row. */
+function toggleResultRow(row) {
+  const detail = document.getElementById(row.getAttribute('aria-controls'));
+  if (!detail) return;
+  const open = row.getAttribute('aria-expanded') === 'true';
+  row.setAttribute('aria-expanded', String(!open));
+  detail.hidden = open;
+}
+
+// Delegated, so it survives re-rendering the table.
+const resultsBody = document.querySelector('#results-table tbody');
+if (resultsBody) {
+  resultsBody.addEventListener('click', (e) => {
+    const row = e.target.closest('.rt-row');
+    if (row) toggleResultRow(row);
+  });
+
+  resultsBody.addEventListener('keydown', (e) => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    const row = e.target.closest('.rt-row');
+    if (row) {
+      e.preventDefault();          // stop Space from scrolling the panel
+      toggleResultRow(row);
+    }
+  });
+}
+
+/* Wire a panel's collapse button.
+ *
+ * Guarded because a browser can serve a cached index.html against a fresh
+ * app.js. When that happened locally the missing element threw at top level
+ * and took init() with it, so the map lost its pins and results too. A stale
+ * panel should cost you that panel, not the whole page. */
+function wirePanelToggle(toggleId, panelId) {
+  const toggle = document.getElementById(toggleId);
+  const panel = document.getElementById(panelId);
+  if (!toggle || !panel) {
+    console.warn(`[match-map] ${toggleId}/${panelId} missing — stale HTML?`);
+    return;
+  }
+  toggle.addEventListener('click', () => {
+    const collapsed = panel.classList.toggle('collapsed');
+    toggle.setAttribute('aria-expanded', String(!collapsed));
+  });
+}
+
+wirePanelToggle('results-toggle', 'results-panel');
+
+/* -------------------------------------------------------- league table */
+
+function renderStandings(rows) {
+  const panel = document.getElementById('standings-panel');
+  const tbody = document.querySelector('#standings-table tbody');
+  if (!panel || !tbody) return;          // stale HTML; see wirePanelToggle
+
+  if (!rows || !rows.length) {
+    panel.hidden = true;          // no table yet (preseason, or mock data)
+    return;
+  }
+  panel.hidden = false;
+
+  tbody.innerHTML = rows.map((r) => {
+    // European places and the drop zone, by position
+    const zone = r.position <= 4 ? 'ucl'
+               : r.position === 5 ? 'uel'
+               : r.position >= 18 ? 'rel' : '';
+    return `
+      <tr class="${zone}">
+        <td class="st-pos">${r.position}</td>
+        <td class="st-team">
+          ${r.team.crest
+            ? `<img src="${esc(r.team.crest)}" alt="" loading="lazy">` : ''}
+          <span>${esc(r.team.name)}</span>
+        </td>
+        <td class="st-num">${r.played}</td>
+        <td class="st-num">${r.gd > 0 ? '+' : ''}${r.gd}</td>
+        <td class="st-num st-pts">${r.points}</td>
+      </tr>`;
+  }).join('');
+  // Starts collapsed at every width — see index.html. Opening it is a click.
+}
+
+wirePanelToggle('standings-toggle', 'standings-panel');
 
 /* ------------------------------------------------------------------ boot */
 
@@ -306,6 +457,7 @@ async function init() {
   deoverlap();
   map.on('zoomend', deoverlap);
   renderResults(data.recent ?? []);
+  renderStandings(data.standings ?? []);
 
   document.getElementById('empty-state').hidden = today.length > 0;
 
