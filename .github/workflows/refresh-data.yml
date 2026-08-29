@@ -1,0 +1,71 @@
+name: Refresh match data
+
+# Two different jobs share this workflow, distinguished by which cron fired:
+#
+#   06:00 UTC  full run — fixtures AND odds. This one is time-critical: The
+#              Odds API drops an event at kickoff, and the earliest Premier
+#              League start is 11:30 UTC, so odds must be captured before then.
+#              Missing this window means no probabilities for that day, with no
+#              way to recover them.
+#
+#   11:00-23:00 every 2h — scores only. Skips the odds call to save quota and
+#              because started matches are gone from that feed anyway. Without
+#              these, a match finishing at 16:30 would show no score until the
+#              next morning.
+#
+# Odds API usage: ~30 requests/month against a 500 free-tier limit.
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+    - cron: '0 11-23/2 * * *'
+  workflow_dispatch:        # manual runs do a full fetch
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-data       # never let two runs race on the same commit
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # No pip install: fetch_data.py is deliberately stdlib-only.
+
+      - name: Fetch match data
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: |
+          if [ "${{ github.event.schedule }}" = "0 11-23/2 * * *" ]; then
+            echo "scores-only refresh"
+            python3 scripts/fetch_data.py --scores-only
+          else
+            echo "full fetch, including odds"
+            python3 scripts/fetch_data.py
+          fi
+
+      - name: Commit if the data actually changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # --quiet exits non-zero when there IS a change; anything else is a
+          # real error worth failing on rather than silently skipping.
+          if git diff --quiet -- data/matches.json; then
+            echo "no change; nothing to commit"
+            exit 0
+          fi
+
+          git add data/matches.json
+          git commit -m "Refresh match data ($(date -u '+%Y-%m-%d %H:%M UTC'))"
+          git push

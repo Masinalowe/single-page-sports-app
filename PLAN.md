@@ -200,8 +200,19 @@ Each phase is independently reviewable. Nothing is committed without your review
       truncated JSON the page would choke on.
 
 ### Phase 5 — Automation
-- [ ] `.github/workflows/refresh-data.yml` — daily cron, key from GitHub
-      Secrets, commits `data/matches.json` only when it actually changed.
+- [x] `.github/workflows/refresh-data.yml`, keys from GitHub Secrets, commits
+      `data/matches.json` only when it actually changed.
+- [x] **06:00 UTC full run** — fixtures + odds. Time-critical: earliest kickoff
+      is 11:30 UTC and odds vanish at kickoff (§4c), so missing this window
+      loses that day's probabilities permanently.
+- [x] **11:00–23:00 every 2h, scores only** (`--scores-only`). Without these a
+      match finishing at 16:30 would show no score until the next morning.
+      Skips the odds call, so usage stays ~30/month against a 500 limit.
+- [x] `fetch_data.py` reads secrets from the environment before falling back to
+      `.env`, so CI needs no file.
+- [ ] **Needs you:** add `FOOTBALL_DATA_TOKEN` and `ODDS_API_KEY` to the repo's
+      Actions secrets, and push the branch. The workflow cannot run until both
+      exist.
 
 ---
 

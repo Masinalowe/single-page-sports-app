@@ -16,6 +16,7 @@ Reads FOOTBALL_DATA_TOKEN and ODDS_API_KEY from .env. Never prints them.
 """
 
 import json
+import os
 import re
 import sys
 import urllib.error
@@ -38,16 +39,19 @@ JOIN_WINDOW = timedelta(hours=3)
 # ------------------------------------------------------------------- config
 
 def env(name):
+    """Real environment first, so CI can inject secrets without a .env file."""
+    if os.environ.get(name):
+        return os.environ[name]
+
     path = ROOT / ".env"
-    if not path.exists():
-        sys.exit("no .env found")
-    for line in path.read_text().splitlines():
-        line = line.strip()
-        if line.startswith(f"{name}="):
-            val = line.split("=", 1)[1].strip().strip("'\"")
-            if val:
-                return val
-    sys.exit(f"{name} not set in .env")
+    if path.exists():
+        for line in path.read_text().splitlines():
+            line = line.strip()
+            if line.startswith(f"{name}="):
+                val = line.split("=", 1)[1].strip().strip("'\"")
+                if val:
+                    return val
+    sys.exit(f"{name} not set (checked environment and .env)")
 
 
 def get(url, headers=None):
@@ -183,8 +187,13 @@ def build_match(m, stadiums, prob):
 
 
 def main():
+    # Odds only need capturing once, before the day's first kickoff. Later
+    # runs exist to refresh scores, and skip the odds call entirely — both to
+    # save quota and because the feed no longer carries started matches.
+    scores_only = "--scores-only" in sys.argv
+
     fd_token = env("FOOTBALL_DATA_TOKEN")
-    odds_key = env("ODDS_API_KEY")
+    odds_key = None if scores_only else env("ODDS_API_KEY")
     stadiums = {k: v for k, v in
                 json.loads((ROOT / "data" / "stadiums.json").read_text()).items()
                 if not k.startswith("_")}
@@ -202,12 +211,16 @@ def main():
     print(f"fixtures : {len(fixtures)} from {monday} to {today_uk}")
 
     # 2 ------------------------------------------------------------- odds
-    oq = urllib.parse.urlencode({"apiKey": odds_key, "regions": "uk",
-                                 "markets": "h2h", "oddsFormat": "decimal"})
-    events = get(f"{ODDS_BASE}/sports/soccer_epl/odds?{oq}")
-    if not isinstance(events, list):
+    if scores_only:
         events = []
-    print(f"odds     : {len(events)} event(s) priced")
+        print("odds     : skipped (--scores-only), carrying forward previous")
+    else:
+        oq = urllib.parse.urlencode({"apiKey": odds_key, "regions": "uk",
+                                     "markets": "h2h", "oddsFormat": "decimal"})
+        events = get(f"{ODDS_BASE}/sports/soccer_epl/odds?{oq}")
+        if not isinstance(events, list):
+            events = []
+        print(f"odds     : {len(events)} event(s) priced")
 
     odds_index = []
     for e in events:
