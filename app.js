@@ -432,14 +432,7 @@ function renderStandings(rows) {
         <td class="st-num st-pts">${r.points}</td>
       </tr>`;
   }).join('');
-
-  // Twenty rows crowd out the map on a phone, and the map is the point.
-  // Start collapsed there; the header stays tappable.
-  if (window.innerWidth <= 640) {
-    panel.classList.add('collapsed');
-    document.getElementById('standings-toggle')
-      ?.setAttribute('aria-expanded', 'false');
-  }
+  // Starts collapsed at every width — see index.html. Opening it is a click.
 }
 
 wirePanelToggle('standings-toggle', 'standings-panel');

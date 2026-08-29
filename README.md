@@ -59,6 +59,22 @@ python3 scripts/make_mock.py
 It **overwrites** `data/matches.json`. Run `fetch_data.py` again to get real
 data back.
 
+## The monogram wash
+
+The repeating "PL" mark over the page is a **lettermark I drew**, not the
+Premier League lion crest. I can't reproduce that faithfully as hand-written
+SVG, and it's a registered trademark, so this stands in for it.
+
+Swapping in a real asset is a one-line change: replace the `background-image`
+data URI on `#monogram` in `styles.css`. Everything else — the blending, the
+land/water recolouring — works with any image.
+
+It's drawn as a viewport-fixed layer with `mix-blend-mode: multiply` rather
+than being clipped to the coastline. Multiply darkens whatever sits beneath,
+so grey water darkens to grey and purple land darkens to purple on its own,
+per pixel. A mark straddling the coast is genuinely split mid-glyph, and stays
+correct at any zoom without a clip path to keep in sync.
+
 ## Project layout
 
 ```
