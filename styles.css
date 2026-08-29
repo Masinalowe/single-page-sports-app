@@ -377,22 +377,31 @@ html, body {
   z-index: 400;
   pointer-events: none;
   mix-blend-mode: multiply;
-  opacity: .5;
+  opacity: .22;
 
   /* The same file twice, the second offset by half a tile, so a single mark
-     in assets/monogram.svg produces a half-drop pattern. Swap that file to
+     in assets/monogram.png produces a half-drop pattern. Swap that file to
      change the artwork; nothing here needs editing.
 
-     grayscale() so a full-colour asset still multiplies sensibly — without it
-     a coloured logo tints the map rather than shading it. */
-  background-image: url("assets/monogram.svg"), url("assets/monogram.svg");
-  background-size: 160px 160px, 160px 160px;
-  background-position: 0 0, 80px 80px;
+     grayscale() matters here: the lion ships in Premier League purple, and
+     multiplying that over the map would tint the water purple instead of
+     darkening it. Neutralised first, it shades both surfaces in their own
+     hue — darker grey on water, darker purple on land. */
+  background-image: url("assets/monogram.png"), url("assets/monogram.png");
+  /* The lion fills its tile where the old lettermark was mostly whitespace,
+     so it needs a much smaller tile and far less opacity to stay a texture
+     rather than swamping the coastline. */
+  background-size: 78px 78px, 78px 78px;
+  background-position: 0 0, 39px 39px;
   filter: grayscale(1);
 }
 
 @media (max-width: 640px) {
-  #monogram { background-size: 120px 120px; opacity: .45; }
+  #monogram {
+    background-size: 58px 58px, 58px 58px;
+    background-position: 0 0, 29px 29px;
+    opacity: .2;
+  }
 }
 
 /* ------------------------------------------------------------ city labels */
