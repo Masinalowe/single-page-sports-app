@@ -13,7 +13,8 @@ upper right lists matches already concluded this week, with scores.
 |---|---|---|
 | Toolchain | **Zero-build vanilla JS** | No Node/npm/brew on this machine. `python3` is present. A single-page map app doesn't need a bundler. |
 | Map | **Leaflet 1.9 + OpenStreetMap tiles**, via CDN | No API key, no build step, good hover/marker primitives. |
-| Data | **API-Football v3** (api-sports.io) | One API covers fixtures, live status, venue, crests, and win predictions. Free tier = 100 req/day. |
+| Fixtures | **football-data.org v4** | Free tier covers the Premier League, current season, "free forever", 10 calls/min. Ships team crests. |
+| Probability | **The Odds API** | Free tier = 500 req/month; we use ~30. Real bookmaker odds, de-vigged into win/draw/away. |
 | Refresh | **GitHub Action cron** commits `data/matches.json` | API key stays in GitHub Secrets, never in the browser. App remains fully static. |
 | Serving | `python3 -m http.server 8000` | Stdlib. No install. |
 
@@ -76,18 +77,40 @@ values above so the browser never carries that table.
 
 ## 4. Stadium coordinates (the one unavoidable manual bit)
 
-API-Football's venue object has name, address, city, capacity, surface, and an
-image — **but no latitude/longitude**. Pins need coordinates, so we keep our own
-`data/stadiums.json`, keyed by API-Football **team id** (stable across seasons;
-venue name strings are not):
+No free football API returns stadium latitude/longitude. **Verified in Phase 0:**
+API-Football's venue object is exactly `['id', 'name', 'city']` — no coordinates.
+football-data.org is likewise venue-name-only. Pins need coordinates, so we keep
+our own `data/stadiums.json`, keyed by **football-data.org team id** (stable
+across seasons; venue name strings are not):
 
 ```jsonc
-{ "42": { "venue": "Emirates Stadium", "lat": 51.5549, "lon": -0.1084 } }
+{ "57": { "team": "Arsenal", "venue": "Emirates Stadium", "lat": 51.5549, "lon": -0.1084 } }
 ```
 
 20 entries, entered once. Maintenance: three promoted clubs each summer.
 `fetch_data.py` fails loudly on an unknown team id rather than silently dropping
 a pin. Cross-check coordinates against Wikipedia when entering.
+
+> **Re-key needed.** The file currently holds API-Football ids, validated in
+> Phase 0 before we changed providers. football-data.org uses a different id
+> space (Arsenal is 57, not 42), so every key must be remapped. The coordinates
+> themselves stay good — only the keys change.
+
+## 4b. Joining two APIs
+
+Fixtures and odds come from different providers with no shared id, so they're
+matched on **team names plus kickoff time** — the one genuinely fragile seam in
+this design. football-data.org says "Wolverhampton Wanderers FC" where The Odds
+API says "Wolves".
+
+Mitigations:
+- A normalization pass (drop `FC`/`AFC`, casefold, strip punctuation) plus an
+  explicit alias table for the cases normalization won't catch.
+- Match only within a ±3h window of kickoff, so same-name fixtures in different
+  gameweeks can't cross-match.
+- An unmatched fixture still renders its pin — it just shows no probability
+  bar, rather than vanishing. `fetch_data.py` reports every miss so the alias
+  table can grow.
 
 ---
 
@@ -95,14 +118,22 @@ a pin. Cross-check coordinates against Wikipedia when entering.
 
 Each phase is independently reviewable. Nothing is committed without your review.
 
-### Phase 0 — Verify the API *(needs your key)*
-- [ ] You create a free api-sports.io account; key goes in `.env` (gitignored),
-      never in a committed file.
-- [ ] Throwaway script hits `/fixtures` and `/predictions` for one real fixture.
-- [ ] **Confirm the predictions response shape.** Expected is
-      `predictions.percent.{home,draw,away}` as strings like `"45%"`, but the
-      docs site blocks automated reads, so we verify against a live response
-      before building on it.
+### Phase 0 — Verify the APIs
+- [x] api-sports.io key verified via `scripts/verify_api.py`.
+- [x] Confirmed `predictions.percent.{home,draw,away}` really is the shape
+      (strings like `"45%"`).
+- [x] Confirmed venue objects carry **no** coordinates — `stadiums.json` earns
+      its place.
+- [x] Confirmed all 20 stadium entries resolve against the league team list.
+- [x] **Found the blocker:** API-Football's free plan is locked out of the
+      current season (*"Free plans do not have access to this season, try from
+      2022 to 2024"*), which kills the "matches happening today" premise.
+      Provider switched to football-data.org + The Odds API.
+- [ ] Register both free keys, add to `.env` (gitignored):
+      `FOOTBALL_DATA_TOKEN`, `ODDS_API_KEY`.
+- [ ] Re-run verification against the two new APIs: confirm current-season PL
+      fixtures return, capture the real crest URLs, and check how many of a
+      matchday's fixtures the name-matching actually joins to odds.
 
 ### Phase 1 — Static shell
 - [ ] `index.html` + `styles.css`: full-viewport map, England-fitted bounds,
@@ -127,11 +158,16 @@ Each phase is independently reviewable. Nothing is committed without your review
 - [ ] Collapsible, and scrollable past ~6 rows so it never overruns the viewport.
 
 ### Phase 4 — Real data
+- [ ] Re-key `data/stadiums.json` to football-data.org team ids (§4).
 - [ ] `scripts/fetch_data.py`, stdlib only (`urllib`, `json`, `zoneinfo`):
-      one `/fixtures` call for today, one for the week's results, then one
-      `/predictions` call per today-fixture. Worst case ≈ 12 requests/day
-      against a 100/day budget.
-- [ ] Joins stadium coordinates, normalizes status, writes `data/matches.json`.
+      one football-data.org call for today's fixtures, one for the week's
+      results, one Odds API call for current EPL h2h odds. Three requests per
+      run, comfortably inside both free tiers.
+- [ ] De-vig the odds: invert each decimal price to an implied probability,
+      then divide by their sum to strip the bookmaker margin — otherwise the
+      three "probabilities" total ~105%.
+- [ ] Join odds to fixtures by normalized name + kickoff window (§4b), joining
+      stadium coordinates and normalizing status along the way.
 - [ ] Writes to a temp file and renames, so a failed run never leaves a
       truncated JSON the page would choke on.
 

@@ -4,7 +4,7 @@
   "34":   { "team": "Newcastle United",    "venue": "St James' Park",            "city": "Newcastle upon Tyne", "lat": 54.9756, "lon": -1.6217 },
   "35":   { "team": "Bournemouth",         "venue": "Vitality Stadium",          "city": "Bournemouth",         "lat": 50.7348, "lon": -1.8391 },
   "36":   { "team": "Fulham",              "venue": "Craven Cottage",            "city": "London",              "lat": 51.4749, "lon": -0.2217 },
-  "39":   { "team": "Wolverhampton",       "venue": "Molineux Stadium",          "city": "Wolverhampton",       "lat": 52.5903, "lon": -2.1303 },
+  "39":   { "team": "Wolves",              "venue": "Molineux Stadium",          "city": "Wolverhampton",       "lat": 52.5903, "lon": -2.1303 },
   "40":   { "team": "Liverpool",           "venue": "Anfield",                   "city": "Liverpool",           "lat": 53.4308, "lon": -2.9608 },
   "41":   { "team": "Southampton",         "venue": "St Mary's Stadium",         "city": "Southampton",         "lat": 50.9058, "lon": -1.3911 },
   "42":   { "team": "Arsenal",             "venue": "Emirates Stadium",          "city": "London",              "lat": 51.5549, "lon": -0.1084 },
