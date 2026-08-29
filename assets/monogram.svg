@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <!-- Placeholder monogram: a plain PL lettermark.
+
+       REPLACE THIS FILE to change the wash across the map. Nothing else needs
+       editing — styles.css points at this path and tiles it twice with an
+       offset, so a single mark is all this file needs to contain.
+
+       For the land/water effect to read well, supply a SILHOUETTE in one
+       flat colour on a transparent background. The page multiplies this over
+       the map, so a white mark disappears and a full-colour one tints oddly;
+       mid-grey behaves best. styles.css also runs a grayscale filter, which
+       makes a coloured asset usable without editing it.
+
+       Keep the artwork inside the 100x100 viewBox with a little padding, as
+       here, so the tiling stays even. -->
+  <g fill="#8c8c8c"
+     font-family="Helvetica, Arial, sans-serif"
+     font-size="40" font-weight="bold" letter-spacing="-1.5"
+     text-anchor="middle">
+    <text x="50" y="64">PL</text>
+  </g>
+</svg>

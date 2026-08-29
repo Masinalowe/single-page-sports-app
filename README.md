@@ -61,19 +61,41 @@ data back.
 
 ## The monogram wash
 
-The repeating "PL" mark over the page is a **lettermark I drew**, not the
-Premier League lion crest. I can't reproduce that faithfully as hand-written
-SVG, and it's a registered trademark, so this stands in for it.
+### Changing the artwork
 
-Swapping in a real asset is a one-line change: replace the `background-image`
-data URI on `#monogram` in `styles.css`. Everything else — the blending, the
-land/water recolouring — works with any image.
+Replace **`assets/monogram.svg`**. That's the whole procedure — no CSS to edit.
+`styles.css` tiles that one file twice with a half-tile offset, so the file
+only needs to contain a single mark.
 
-It's drawn as a viewport-fixed layer with `mix-blend-mode: multiply` rather
-than being clipped to the coastline. Multiply darkens whatever sits beneath,
-so grey water darkens to grey and purple land darkens to purple on its own,
-per pixel. A mark straddling the coast is genuinely split mid-glyph, and stays
-correct at any zoom without a clip path to keep in sync.
+The file currently holds a plain "PL" lettermark as a placeholder. For the
+Premier League lion, download the official artwork and save it to that path.
+Two things make an asset work well here:
+
+- **A silhouette in one flat colour, transparent background.** The page
+  multiplies the mark over the map, so a white mark vanishes and a full-colour
+  one tints rather than shades. Mid-grey behaves best. A `grayscale()` filter
+  in the CSS makes a coloured file usable without editing it.
+- **Artwork inside the 100×100 viewBox with a little padding**, so tiling stays
+  even.
+
+Note that the Premier League lion is a registered trademark, and this repo is
+public. That's a judgement call about your own repo, which is why the
+placeholder ships instead.
+
+### How the effect works
+
+The wash is a viewport-fixed layer using `mix-blend-mode: multiply`, not two
+layers clipped to the coastline. Multiply darkens whatever sits beneath it, so
+grey water darkens to grey and purple land darkens to purple on its own, per
+pixel. A mark straddling the coast is genuinely split mid-glyph.
+
+The clipping approach is the obvious one and it doesn't work: Leaflet animates
+the coastline path during zoom, so a clip path visibly lags and tears
+mid-animation. Blending has nothing to keep in sync and stays correct at any
+zoom.
+
+Tuning: `opacity` (`.5`, `.45` on phones) and `background-size` (160px, 120px
+on phones) on `#monogram`.
 
 ## Project layout
 
