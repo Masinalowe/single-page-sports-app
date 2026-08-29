@@ -162,15 +162,26 @@ def build_match(m, stadiums, prob):
     if not ground:
         return None, f"no stadium entry for team id {home['id']} ({home['name']})"
 
-    ft = (m.get("score") or {}).get("fullTime") or {}
+    score_obj = m.get("score") or {}
+    ft = score_obj.get("fullTime") or {}
     score = ({"home": ft["home"], "away": ft["away"]}
              if ft.get("home") is not None and ft.get("away") is not None
              else None)
+
+    # Half-time is the most detail the free tier gives. Goals, bookings and
+    # substitutions all come back null, so the expandable result rows show
+    # this instead of scorers.
+    ht = score_obj.get("halfTime") or {}
+    half_time = ({"home": ht["home"], "away": ht["away"]}
+                 if ht.get("home") is not None and ht.get("away") is not None
+                 else None)
 
     return {
         "id": m["id"],
         "kickoff_utc": m["utcDate"],
         "status": normalize_status(m["status"]),
+        "matchday": m.get("matchday"),
+        "half_time": half_time,
         "venue": {
             "name": ground["venue"],
             "city": ground["city"],

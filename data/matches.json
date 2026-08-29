@@ -1,11 +1,16 @@
 {
-  "generated_at": "2026-08-29T21:53:53Z",
+  "generated_at": "2026-08-29T22:52:41Z",
   "season": 2026,
   "today": [
     {
       "id": 560552,
       "kickoff_utc": "2026-08-29T11:30:00Z",
       "status": "finished",
+      "matchday": 2,
+      "half_time": {
+        "home": 0,
+        "away": 1
+      },
       "venue": {
         "name": "Anfield",
         "city": "Liverpool",
@@ -32,6 +37,11 @@
       "id": 560560,
       "kickoff_utc": "2026-08-29T14:00:00Z",
       "status": "finished",
+      "matchday": 2,
+      "half_time": {
+        "home": 1,
+        "away": 0
+      },
       "venue": {
         "name": "Vitality Stadium",
         "city": "Bournemouth",
@@ -58,6 +68,11 @@
       "id": 560561,
       "kickoff_utc": "2026-08-29T14:00:00Z",
       "status": "finished",
+      "matchday": 2,
+      "half_time": {
+        "home": 0,
+        "away": 0
+      },
       "venue": {
         "name": "Coventry Building Society Arena",
         "city": "Coventry",
@@ -84,6 +99,11 @@
       "id": 560558,
       "kickoff_utc": "2026-08-29T16:30:00Z",
       "status": "finished",
+      "matchday": 2,
+      "half_time": {
+        "home": 0,
+        "away": 0
+      },
       "venue": {
         "name": "Tottenham Hotspur Stadium",
         "city": "London",
@@ -112,6 +132,11 @@
       "id": 560555,
       "kickoff_utc": "2026-08-28T19:00:00Z",
       "status": "finished",
+      "matchday": 2,
+      "half_time": {
+        "home": 0,
+        "away": 1
+      },
       "venue": {
         "name": "Selhurst Park",
         "city": "London",
@@ -138,6 +163,11 @@
       "id": 560551,
       "kickoff_utc": "2026-08-24T19:00:00Z",
       "status": "finished",
+      "matchday": 1,
+      "half_time": {
+        "home": 1,
+        "away": 2
+      },
       "venue": {
         "name": "Craven Cottage",
         "city": "London",
