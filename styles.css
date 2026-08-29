@@ -29,13 +29,6 @@ html, body {
 
 #map { position: absolute; inset: 0; background: var(--bg); z-index: 0; }
 
-/* OSM ships a light basemap and needs no API key. Invert + hue-rotate flips it
-   dark while keeping land/water hues roughly true. Scoped to the tile pane so
-   pins and controls above it keep their real colors. */
-.leaflet-tile-pane {
-  filter: invert(1) hue-rotate(180deg) brightness(.92) contrast(.86) saturate(.55);
-}
-
 /* Leaflet's default attribution is bright white; tone it into the theme */
 .leaflet-control-attribution {
   background: rgba(11, 16, 32, .78) !important;

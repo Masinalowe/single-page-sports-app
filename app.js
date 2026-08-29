@@ -64,10 +64,21 @@ const map = L.map('map', {
 
 L.control.zoom({ position: 'bottomright' }).addTo(map);
 
-// Standard OSM tiles: no API key, unlike CARTO's basemaps which now require one.
-// They ship light, so .leaflet-tile-pane inverts them into the dark theme.
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; OpenStreetMap contributors',
+// Esri's Dark Gray Canvas: genuinely dark and keyless, unlike CARTO's dark
+// basemap which now requires one. An earlier version inverted light OSM tiles
+// in CSS instead, but filtering the tile pane composites every 256px tile
+// separately and left visible seams across the map. A natively dark basemap
+// needs no filter, so there are no seams to hide.
+//
+// Base carries no labels — the reference layer draws place names over it.
+const ESRI = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas';
+
+L.tileLayer(`${ESRI}/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}`, {
+  attribution: 'Esri, HERE, Garmin, &copy; OpenStreetMap contributors',
+  maxZoom: 11,
+}).addTo(map);
+
+L.tileLayer(`${ESRI}/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}`, {
   maxZoom: 11,
 }).addTo(map);
 
