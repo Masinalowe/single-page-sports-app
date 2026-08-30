@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T13:02:45Z",
+  "generated_at": "2026-08-30T15:03:01Z",
   "season": 2026,
   "standings": [
     {
@@ -33,16 +33,16 @@
     {
       "position": 3,
       "team": {
-        "id": 397,
-        "name": "Brighton Hove",
-        "crest": "https://crests.football-data.org/397.png"
+        "id": 61,
+        "name": "Chelsea",
+        "crest": "https://crests.football-data.org/61.png"
       },
       "played": 2,
-      "won": 1,
-      "draw": 1,
+      "won": 2,
+      "draw": 0,
       "lost": 0,
-      "gd": 4,
-      "points": 4
+      "gd": 2,
+      "points": 6
     },
     {
       "position": 4,
@@ -89,9 +89,9 @@
     {
       "position": 7,
       "team": {
-        "id": 61,
-        "name": "Chelsea",
-        "crest": "https://crests.football-data.org/61.png"
+        "id": 341,
+        "name": "Leeds United",
+        "crest": "https://crests.football-data.org/341.png"
       },
       "played": 2,
       "won": 1,
@@ -103,16 +103,16 @@
     {
       "position": 8,
       "team": {
-        "id": 341,
-        "name": "Leeds United",
-        "crest": "https://crests.football-data.org/341.png"
+        "id": 397,
+        "name": "Brighton Hove",
+        "crest": "https://crests.football-data.org/397.png"
       },
       "played": 2,
       "won": 1,
-      "draw": 1,
-      "lost": 0,
-      "gd": 1,
-      "points": 4
+      "draw": 0,
+      "lost": 1,
+      "gd": 3,
+      "points": 3
     },
     {
       "position": 9,
@@ -145,6 +145,20 @@
     {
       "position": 11,
       "team": {
+        "id": 71,
+        "name": "Sunderland",
+        "crest": "https://crests.football-data.org/71.png"
+      },
+      "played": 2,
+      "won": 1,
+      "draw": 0,
+      "lost": 1,
+      "gd": 0,
+      "points": 3
+    },
+    {
+      "position": 12,
+      "team": {
         "id": 64,
         "name": "Liverpool",
         "crest": "https://crests.football-data.org/64.png"
@@ -157,7 +171,7 @@
       "points": 2
     },
     {
-      "position": 12,
+      "position": 13,
       "team": {
         "id": 1044,
         "name": "Bournemouth",
@@ -171,21 +185,7 @@
       "points": 1
     },
     {
-      "position": 12,
-      "team": {
-        "id": 63,
-        "name": "Fulham",
-        "crest": "https://crests.football-data.org/63.png"
-      },
-      "played": 2,
-      "won": 0,
-      "draw": 1,
-      "lost": 1,
-      "gd": -1,
-      "points": 1
-    },
-    {
-      "position": 12,
+      "position": 13,
       "team": {
         "id": 351,
         "name": "Nottingham",
@@ -201,16 +201,16 @@
     {
       "position": 15,
       "team": {
-        "id": 71,
-        "name": "Sunderland",
-        "crest": "https://crests.football-data.org/71.png"
+        "id": 63,
+        "name": "Fulham",
+        "crest": "https://crests.football-data.org/63.png"
       },
       "played": 2,
       "won": 0,
-      "draw": 1,
-      "lost": 1,
-      "gd": -1,
-      "points": 1
+      "draw": 0,
+      "lost": 2,
+      "gd": -2,
+      "points": 0
     },
     {
       "position": 16,
@@ -287,9 +287,12 @@
     {
       "id": 560554,
       "kickoff_utc": "2026-08-30T13:00:00Z",
-      "status": "scheduled",
+      "status": "finished",
       "matchday": 2,
-      "half_time": null,
+      "half_time": {
+        "home": 0,
+        "away": 0
+      },
       "venue": {
         "name": "Stadium of Light",
         "city": "Sunderland",
@@ -311,14 +314,20 @@
         "draw": 29,
         "away": 32
       },
-      "score": null
+      "score": {
+        "home": 1,
+        "away": 0
+      }
     },
     {
       "id": 560556,
       "kickoff_utc": "2026-08-30T13:00:00Z",
-      "status": "scheduled",
+      "status": "finished",
       "matchday": 2,
-      "half_time": null,
+      "half_time": {
+        "home": 3,
+        "away": 1
+      },
       "venue": {
         "name": "Stamford Bridge",
         "city": "London",
@@ -340,14 +349,20 @@
         "draw": 25,
         "away": 25
       },
-      "score": null
+      "score": {
+        "home": 4,
+        "away": 3
+      }
     },
     {
       "id": 560559,
       "kickoff_utc": "2026-08-30T13:00:00Z",
-      "status": "scheduled",
+      "status": "finished",
       "matchday": 2,
-      "half_time": null,
+      "half_time": {
+        "home": 0,
+        "away": 1
+      },
       "venue": {
         "name": "Elland Road",
         "city": "Leeds",
@@ -369,7 +384,10 @@
         "draw": 28,
         "away": 35
       },
-      "score": null
+      "score": {
+        "home": 1,
+        "away": 1
+      }
     },
     {
       "id": 560553,
