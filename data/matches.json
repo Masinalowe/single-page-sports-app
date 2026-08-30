@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T23:27:17Z",
+  "generated_at": "2026-08-30T06:01:10Z",
   "season": 2026,
   "standings": [
     {
@@ -336,9 +336,9 @@
         "logo": "https://crests.football-data.org/397.png"
       },
       "probability": {
-        "home": 51,
+        "home": 50,
         "draw": 25,
-        "away": 24
+        "away": 25
       },
       "score": null
     },
@@ -394,9 +394,9 @@
         "logo": "https://crests.football-data.org/349.png"
       },
       "probability": {
-        "home": 68,
+        "home": 69,
         "draw": 19,
-        "away": 13
+        "away": 12
       },
       "score": null
     }
