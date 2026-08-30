@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T21:02:52Z",
+  "generated_at": "2026-08-30T23:02:49Z",
   "season": 2026,
   "standings": [
     {
@@ -285,332 +285,30 @@
   ],
   "today": [
     {
-      "id": 560554,
-      "kickoff_utc": "2026-08-30T13:00:00Z",
-      "status": "finished",
+      "id": 560557,
+      "kickoff_utc": "2026-08-31T19:00:00Z",
+      "status": "scheduled",
       "matchday": 2,
-      "half_time": {
-        "home": 0,
-        "away": 0
-      },
+      "half_time": null,
       "venue": {
-        "name": "Stadium of Light",
-        "city": "Sunderland",
-        "lat": 54.9145,
-        "lon": -1.3882
+        "name": "Villa Park",
+        "city": "Birmingham",
+        "lat": 52.5092,
+        "lon": -1.8848
       },
       "home": {
-        "id": 71,
-        "name": "Sunderland AFC",
-        "logo": "https://crests.football-data.org/71.png"
+        "id": 58,
+        "name": "Aston Villa FC",
+        "logo": "https://crests.football-data.org/58.png"
       },
       "away": {
-        "id": 63,
-        "name": "Fulham FC",
-        "logo": "https://crests.football-data.org/63.png"
+        "id": 57,
+        "name": "Arsenal FC",
+        "logo": "https://crests.football-data.org/57.png"
       },
-      "probability": {
-        "home": 39,
-        "draw": 29,
-        "away": 32
-      },
-      "score": {
-        "home": 1,
-        "away": 0
-      }
-    },
-    {
-      "id": 560556,
-      "kickoff_utc": "2026-08-30T13:00:00Z",
-      "status": "finished",
-      "matchday": 2,
-      "half_time": {
-        "home": 3,
-        "away": 1
-      },
-      "venue": {
-        "name": "Stamford Bridge",
-        "city": "London",
-        "lat": 51.4817,
-        "lon": -0.191
-      },
-      "home": {
-        "id": 61,
-        "name": "Chelsea FC",
-        "logo": "https://crests.football-data.org/61.png"
-      },
-      "away": {
-        "id": 397,
-        "name": "Brighton & Hove Albion FC",
-        "logo": "https://crests.football-data.org/397.png"
-      },
-      "probability": {
-        "home": 50,
-        "draw": 25,
-        "away": 25
-      },
-      "score": {
-        "home": 4,
-        "away": 3
-      }
-    },
-    {
-      "id": 560559,
-      "kickoff_utc": "2026-08-30T13:00:00Z",
-      "status": "finished",
-      "matchday": 2,
-      "half_time": {
-        "home": 0,
-        "away": 1
-      },
-      "venue": {
-        "name": "Elland Road",
-        "city": "Leeds",
-        "lat": 53.7778,
-        "lon": -1.5722
-      },
-      "home": {
-        "id": 341,
-        "name": "Leeds United FC",
-        "logo": "https://crests.football-data.org/341.png"
-      },
-      "away": {
-        "id": 402,
-        "name": "Brentford FC",
-        "logo": "https://crests.football-data.org/402.png"
-      },
-      "probability": {
-        "home": 37,
-        "draw": 28,
-        "away": 35
-      },
-      "score": {
-        "home": 1,
-        "away": 1
-      }
-    },
-    {
-      "id": 560553,
-      "kickoff_utc": "2026-08-30T15:30:00Z",
-      "status": "finished",
-      "matchday": 2,
-      "half_time": {
-        "home": 1,
-        "away": 1
-      },
-      "venue": {
-        "name": "Old Trafford",
-        "city": "Manchester",
-        "lat": 53.4631,
-        "lon": -2.2913
-      },
-      "home": {
-        "id": 66,
-        "name": "Manchester United FC",
-        "logo": "https://crests.football-data.org/66.png"
-      },
-      "away": {
-        "id": 349,
-        "name": "Ipswich Town FC",
-        "logo": "https://crests.football-data.org/349.png"
-      },
-      "probability": {
-        "home": 69,
-        "draw": 19,
-        "away": 12
-      },
-      "score": {
-        "home": 5,
-        "away": 2
-      }
+      "probability": null,
+      "score": null
     }
   ],
-  "recent": [
-    {
-      "id": 560558,
-      "kickoff_utc": "2026-08-29T16:30:00Z",
-      "status": "finished",
-      "matchday": 2,
-      "half_time": {
-        "home": 0,
-        "away": 0
-      },
-      "venue": {
-        "name": "Tottenham Hotspur Stadium",
-        "city": "London",
-        "lat": 51.6043,
-        "lon": -0.0666
-      },
-      "home": {
-        "id": 73,
-        "name": "Tottenham Hotspur FC",
-        "logo": "https://crests.football-data.org/73.png"
-      },
-      "away": {
-        "id": 67,
-        "name": "Newcastle United FC",
-        "logo": "https://crests.football-data.org/67.png"
-      },
-      "probability": null,
-      "score": {
-        "home": 0,
-        "away": 2
-      }
-    },
-    {
-      "id": 560560,
-      "kickoff_utc": "2026-08-29T14:00:00Z",
-      "status": "finished",
-      "matchday": 2,
-      "half_time": {
-        "home": 1,
-        "away": 0
-      },
-      "venue": {
-        "name": "Vitality Stadium",
-        "city": "Bournemouth",
-        "lat": 50.7348,
-        "lon": -1.8391
-      },
-      "home": {
-        "id": 1044,
-        "name": "AFC Bournemouth",
-        "logo": "https://crests.football-data.org/bournemouth.png"
-      },
-      "away": {
-        "id": 62,
-        "name": "Everton FC",
-        "logo": "https://crests.football-data.org/62.png"
-      },
-      "probability": null,
-      "score": {
-        "home": 1,
-        "away": 1
-      }
-    },
-    {
-      "id": 560561,
-      "kickoff_utc": "2026-08-29T14:00:00Z",
-      "status": "finished",
-      "matchday": 2,
-      "half_time": {
-        "home": 0,
-        "away": 0
-      },
-      "venue": {
-        "name": "Coventry Building Society Arena",
-        "city": "Coventry",
-        "lat": 52.4481,
-        "lon": -1.4954
-      },
-      "home": {
-        "id": 1076,
-        "name": "Coventry City FC",
-        "logo": "https://crests.football-data.org/1076.png"
-      },
-      "away": {
-        "id": 322,
-        "name": "Hull City AFC",
-        "logo": "https://crests.football-data.org/322.png"
-      },
-      "probability": null,
-      "score": {
-        "home": 0,
-        "away": 1
-      }
-    },
-    {
-      "id": 560552,
-      "kickoff_utc": "2026-08-29T11:30:00Z",
-      "status": "finished",
-      "matchday": 2,
-      "half_time": {
-        "home": 0,
-        "away": 1
-      },
-      "venue": {
-        "name": "Anfield",
-        "city": "Liverpool",
-        "lat": 53.4308,
-        "lon": -2.9608
-      },
-      "home": {
-        "id": 64,
-        "name": "Liverpool FC",
-        "logo": "https://crests.football-data.org/64.png"
-      },
-      "away": {
-        "id": 351,
-        "name": "Nottingham Forest FC",
-        "logo": "https://crests.football-data.org/351.png"
-      },
-      "probability": null,
-      "score": {
-        "home": 2,
-        "away": 2
-      }
-    },
-    {
-      "id": 560555,
-      "kickoff_utc": "2026-08-28T19:00:00Z",
-      "status": "finished",
-      "matchday": 2,
-      "half_time": {
-        "home": 0,
-        "away": 1
-      },
-      "venue": {
-        "name": "Selhurst Park",
-        "city": "London",
-        "lat": 51.3983,
-        "lon": -0.0855
-      },
-      "home": {
-        "id": 354,
-        "name": "Crystal Palace FC",
-        "logo": "https://crests.football-data.org/354.png"
-      },
-      "away": {
-        "id": 65,
-        "name": "Manchester City FC",
-        "logo": "https://crests.football-data.org/65.png"
-      },
-      "probability": null,
-      "score": {
-        "home": 1,
-        "away": 4
-      }
-    },
-    {
-      "id": 560551,
-      "kickoff_utc": "2026-08-24T19:00:00Z",
-      "status": "finished",
-      "matchday": 1,
-      "half_time": {
-        "home": 1,
-        "away": 2
-      },
-      "venue": {
-        "name": "Craven Cottage",
-        "city": "London",
-        "lat": 51.4749,
-        "lon": -0.2217
-      },
-      "home": {
-        "id": 63,
-        "name": "Fulham FC",
-        "logo": "https://crests.football-data.org/63.png"
-      },
-      "away": {
-        "id": 61,
-        "name": "Chelsea FC",
-        "logo": "https://crests.football-data.org/61.png"
-      },
-      "probability": null,
-      "score": {
-        "home": 2,
-        "away": 3
-      }
-    }
-  ]
+  "recent": []
 }
