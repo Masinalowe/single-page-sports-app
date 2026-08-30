@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T19:03:08Z",
+  "generated_at": "2026-08-30T21:02:52Z",
   "season": 2026,
   "standings": [
     {
@@ -426,6 +426,130 @@
     }
   ],
   "recent": [
+    {
+      "id": 560558,
+      "kickoff_utc": "2026-08-29T16:30:00Z",
+      "status": "finished",
+      "matchday": 2,
+      "half_time": {
+        "home": 0,
+        "away": 0
+      },
+      "venue": {
+        "name": "Tottenham Hotspur Stadium",
+        "city": "London",
+        "lat": 51.6043,
+        "lon": -0.0666
+      },
+      "home": {
+        "id": 73,
+        "name": "Tottenham Hotspur FC",
+        "logo": "https://crests.football-data.org/73.png"
+      },
+      "away": {
+        "id": 67,
+        "name": "Newcastle United FC",
+        "logo": "https://crests.football-data.org/67.png"
+      },
+      "probability": null,
+      "score": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    {
+      "id": 560560,
+      "kickoff_utc": "2026-08-29T14:00:00Z",
+      "status": "finished",
+      "matchday": 2,
+      "half_time": {
+        "home": 1,
+        "away": 0
+      },
+      "venue": {
+        "name": "Vitality Stadium",
+        "city": "Bournemouth",
+        "lat": 50.7348,
+        "lon": -1.8391
+      },
+      "home": {
+        "id": 1044,
+        "name": "AFC Bournemouth",
+        "logo": "https://crests.football-data.org/bournemouth.png"
+      },
+      "away": {
+        "id": 62,
+        "name": "Everton FC",
+        "logo": "https://crests.football-data.org/62.png"
+      },
+      "probability": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    {
+      "id": 560561,
+      "kickoff_utc": "2026-08-29T14:00:00Z",
+      "status": "finished",
+      "matchday": 2,
+      "half_time": {
+        "home": 0,
+        "away": 0
+      },
+      "venue": {
+        "name": "Coventry Building Society Arena",
+        "city": "Coventry",
+        "lat": 52.4481,
+        "lon": -1.4954
+      },
+      "home": {
+        "id": 1076,
+        "name": "Coventry City FC",
+        "logo": "https://crests.football-data.org/1076.png"
+      },
+      "away": {
+        "id": 322,
+        "name": "Hull City AFC",
+        "logo": "https://crests.football-data.org/322.png"
+      },
+      "probability": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      }
+    },
+    {
+      "id": 560552,
+      "kickoff_utc": "2026-08-29T11:30:00Z",
+      "status": "finished",
+      "matchday": 2,
+      "half_time": {
+        "home": 0,
+        "away": 1
+      },
+      "venue": {
+        "name": "Anfield",
+        "city": "Liverpool",
+        "lat": 53.4308,
+        "lon": -2.9608
+      },
+      "home": {
+        "id": 64,
+        "name": "Liverpool FC",
+        "logo": "https://crests.football-data.org/64.png"
+      },
+      "away": {
+        "id": 351,
+        "name": "Nottingham Forest FC",
+        "logo": "https://crests.football-data.org/351.png"
+      },
+      "probability": null,
+      "score": {
+        "home": 2,
+        "away": 2
+      }
+    },
     {
       "id": 560555,
       "kickoff_utc": "2026-08-28T19:00:00Z",
