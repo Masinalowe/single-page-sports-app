@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T23:02:49Z",
+  "generated_at": "2026-08-31T06:00:52Z",
   "season": 2026,
   "standings": [
     {
@@ -306,7 +306,11 @@
         "name": "Arsenal FC",
         "logo": "https://crests.football-data.org/57.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 15,
+        "draw": 22,
+        "away": 63
+      },
       "score": null
     }
   ],
