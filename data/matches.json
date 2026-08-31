@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T06:00:52Z",
+  "generated_at": "2026-08-31T19:03:19Z",
   "season": 2026,
   "standings": [
     {
@@ -61,6 +61,20 @@
     {
       "position": 5,
       "team": {
+        "id": 57,
+        "name": "Arsenal",
+        "crest": "https://crests.football-data.org/57.png"
+      },
+      "played": 2,
+      "won": 1,
+      "draw": 1,
+      "lost": 0,
+      "gd": 3,
+      "points": 4
+    },
+    {
+      "position": 6,
+      "team": {
         "id": 67,
         "name": "Newcastle",
         "crest": "https://crests.football-data.org/67.png"
@@ -73,7 +87,7 @@
       "points": 4
     },
     {
-      "position": 6,
+      "position": 7,
       "team": {
         "id": 62,
         "name": "Everton",
@@ -87,7 +101,7 @@
       "points": 4
     },
     {
-      "position": 7,
+      "position": 8,
       "team": {
         "id": 341,
         "name": "Leeds United",
@@ -101,7 +115,7 @@
       "points": 4
     },
     {
-      "position": 8,
+      "position": 9,
       "team": {
         "id": 397,
         "name": "Brighton Hove",
@@ -111,20 +125,6 @@
       "won": 1,
       "draw": 0,
       "lost": 1,
-      "gd": 3,
-      "points": 3
-    },
-    {
-      "position": 9,
-      "team": {
-        "id": 57,
-        "name": "Arsenal",
-        "crest": "https://crests.football-data.org/57.png"
-      },
-      "played": 1,
-      "won": 1,
-      "draw": 0,
-      "lost": 0,
       "gd": 3,
       "points": 3
     },
@@ -215,6 +215,20 @@
     {
       "position": 16,
       "team": {
+        "id": 58,
+        "name": "Aston Villa",
+        "crest": "https://crests.football-data.org/58.png"
+      },
+      "played": 2,
+      "won": 0,
+      "draw": 1,
+      "lost": 1,
+      "gd": -4,
+      "points": 1
+    },
+    {
+      "position": 17,
+      "team": {
         "id": 63,
         "name": "Fulham",
         "crest": "https://crests.football-data.org/63.png"
@@ -227,21 +241,7 @@
       "points": 0
     },
     {
-      "position": 17,
-      "team": {
-        "id": 58,
-        "name": "Aston Villa",
-        "crest": "https://crests.football-data.org/58.png"
-      },
-      "played": 1,
-      "won": 0,
-      "draw": 0,
-      "lost": 1,
-      "gd": -4,
-      "points": 0
-    },
-    {
-      "position": 17,
+      "position": 18,
       "team": {
         "id": 1076,
         "name": "Coventry City",
