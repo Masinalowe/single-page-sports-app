@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T19:03:19Z",
+  "generated_at": "2026-08-31T21:03:13Z",
   "season": 2026,
   "standings": [
     {
@@ -19,6 +19,20 @@
     {
       "position": 2,
       "team": {
+        "id": 57,
+        "name": "Arsenal",
+        "crest": "https://crests.football-data.org/57.png"
+      },
+      "played": 2,
+      "won": 2,
+      "draw": 0,
+      "lost": 0,
+      "gd": 4,
+      "points": 6
+    },
+    {
+      "position": 3,
+      "team": {
         "id": 322,
         "name": "Hull City",
         "crest": "https://crests.football-data.org/322.png"
@@ -31,7 +45,7 @@
       "points": 6
     },
     {
-      "position": 3,
+      "position": 4,
       "team": {
         "id": 61,
         "name": "Chelsea",
@@ -45,25 +59,11 @@
       "points": 6
     },
     {
-      "position": 4,
+      "position": 5,
       "team": {
         "id": 402,
         "name": "Brentford",
         "crest": "https://crests.football-data.org/402.png"
-      },
-      "played": 2,
-      "won": 1,
-      "draw": 1,
-      "lost": 0,
-      "gd": 3,
-      "points": 4
-    },
-    {
-      "position": 5,
-      "team": {
-        "id": 57,
-        "name": "Arsenal",
-        "crest": "https://crests.football-data.org/57.png"
       },
       "played": 2,
       "won": 1,
@@ -215,20 +215,6 @@
     {
       "position": 16,
       "team": {
-        "id": 58,
-        "name": "Aston Villa",
-        "crest": "https://crests.football-data.org/58.png"
-      },
-      "played": 2,
-      "won": 0,
-      "draw": 1,
-      "lost": 1,
-      "gd": -4,
-      "points": 1
-    },
-    {
-      "position": 17,
-      "team": {
         "id": 63,
         "name": "Fulham",
         "crest": "https://crests.football-data.org/63.png"
@@ -241,7 +227,7 @@
       "points": 0
     },
     {
-      "position": 18,
+      "position": 17,
       "team": {
         "id": 1076,
         "name": "Coventry City",
@@ -255,7 +241,7 @@
       "points": 0
     },
     {
-      "position": 19,
+      "position": 18,
       "team": {
         "id": 354,
         "name": "Crystal Palace",
@@ -269,7 +255,21 @@
       "points": 0
     },
     {
-      "position": 20,
+      "position": 19,
+      "team": {
+        "id": 58,
+        "name": "Aston Villa",
+        "crest": "https://crests.football-data.org/58.png"
+      },
+      "played": 2,
+      "won": 0,
+      "draw": 0,
+      "lost": 2,
+      "gd": -5,
+      "points": 0
+    },
+    {
+      "position": 19,
       "team": {
         "id": 73,
         "name": "Tottenham",
@@ -287,9 +287,12 @@
     {
       "id": 560557,
       "kickoff_utc": "2026-08-31T19:00:00Z",
-      "status": "scheduled",
+      "status": "live",
       "matchday": 2,
-      "half_time": null,
+      "half_time": {
+        "home": 0,
+        "away": 0
+      },
       "venue": {
         "name": "Villa Park",
         "city": "Birmingham",
@@ -311,7 +314,10 @@
         "draw": 22,
         "away": 63
       },
-      "score": null
+      "score": {
+        "home": 0,
+        "away": 1
+      }
     }
   ],
   "recent": []
