@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T21:03:13Z",
+  "generated_at": "2026-08-31T23:02:53Z",
   "season": 2026,
   "standings": [
     {
@@ -283,11 +283,12 @@
       "points": 0
     }
   ],
-  "today": [
+  "today": [],
+  "recent": [
     {
       "id": 560557,
       "kickoff_utc": "2026-08-31T19:00:00Z",
-      "status": "live",
+      "status": "finished",
       "matchday": 2,
       "half_time": {
         "home": 0,
@@ -319,6 +320,5 @@
         "away": 1
       }
     }
-  ],
-  "recent": []
+  ]
 }
