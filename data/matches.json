@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T23:02:53Z",
+  "generated_at": "2026-09-03T23:04:32Z",
   "season": 2026,
   "standings": [
     {
@@ -283,7 +283,33 @@
       "points": 0
     }
   ],
-  "today": [],
+  "today": [
+    {
+      "id": 560566,
+      "kickoff_utc": "2026-09-04T19:00:00Z",
+      "status": "scheduled",
+      "matchday": 3,
+      "half_time": null,
+      "venue": {
+        "name": "Portman Road",
+        "city": "Ipswich",
+        "lat": 52.055,
+        "lon": 1.145
+      },
+      "home": {
+        "id": 349,
+        "name": "Ipswich Town FC",
+        "logo": "https://crests.football-data.org/349.png"
+      },
+      "away": {
+        "id": 64,
+        "name": "Liverpool FC",
+        "logo": "https://crests.football-data.org/64.png"
+      },
+      "probability": null,
+      "score": null
+    }
+  ],
   "recent": [
     {
       "id": 560557,
