@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T21:04:38Z",
+  "generated_at": "2026-09-04T23:04:37Z",
   "season": 2026,
   "standings": [
     {
@@ -285,6 +285,183 @@
   ],
   "today": [
     {
+      "id": 560571,
+      "kickoff_utc": "2026-09-05T11:30:00Z",
+      "status": "scheduled",
+      "matchday": 3,
+      "half_time": null,
+      "venue": {
+        "name": "St James' Park",
+        "city": "Newcastle upon Tyne",
+        "lat": 54.9756,
+        "lon": -1.6217
+      },
+      "home": {
+        "id": 67,
+        "name": "Newcastle United FC",
+        "logo": "https://crests.football-data.org/67.png"
+      },
+      "away": {
+        "id": 1044,
+        "name": "AFC Bournemouth",
+        "logo": "https://crests.football-data.org/bournemouth.png"
+      },
+      "probability": null,
+      "score": null
+    },
+    {
+      "id": 560562,
+      "kickoff_utc": "2026-09-05T14:00:00Z",
+      "status": "scheduled",
+      "matchday": 3,
+      "half_time": null,
+      "venue": {
+        "name": "The City Ground",
+        "city": "Nottingham",
+        "lat": 52.94,
+        "lon": -1.1329
+      },
+      "home": {
+        "id": 351,
+        "name": "Nottingham Forest FC",
+        "logo": "https://crests.football-data.org/351.png"
+      },
+      "away": {
+        "id": 73,
+        "name": "Tottenham Hotspur FC",
+        "logo": "https://crests.football-data.org/73.png"
+      },
+      "probability": null,
+      "score": null
+    },
+    {
+      "id": 560563,
+      "kickoff_utc": "2026-09-05T14:00:00Z",
+      "status": "scheduled",
+      "matchday": 3,
+      "half_time": null,
+      "venue": {
+        "name": "Etihad Stadium",
+        "city": "Manchester",
+        "lat": 53.4831,
+        "lon": -2.2004
+      },
+      "home": {
+        "id": 65,
+        "name": "Manchester City FC",
+        "logo": "https://crests.football-data.org/65.png"
+      },
+      "away": {
+        "id": 1076,
+        "name": "Coventry City FC",
+        "logo": "https://crests.football-data.org/1076.png"
+      },
+      "probability": null,
+      "score": null
+    },
+    {
+      "id": 560564,
+      "kickoff_utc": "2026-09-05T14:00:00Z",
+      "status": "scheduled",
+      "matchday": 3,
+      "half_time": null,
+      "venue": {
+        "name": "Amex Stadium",
+        "city": "Brighton",
+        "lat": 50.8616,
+        "lon": -0.0837
+      },
+      "home": {
+        "id": 397,
+        "name": "Brighton & Hove Albion FC",
+        "logo": "https://crests.football-data.org/397.png"
+      },
+      "away": {
+        "id": 341,
+        "name": "Leeds United FC",
+        "logo": "https://crests.football-data.org/341.png"
+      },
+      "probability": null,
+      "score": null
+    },
+    {
+      "id": 560565,
+      "kickoff_utc": "2026-09-05T14:00:00Z",
+      "status": "scheduled",
+      "matchday": 3,
+      "half_time": null,
+      "venue": {
+        "name": "Gtech Community Stadium",
+        "city": "London",
+        "lat": 51.4907,
+        "lon": -0.2887
+      },
+      "home": {
+        "id": 402,
+        "name": "Brentford FC",
+        "logo": "https://crests.football-data.org/402.png"
+      },
+      "away": {
+        "id": 71,
+        "name": "Sunderland AFC",
+        "logo": "https://crests.football-data.org/71.png"
+      },
+      "probability": null,
+      "score": null
+    },
+    {
+      "id": 560568,
+      "kickoff_utc": "2026-09-05T14:00:00Z",
+      "status": "scheduled",
+      "matchday": 3,
+      "half_time": null,
+      "venue": {
+        "name": "Craven Cottage",
+        "city": "London",
+        "lat": 51.4749,
+        "lon": -0.2217
+      },
+      "home": {
+        "id": 63,
+        "name": "Fulham FC",
+        "logo": "https://crests.football-data.org/63.png"
+      },
+      "away": {
+        "id": 354,
+        "name": "Crystal Palace FC",
+        "logo": "https://crests.football-data.org/354.png"
+      },
+      "probability": null,
+      "score": null
+    },
+    {
+      "id": 560569,
+      "kickoff_utc": "2026-09-05T16:30:00Z",
+      "status": "scheduled",
+      "matchday": 3,
+      "half_time": null,
+      "venue": {
+        "name": "MKM Stadium",
+        "city": "Hull",
+        "lat": 53.746,
+        "lon": -0.3676
+      },
+      "home": {
+        "id": 322,
+        "name": "Hull City AFC",
+        "logo": "https://crests.football-data.org/322.png"
+      },
+      "away": {
+        "id": 58,
+        "name": "Aston Villa FC",
+        "logo": "https://crests.football-data.org/58.png"
+      },
+      "probability": null,
+      "score": null
+    }
+  ],
+  "recent": [
+    {
       "id": 560566,
       "kickoff_utc": "2026-09-04T19:00:00Z",
       "status": "finished",
@@ -318,13 +495,11 @@
         "home": 0,
         "away": 2
       }
-    }
-  ],
-  "recent": [
+    },
     {
       "id": 560557,
       "kickoff_utc": "2026-08-31T19:00:00Z",
-      "status": "finished",
+      "status": "scheduled",
       "matchday": 2,
       "half_time": {
         "home": 0,
