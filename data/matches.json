@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T23:04:32Z",
+  "generated_at": "2026-09-04T06:01:10Z",
   "season": 2026,
   "standings": [
     {
@@ -306,7 +306,11 @@
         "name": "Liverpool FC",
         "logo": "https://crests.football-data.org/64.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 16,
+        "draw": 19,
+        "away": 65
+      },
       "score": null
     }
   ],
