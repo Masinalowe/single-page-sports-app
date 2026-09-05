@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T17:04:40Z",
+  "generated_at": "2026-09-05T19:04:20Z",
   "season": 2026,
   "standings": [
     {
@@ -497,9 +497,12 @@
     {
       "id": 560569,
       "kickoff_utc": "2026-09-05T16:30:00Z",
-      "status": "live",
+      "status": "finished",
       "matchday": 3,
-      "half_time": null,
+      "half_time": {
+        "home": 0,
+        "away": 0
+      },
       "venue": {
         "name": "MKM Stadium",
         "city": "Hull",
