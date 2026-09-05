@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T23:04:37Z",
+  "generated_at": "2026-09-05T06:01:08Z",
   "season": 2026,
   "standings": [
     {
@@ -306,7 +306,11 @@
         "name": "AFC Bournemouth",
         "logo": "https://crests.football-data.org/bournemouth.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 46,
+        "draw": 26,
+        "away": 28
+      },
       "score": null
     },
     {
@@ -331,7 +335,11 @@
         "name": "Tottenham Hotspur FC",
         "logo": "https://crests.football-data.org/73.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 40,
+        "draw": 28,
+        "away": 32
+      },
       "score": null
     },
     {
@@ -356,7 +364,11 @@
         "name": "Coventry City FC",
         "logo": "https://crests.football-data.org/1076.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 83,
+        "draw": 11,
+        "away": 6
+      },
       "score": null
     },
     {
@@ -381,7 +393,11 @@
         "name": "Leeds United FC",
         "logo": "https://crests.football-data.org/341.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 47,
+        "draw": 27,
+        "away": 26
+      },
       "score": null
     },
     {
@@ -406,7 +422,11 @@
         "name": "Sunderland AFC",
         "logo": "https://crests.football-data.org/71.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 55,
+        "draw": 25,
+        "away": 20
+      },
       "score": null
     },
     {
@@ -431,7 +451,11 @@
         "name": "Crystal Palace FC",
         "logo": "https://crests.football-data.org/354.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 43,
+        "draw": 28,
+        "away": 29
+      },
       "score": null
     },
     {
@@ -456,7 +480,11 @@
         "name": "Aston Villa FC",
         "logo": "https://crests.football-data.org/58.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 23,
+        "draw": 27,
+        "away": 50
+      },
       "score": null
     }
   ],
@@ -499,7 +527,7 @@
     {
       "id": 560557,
       "kickoff_utc": "2026-08-31T19:00:00Z",
-      "status": "scheduled",
+      "status": "finished",
       "matchday": 2,
       "half_time": {
         "home": 0,
