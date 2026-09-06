@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T13:04:32Z",
+  "generated_at": "2026-09-06T15:04:56Z",
   "season": 2026,
   "standings": [
     {
@@ -287,9 +287,12 @@
     {
       "id": 560567,
       "kickoff_utc": "2026-09-06T13:00:00Z",
-      "status": "scheduled",
+      "status": "finished",
       "matchday": 3,
-      "half_time": null,
+      "half_time": {
+        "home": 0,
+        "away": 0
+      },
       "venue": {
         "name": "Hill Dickinson Stadium",
         "city": "Liverpool",
@@ -311,7 +314,10 @@
         "draw": 26,
         "away": 46
       },
-      "score": null
+      "score": {
+        "home": 2,
+        "away": 2
+      }
     },
     {
       "id": 560570,
