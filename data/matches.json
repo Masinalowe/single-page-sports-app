@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T15:04:56Z",
+  "generated_at": "2026-09-06T17:04:20Z",
   "season": 2026,
   "standings": [
     {
@@ -19,6 +19,20 @@
     {
       "position": 2,
       "team": {
+        "id": 57,
+        "name": "Arsenal",
+        "crest": "https://crests.football-data.org/57.png"
+      },
+      "played": 3,
+      "won": 3,
+      "draw": 0,
+      "lost": 0,
+      "gd": 5,
+      "points": 9
+    },
+    {
+      "position": 3,
+      "team": {
         "id": 322,
         "name": "Hull City",
         "crest": "https://crests.football-data.org/322.png"
@@ -31,31 +45,17 @@
       "points": 7
     },
     {
-      "position": 3,
-      "team": {
-        "id": 57,
-        "name": "Arsenal",
-        "crest": "https://crests.football-data.org/57.png"
-      },
-      "played": 2,
-      "won": 2,
-      "draw": 0,
-      "lost": 0,
-      "gd": 4,
-      "points": 6
-    },
-    {
       "position": 4,
       "team": {
         "id": 61,
         "name": "Chelsea",
         "crest": "https://crests.football-data.org/61.png"
       },
-      "played": 2,
+      "played": 3,
       "won": 2,
       "draw": 0,
-      "lost": 0,
-      "gd": 2,
+      "lost": 1,
+      "gd": 1,
       "points": 6
     },
     {
@@ -322,9 +322,12 @@
     {
       "id": 560570,
       "kickoff_utc": "2026-09-06T15:30:00Z",
-      "status": "scheduled",
+      "status": "live",
       "matchday": 3,
-      "half_time": null,
+      "half_time": {
+        "home": 1,
+        "away": 1
+      },
       "venue": {
         "name": "Emirates Stadium",
         "city": "London",
@@ -346,7 +349,10 @@
         "draw": 25,
         "away": 19
       },
-      "score": null
+      "score": {
+        "home": 2,
+        "away": 1
+      }
     }
   ],
   "recent": [
