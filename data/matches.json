@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T23:04:16Z",
+  "generated_at": "2026-09-06T06:01:04Z",
   "season": 2026,
   "standings": [
     {
@@ -306,7 +306,11 @@
         "name": "Manchester United FC",
         "logo": "https://crests.football-data.org/66.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 28,
+        "draw": 26,
+        "away": 46
+      },
       "score": null
     },
     {
@@ -331,7 +335,11 @@
         "name": "Chelsea FC",
         "logo": "https://crests.football-data.org/61.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 56,
+        "draw": 25,
+        "away": 19
+      },
       "score": null
     }
   ],
