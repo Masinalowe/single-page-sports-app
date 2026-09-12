@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T19:04:07Z",
+  "generated_at": "2026-09-12T21:04:32Z",
   "season": 2026,
   "standings": [
     {
@@ -10,11 +10,11 @@
         "crest": "https://crests.football-data.org/57.png"
       },
       "played": 4,
-      "won": 3,
-      "draw": 1,
+      "won": 4,
+      "draw": 0,
       "lost": 0,
-      "gd": 5,
-      "points": 10
+      "gd": 6,
+      "points": 12
     },
     {
       "position": 2,
@@ -159,20 +159,6 @@
     {
       "position": 12,
       "team": {
-        "id": 71,
-        "name": "Sunderland",
-        "crest": "https://crests.football-data.org/71.png"
-      },
-      "played": 4,
-      "won": 1,
-      "draw": 2,
-      "lost": 1,
-      "gd": 0,
-      "points": 5
-    },
-    {
-      "position": 13,
-      "team": {
         "id": 397,
         "name": "Brighton Hove",
         "crest": "https://crests.football-data.org/397.png"
@@ -185,7 +171,7 @@
       "points": 4
     },
     {
-      "position": 14,
+      "position": 13,
       "team": {
         "id": 66,
         "name": "Man United",
@@ -196,6 +182,20 @@
       "draw": 1,
       "lost": 1,
       "gd": 1,
+      "points": 4
+    },
+    {
+      "position": 14,
+      "team": {
+        "id": 71,
+        "name": "Sunderland",
+        "crest": "https://crests.football-data.org/71.png"
+      },
+      "played": 4,
+      "won": 1,
+      "draw": 1,
+      "lost": 2,
+      "gd": -1,
       "points": 4
     },
     {
@@ -497,9 +497,12 @@
     {
       "id": 560577,
       "kickoff_utc": "2026-09-12T19:00:00Z",
-      "status": "scheduled",
+      "status": "finished",
       "matchday": 4,
-      "half_time": null,
+      "half_time": {
+        "home": 0,
+        "away": 0
+      },
       "venue": {
         "name": "Stadium of Light",
         "city": "Sunderland",
@@ -521,7 +524,10 @@
         "draw": 24,
         "away": 62
       },
-      "score": null
+      "score": {
+        "home": 0,
+        "away": 2
+      }
     }
   ],
   "recent": []
