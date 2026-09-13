@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-13T13:04:35Z",
+  "generated_at": "2026-09-13T15:04:42Z",
   "season": 2026,
   "standings": [
     {
@@ -47,6 +47,20 @@
     {
       "position": 4,
       "team": {
+        "id": 397,
+        "name": "Brighton Hove",
+        "crest": "https://crests.football-data.org/397.png"
+      },
+      "played": 4,
+      "won": 2,
+      "draw": 1,
+      "lost": 1,
+      "gd": 8,
+      "points": 7
+    },
+    {
+      "position": 5,
+      "team": {
         "id": 61,
         "name": "Chelsea",
         "crest": "https://crests.football-data.org/61.png"
@@ -59,7 +73,7 @@
       "points": 7
     },
     {
-      "position": 5,
+      "position": 6,
       "team": {
         "id": 402,
         "name": "Brentford",
@@ -73,7 +87,7 @@
       "points": 6
     },
     {
-      "position": 6,
+      "position": 7,
       "team": {
         "id": 64,
         "name": "Liverpool",
@@ -87,7 +101,7 @@
       "points": 6
     },
     {
-      "position": 7,
+      "position": 8,
       "team": {
         "id": 62,
         "name": "Everton",
@@ -101,7 +115,7 @@
       "points": 6
     },
     {
-      "position": 8,
+      "position": 9,
       "team": {
         "id": 349,
         "name": "Ipswich Town",
@@ -113,20 +127,6 @@
       "lost": 2,
       "gd": -3,
       "points": 6
-    },
-    {
-      "position": 9,
-      "team": {
-        "id": 397,
-        "name": "Brighton Hove",
-        "crest": "https://crests.football-data.org/397.png"
-      },
-      "played": 4,
-      "won": 1,
-      "draw": 2,
-      "lost": 1,
-      "gd": 3,
-      "points": 5
     },
     {
       "position": 10,
@@ -257,20 +257,6 @@
     {
       "position": 19,
       "team": {
-        "id": 1076,
-        "name": "Coventry City",
-        "crest": "https://crests.football-data.org/1076.png"
-      },
-      "played": 4,
-      "won": 0,
-      "draw": 1,
-      "lost": 3,
-      "gd": -5,
-      "points": 1
-    },
-    {
-      "position": 20,
-      "team": {
         "id": 58,
         "name": "Aston Villa",
         "crest": "https://crests.football-data.org/58.png"
@@ -281,15 +267,32 @@
       "lost": 3,
       "gd": -6,
       "points": 1
+    },
+    {
+      "position": 20,
+      "team": {
+        "id": 1076,
+        "name": "Coventry City",
+        "crest": "https://crests.football-data.org/1076.png"
+      },
+      "played": 4,
+      "won": 0,
+      "draw": 0,
+      "lost": 4,
+      "gd": -10,
+      "points": 0
     }
   ],
   "today": [
     {
       "id": 560578,
       "kickoff_utc": "2026-09-13T13:00:00Z",
-      "status": "scheduled",
+      "status": "finished",
       "matchday": 4,
-      "half_time": null,
+      "half_time": {
+        "home": 0,
+        "away": 1
+      },
       "venue": {
         "name": "Coventry Building Society Arena",
         "city": "Coventry",
@@ -311,7 +314,10 @@
         "draw": 26,
         "away": 49
       },
-      "score": null
+      "score": {
+        "home": 0,
+        "away": 5
+      }
     },
     {
       "id": 560580,
