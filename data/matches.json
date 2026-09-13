@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-13T17:04:25Z",
+  "generated_at": "2026-09-13T19:04:01Z",
   "season": 2026,
   "standings": [
     {
@@ -322,7 +322,7 @@
     {
       "id": 560580,
       "kickoff_utc": "2026-09-13T15:30:00Z",
-      "status": "live",
+      "status": "finished",
       "matchday": 4,
       "half_time": {
         "home": 0,
