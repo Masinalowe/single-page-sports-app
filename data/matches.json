@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T23:04:24Z",
+  "generated_at": "2026-09-13T06:01:09Z",
   "season": 2026,
   "standings": [
     {
@@ -306,7 +306,11 @@
         "name": "Brighton & Hove Albion FC",
         "logo": "https://crests.football-data.org/397.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 25,
+        "draw": 26,
+        "away": 49
+      },
       "score": null
     },
     {
@@ -331,7 +335,11 @@
         "name": "Manchester City FC",
         "logo": "https://crests.football-data.org/65.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 31,
+        "draw": 25,
+        "away": 44
+      },
       "score": null
     }
   ],
