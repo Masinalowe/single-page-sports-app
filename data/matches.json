@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-14T21:05:06Z",
+  "generated_at": "2026-09-14T23:04:33Z",
   "season": 2026,
   "standings": [
     {
@@ -283,7 +283,8 @@
       "points": 0
     }
   ],
-  "today": [
+  "today": [],
+  "recent": [
     {
       "id": 560579,
       "kickoff_utc": "2026-09-14T19:00:00Z",
@@ -319,6 +320,5 @@
         "away": 1
       }
     }
-  ],
-  "recent": []
+  ]
 }
