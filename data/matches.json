@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-13T23:04:30Z",
+  "generated_at": "2026-09-14T06:01:28Z",
   "season": 2026,
   "standings": [
     {
@@ -306,7 +306,11 @@
         "name": "Newcastle United FC",
         "logo": "https://crests.football-data.org/67.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 41,
+        "draw": 27,
+        "away": 32
+      },
       "score": null
     }
   ],
