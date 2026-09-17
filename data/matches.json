@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-14T23:04:33Z",
+  "generated_at": "2026-09-17T23:04:27Z",
   "season": 2026,
   "standings": [
     {
@@ -283,7 +283,33 @@
       "points": 0
     }
   ],
-  "today": [],
+  "today": [
+    {
+      "id": 560591,
+      "kickoff_utc": "2026-09-18T19:00:00Z",
+      "status": "scheduled",
+      "matchday": 5,
+      "half_time": null,
+      "venue": {
+        "name": "Gtech Community Stadium",
+        "city": "London",
+        "lat": 51.4907,
+        "lon": -0.2887
+      },
+      "home": {
+        "id": 402,
+        "name": "Brentford FC",
+        "logo": "https://crests.football-data.org/402.png"
+      },
+      "away": {
+        "id": 61,
+        "name": "Chelsea FC",
+        "logo": "https://crests.football-data.org/61.png"
+      },
+      "probability": null,
+      "score": null
+    }
+  ],
   "recent": [
     {
       "id": 560579,
