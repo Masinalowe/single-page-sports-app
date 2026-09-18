@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T19:05:15Z",
+  "generated_at": "2026-09-18T21:04:40Z",
   "season": 2026,
   "standings": [
     {
@@ -33,6 +33,20 @@
     {
       "position": 3,
       "team": {
+        "id": 402,
+        "name": "Brentford",
+        "crest": "https://crests.football-data.org/402.png"
+      },
+      "played": 5,
+      "won": 2,
+      "draw": 3,
+      "lost": 0,
+      "gd": 6,
+      "points": 9
+    },
+    {
+      "position": 4,
+      "team": {
         "id": 341,
         "name": "Leeds United",
         "crest": "https://crests.football-data.org/341.png"
@@ -45,7 +59,7 @@
       "points": 8
     },
     {
-      "position": 4,
+      "position": 5,
       "team": {
         "id": 322,
         "name": "Hull City",
@@ -56,20 +70,6 @@
       "draw": 2,
       "lost": 0,
       "gd": 3,
-      "points": 8
-    },
-    {
-      "position": 5,
-      "team": {
-        "id": 61,
-        "name": "Chelsea",
-        "crest": "https://crests.football-data.org/61.png"
-      },
-      "played": 5,
-      "won": 2,
-      "draw": 2,
-      "lost": 1,
-      "gd": 1,
       "points": 8
     },
     {
@@ -89,15 +89,15 @@
     {
       "position": 7,
       "team": {
-        "id": 402,
-        "name": "Brentford",
-        "crest": "https://crests.football-data.org/402.png"
+        "id": 61,
+        "name": "Chelsea",
+        "crest": "https://crests.football-data.org/61.png"
       },
       "played": 5,
-      "won": 1,
-      "draw": 4,
-      "lost": 0,
-      "gd": 3,
+      "won": 2,
+      "draw": 1,
+      "lost": 2,
+      "gd": -2,
       "points": 7
     },
     {
@@ -287,9 +287,12 @@
     {
       "id": 560591,
       "kickoff_utc": "2026-09-18T19:00:00Z",
-      "status": "scheduled",
+      "status": "finished",
       "matchday": 5,
-      "half_time": null,
+      "half_time": {
+        "home": 0,
+        "away": 0
+      },
       "venue": {
         "name": "Gtech Community Stadium",
         "city": "London",
@@ -311,7 +314,10 @@
         "draw": 25,
         "away": 40
       },
-      "score": null
+      "score": {
+        "home": 3,
+        "away": 0
+      }
     }
   ],
   "recent": [
