@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T23:04:27Z",
+  "generated_at": "2026-09-18T06:00:53Z",
   "season": 2026,
   "standings": [
     {
@@ -306,7 +306,11 @@
         "name": "Chelsea FC",
         "logo": "https://crests.football-data.org/61.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 35,
+        "draw": 25,
+        "away": 40
+      },
       "score": null
     }
   ],
