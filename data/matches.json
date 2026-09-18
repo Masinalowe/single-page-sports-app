@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T06:00:53Z",
+  "generated_at": "2026-09-18T19:05:15Z",
   "season": 2026,
   "standings": [
     {
@@ -61,6 +61,20 @@
     {
       "position": 5,
       "team": {
+        "id": 61,
+        "name": "Chelsea",
+        "crest": "https://crests.football-data.org/61.png"
+      },
+      "played": 5,
+      "won": 2,
+      "draw": 2,
+      "lost": 1,
+      "gd": 1,
+      "points": 8
+    },
+    {
+      "position": 6,
+      "team": {
         "id": 397,
         "name": "Brighton Hove",
         "crest": "https://crests.football-data.org/397.png"
@@ -73,32 +87,18 @@
       "points": 7
     },
     {
-      "position": 6,
-      "team": {
-        "id": 61,
-        "name": "Chelsea",
-        "crest": "https://crests.football-data.org/61.png"
-      },
-      "played": 4,
-      "won": 2,
-      "draw": 1,
-      "lost": 1,
-      "gd": 1,
-      "points": 7
-    },
-    {
       "position": 7,
       "team": {
         "id": 402,
         "name": "Brentford",
         "crest": "https://crests.football-data.org/402.png"
       },
-      "played": 4,
+      "played": 5,
       "won": 1,
-      "draw": 3,
+      "draw": 4,
       "lost": 0,
       "gd": 3,
-      "points": 6
+      "points": 7
     },
     {
       "position": 8,
