@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T17:04:32Z",
+  "generated_at": "2026-09-19T19:04:05Z",
   "season": 2026,
   "standings": [
     {
@@ -145,20 +145,6 @@
     {
       "position": 11,
       "team": {
-        "id": 351,
-        "name": "Nottingham",
-        "crest": "https://crests.football-data.org/351.png"
-      },
-      "played": 5,
-      "won": 1,
-      "draw": 3,
-      "lost": 1,
-      "gd": 0,
-      "points": 6
-    },
-    {
-      "position": 12,
-      "team": {
         "id": 349,
         "name": "Ipswich Town",
         "crest": "https://crests.football-data.org/349.png"
@@ -169,6 +155,20 @@
       "lost": 3,
       "gd": -4,
       "points": 6
+    },
+    {
+      "position": 12,
+      "team": {
+        "id": 351,
+        "name": "Nottingham",
+        "crest": "https://crests.football-data.org/351.png"
+      },
+      "played": 5,
+      "won": 1,
+      "draw": 2,
+      "lost": 2,
+      "gd": -1,
+      "points": 5
     },
     {
       "position": 13,
@@ -243,6 +243,20 @@
     {
       "position": 18,
       "team": {
+        "id": 1076,
+        "name": "Coventry City",
+        "crest": "https://crests.football-data.org/1076.png"
+      },
+      "played": 5,
+      "won": 1,
+      "draw": 0,
+      "lost": 4,
+      "gd": -9,
+      "points": 3
+    },
+    {
+      "position": 19,
+      "team": {
         "id": 73,
         "name": "Tottenham",
         "crest": "https://crests.football-data.org/73.png"
@@ -255,7 +269,7 @@
       "points": 2
     },
     {
-      "position": 19,
+      "position": 20,
       "team": {
         "id": 63,
         "name": "Fulham",
@@ -266,20 +280,6 @@
       "draw": 1,
       "lost": 3,
       "gd": -3,
-      "points": 1
-    },
-    {
-      "position": 20,
-      "team": {
-        "id": 1076,
-        "name": "Coventry City",
-        "crest": "https://crests.football-data.org/1076.png"
-      },
-      "played": 5,
-      "won": 0,
-      "draw": 1,
-      "lost": 4,
-      "gd": -10,
       "points": 1
     }
   ],
@@ -427,9 +427,12 @@
     {
       "id": 560589,
       "kickoff_utc": "2026-09-19T16:30:00Z",
-      "status": "live",
+      "status": "finished",
       "matchday": 5,
-      "half_time": null,
+      "half_time": {
+        "home": 0,
+        "away": 0
+      },
       "venue": {
         "name": "The City Ground",
         "city": "Nottingham",
@@ -453,7 +456,7 @@
       },
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       }
     }
   ],
