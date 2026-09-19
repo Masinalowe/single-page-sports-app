@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T15:04:32Z",
+  "generated_at": "2026-09-19T17:04:32Z",
   "season": 2026,
   "standings": [
     {
@@ -27,7 +27,7 @@
       "won": 4,
       "draw": 0,
       "lost": 1,
-      "gd": 5,
+      "gd": 4,
       "points": 12
     },
     {
@@ -41,7 +41,7 @@
       "won": 3,
       "draw": 1,
       "lost": 1,
-      "gd": 10,
+      "gd": 11,
       "points": 10
     },
     {
@@ -89,20 +89,6 @@
     {
       "position": 7,
       "team": {
-        "id": 67,
-        "name": "Newcastle",
-        "crest": "https://crests.football-data.org/67.png"
-      },
-      "played": 5,
-      "won": 2,
-      "draw": 2,
-      "lost": 1,
-      "gd": 1,
-      "points": 8
-    },
-    {
-      "position": 8,
-      "team": {
         "id": 322,
         "name": "Hull City",
         "crest": "https://crests.football-data.org/322.png"
@@ -111,7 +97,21 @@
       "won": 2,
       "draw": 2,
       "lost": 1,
-      "gd": 1,
+      "gd": 2,
+      "points": 8
+    },
+    {
+      "position": 8,
+      "team": {
+        "id": 67,
+        "name": "Newcastle",
+        "crest": "https://crests.football-data.org/67.png"
+      },
+      "played": 5,
+      "won": 2,
+      "draw": 2,
+      "lost": 1,
+      "gd": 0,
       "points": 8
     },
     {
@@ -145,6 +145,20 @@
     {
       "position": 11,
       "team": {
+        "id": 351,
+        "name": "Nottingham",
+        "crest": "https://crests.football-data.org/351.png"
+      },
+      "played": 5,
+      "won": 1,
+      "draw": 3,
+      "lost": 1,
+      "gd": 0,
+      "points": 6
+    },
+    {
+      "position": 12,
+      "team": {
         "id": 349,
         "name": "Ipswich Town",
         "crest": "https://crests.football-data.org/349.png"
@@ -155,20 +169,6 @@
       "lost": 3,
       "gd": -4,
       "points": 6
-    },
-    {
-      "position": 12,
-      "team": {
-        "id": 351,
-        "name": "Nottingham",
-        "crest": "https://crests.football-data.org/351.png"
-      },
-      "played": 4,
-      "won": 1,
-      "draw": 2,
-      "lost": 1,
-      "gd": 0,
-      "points": 5
     },
     {
       "position": 13,
@@ -275,12 +275,12 @@
         "name": "Coventry City",
         "crest": "https://crests.football-data.org/1076.png"
       },
-      "played": 4,
+      "played": 5,
       "won": 0,
-      "draw": 0,
+      "draw": 1,
       "lost": 4,
       "gd": -10,
-      "points": 0
+      "points": 1
     }
   ],
   "today": [
@@ -322,7 +322,7 @@
     {
       "id": 560584,
       "kickoff_utc": "2026-09-19T14:00:00Z",
-      "status": "live",
+      "status": "finished",
       "matchday": 5,
       "half_time": {
         "home": 1,
@@ -357,7 +357,7 @@
     {
       "id": 560586,
       "kickoff_utc": "2026-09-19T14:00:00Z",
-      "status": "live",
+      "status": "finished",
       "matchday": 5,
       "half_time": {
         "home": 2,
@@ -385,14 +385,14 @@
         "away": 56
       },
       "score": {
-        "home": 2,
+        "home": 3,
         "away": 0
       }
     },
     {
       "id": 560588,
       "kickoff_utc": "2026-09-19T14:00:00Z",
-      "status": "live",
+      "status": "finished",
       "matchday": 5,
       "half_time": {
         "home": 2,
@@ -421,13 +421,13 @@
       },
       "score": {
         "home": 2,
-        "away": 0
+        "away": 1
       }
     },
     {
       "id": 560589,
       "kickoff_utc": "2026-09-19T16:30:00Z",
-      "status": "scheduled",
+      "status": "live",
       "matchday": 5,
       "half_time": null,
       "venue": {
@@ -451,7 +451,10 @@
         "draw": 24,
         "away": 18
       },
-      "score": null
+      "score": {
+        "home": 0,
+        "away": 0
+      }
     }
   ],
   "recent": [
