@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T06:01:08Z",
+  "generated_at": "2026-09-19T13:04:23Z",
   "season": 2026,
   "standings": [
     {
@@ -201,6 +201,20 @@
     {
       "position": 15,
       "team": {
+        "id": 58,
+        "name": "Aston Villa",
+        "crest": "https://crests.football-data.org/58.png"
+      },
+      "played": 5,
+      "won": 1,
+      "draw": 1,
+      "lost": 3,
+      "gd": -5,
+      "points": 4
+    },
+    {
+      "position": 16,
+      "team": {
         "id": 1044,
         "name": "Bournemouth",
         "crest": "https://crests.football-data.org/bournemouth.png"
@@ -213,7 +227,7 @@
       "points": 3
     },
     {
-      "position": 16,
+      "position": 17,
       "team": {
         "id": 354,
         "name": "Crystal Palace",
@@ -227,21 +241,21 @@
       "points": 3
     },
     {
-      "position": 17,
+      "position": 18,
       "team": {
         "id": 73,
         "name": "Tottenham",
         "crest": "https://crests.football-data.org/73.png"
       },
-      "played": 4,
+      "played": 5,
       "won": 0,
       "draw": 2,
-      "lost": 2,
-      "gd": -5,
+      "lost": 3,
+      "gd": -6,
       "points": 2
     },
     {
-      "position": 18,
+      "position": 19,
       "team": {
         "id": 63,
         "name": "Fulham",
@@ -252,20 +266,6 @@
       "draw": 1,
       "lost": 3,
       "gd": -3,
-      "points": 1
-    },
-    {
-      "position": 19,
-      "team": {
-        "id": 58,
-        "name": "Aston Villa",
-        "crest": "https://crests.football-data.org/58.png"
-      },
-      "played": 4,
-      "won": 0,
-      "draw": 1,
-      "lost": 3,
-      "gd": -6,
       "points": 1
     },
     {
@@ -287,9 +287,12 @@
     {
       "id": 560587,
       "kickoff_utc": "2026-09-19T11:30:00Z",
-      "status": "scheduled",
+      "status": "live",
       "matchday": 5,
-      "half_time": null,
+      "half_time": {
+        "home": 0,
+        "away": 1
+      },
       "venue": {
         "name": "Tottenham Hotspur Stadium",
         "city": "London",
@@ -311,7 +314,10 @@
         "draw": 26,
         "away": 25
       },
-      "score": null
+      "score": {
+        "home": 1,
+        "away": 1
+      }
     },
     {
       "id": 560584,
