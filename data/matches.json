@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T15:04:38Z",
+  "generated_at": "2026-09-20T17:04:28Z",
   "season": 2026,
   "standings": [
     {
@@ -177,15 +177,29 @@
         "name": "Man United",
         "crest": "https://crests.football-data.org/66.png"
       },
-      "played": 4,
+      "played": 5,
       "won": 1,
       "draw": 1,
-      "lost": 2,
-      "gd": 0,
+      "lost": 3,
+      "gd": -1,
       "points": 4
     },
     {
       "position": 14,
+      "team": {
+        "id": 63,
+        "name": "Fulham",
+        "crest": "https://crests.football-data.org/63.png"
+      },
+      "played": 5,
+      "won": 1,
+      "draw": 1,
+      "lost": 3,
+      "gd": -2,
+      "points": 4
+    },
+    {
+      "position": 15,
       "team": {
         "id": 71,
         "name": "Sunderland",
@@ -199,7 +213,7 @@
       "points": 4
     },
     {
-      "position": 15,
+      "position": 16,
       "team": {
         "id": 354,
         "name": "Crystal Palace",
@@ -213,7 +227,7 @@
       "points": 4
     },
     {
-      "position": 16,
+      "position": 17,
       "team": {
         "id": 58,
         "name": "Aston Villa",
@@ -227,7 +241,7 @@
       "points": 4
     },
     {
-      "position": 17,
+      "position": 18,
       "team": {
         "id": 1044,
         "name": "Bournemouth",
@@ -241,7 +255,7 @@
       "points": 3
     },
     {
-      "position": 18,
+      "position": 19,
       "team": {
         "id": 1076,
         "name": "Coventry City",
@@ -255,7 +269,7 @@
       "points": 3
     },
     {
-      "position": 19,
+      "position": 20,
       "team": {
         "id": 73,
         "name": "Tottenham",
@@ -267,20 +281,6 @@
       "lost": 3,
       "gd": -6,
       "points": 2
-    },
-    {
-      "position": 20,
-      "team": {
-        "id": 63,
-        "name": "Fulham",
-        "crest": "https://crests.football-data.org/63.png"
-      },
-      "played": 4,
-      "won": 0,
-      "draw": 1,
-      "lost": 3,
-      "gd": -3,
-      "points": 1
     }
   ],
   "today": [
@@ -351,7 +351,7 @@
       },
       "score": {
         "home": 0,
-        "away": 1
+        "away": 0
       }
     },
     {
@@ -392,9 +392,12 @@
     {
       "id": 560583,
       "kickoff_utc": "2026-09-20T15:30:00Z",
-      "status": "scheduled",
+      "status": "live",
       "matchday": 5,
-      "half_time": null,
+      "half_time": {
+        "home": 0,
+        "away": 0
+      },
       "venue": {
         "name": "Craven Cottage",
         "city": "London",
@@ -416,7 +419,10 @@
         "draw": 25,
         "away": 47
       },
-      "score": null
+      "score": {
+        "home": 1,
+        "away": 0
+      }
     }
   ],
   "recent": [
