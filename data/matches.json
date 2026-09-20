@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T23:04:15Z",
+  "generated_at": "2026-09-20T06:00:51Z",
   "season": 2026,
   "standings": [
     {
@@ -306,7 +306,11 @@
         "name": "Liverpool FC",
         "logo": "https://crests.football-data.org/64.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 31,
+        "draw": 25,
+        "away": 44
+      },
       "score": null
     },
     {
@@ -331,7 +335,11 @@
         "name": "Crystal Palace FC",
         "logo": "https://crests.football-data.org/354.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 56,
+        "draw": 24,
+        "away": 20
+      },
       "score": null
     },
     {
@@ -356,7 +364,11 @@
         "name": "Sunderland AFC",
         "logo": "https://crests.football-data.org/71.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 72,
+        "draw": 18,
+        "away": 10
+      },
       "score": null
     },
     {
@@ -381,7 +393,11 @@
         "name": "Manchester United FC",
         "logo": "https://crests.football-data.org/66.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 28,
+        "draw": 25,
+        "away": 47
+      },
       "score": null
     }
   ],
