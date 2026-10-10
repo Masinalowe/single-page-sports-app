@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T02:09:39Z",
+  "generated_at": "2026-10-10T11:26:29Z",
   "season": 2026,
   "standings": [
     {
@@ -306,7 +306,11 @@
         "name": "Leeds United FC",
         "logo": "https://crests.football-data.org/341.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 66,
+        "draw": 21,
+        "away": 13
+      },
       "score": null
     },
     {
@@ -331,7 +335,11 @@
         "name": "Brighton & Hove Albion FC",
         "logo": "https://crests.football-data.org/397.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 31,
+        "draw": 27,
+        "away": 42
+      },
       "score": null
     },
     {
@@ -356,7 +364,11 @@
         "name": "AFC Bournemouth",
         "logo": "https://crests.football-data.org/bournemouth.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 53,
+        "draw": 24,
+        "away": 23
+      },
       "score": null
     },
     {
@@ -381,7 +393,11 @@
         "name": "Fulham FC",
         "logo": "https://crests.football-data.org/63.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 34,
+        "draw": 27,
+        "away": 39
+      },
       "score": null
     },
     {
@@ -406,7 +422,11 @@
         "name": "Brentford FC",
         "logo": "https://crests.football-data.org/402.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 35,
+        "draw": 27,
+        "away": 38
+      },
       "score": null
     },
     {
@@ -431,7 +451,11 @@
         "name": "Tottenham Hotspur FC",
         "logo": "https://crests.football-data.org/73.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 55,
+        "draw": 23,
+        "away": 22
+      },
       "score": null
     }
   ],
