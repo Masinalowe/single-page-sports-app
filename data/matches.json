@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T20:24:31Z",
+  "generated_at": "2026-10-11T00:01:04Z",
   "season": 2026,
   "standings": [
     {
@@ -285,8 +285,85 @@
   ],
   "today": [
     {
-      "id": 560593,
-      "kickoff_utc": "2026-10-10T11:30:00Z",
+      "id": 560594,
+      "kickoff_utc": "2026-10-11T13:00:00Z",
+      "status": "scheduled",
+      "matchday": 6,
+      "half_time": null,
+      "venue": {
+        "name": "MKM Stadium",
+        "city": "Hull",
+        "lat": 53.746,
+        "lon": -0.3676
+      },
+      "home": {
+        "id": 322,
+        "name": "Hull City AFC",
+        "logo": "https://crests.football-data.org/322.png"
+      },
+      "away": {
+        "id": 62,
+        "name": "Everton FC",
+        "logo": "https://crests.football-data.org/62.png"
+      },
+      "probability": null,
+      "score": null
+    },
+    {
+      "id": 560596,
+      "kickoff_utc": "2026-10-11T13:00:00Z",
+      "status": "scheduled",
+      "matchday": 6,
+      "half_time": null,
+      "venue": {
+        "name": "Selhurst Park",
+        "city": "London",
+        "lat": 51.3983,
+        "lon": -0.0855
+      },
+      "home": {
+        "id": 354,
+        "name": "Crystal Palace FC",
+        "logo": "https://crests.football-data.org/354.png"
+      },
+      "away": {
+        "id": 351,
+        "name": "Nottingham Forest FC",
+        "logo": "https://crests.football-data.org/351.png"
+      },
+      "probability": null,
+      "score": null
+    },
+    {
+      "id": 560598,
+      "kickoff_utc": "2026-10-11T15:30:00Z",
+      "status": "scheduled",
+      "matchday": 6,
+      "half_time": null,
+      "venue": {
+        "name": "Anfield",
+        "city": "Liverpool",
+        "lat": 53.4308,
+        "lon": -2.9608
+      },
+      "home": {
+        "id": 64,
+        "name": "Liverpool FC",
+        "logo": "https://crests.football-data.org/64.png"
+      },
+      "away": {
+        "id": 65,
+        "name": "Manchester City FC",
+        "logo": "https://crests.football-data.org/65.png"
+      },
+      "probability": null,
+      "score": null
+    }
+  ],
+  "recent": [
+    {
+      "id": 560600,
+      "kickoff_utc": "2026-10-10T16:30:00Z",
       "status": "finished",
       "matchday": 6,
       "half_time": {
@@ -294,28 +371,28 @@
         "away": 0
       },
       "venue": {
-        "name": "Emirates Stadium",
-        "city": "London",
-        "lat": 51.5549,
-        "lon": -0.1084
+        "name": "Old Trafford",
+        "city": "Manchester",
+        "lat": 53.4631,
+        "lon": -2.2913
       },
       "home": {
-        "id": 57,
-        "name": "Arsenal FC",
-        "logo": "https://crests.football-data.org/57.png"
+        "id": 66,
+        "name": "Manchester United FC",
+        "logo": "https://crests.football-data.org/66.png"
       },
       "away": {
-        "id": 341,
-        "name": "Leeds United FC",
-        "logo": "https://crests.football-data.org/341.png"
+        "id": 73,
+        "name": "Tottenham Hotspur FC",
+        "logo": "https://crests.football-data.org/73.png"
       },
       "probability": {
-        "home": 66,
-        "draw": 21,
-        "away": 13
+        "home": 55,
+        "draw": 23,
+        "away": 22
       },
       "score": {
-        "home": 2,
+        "home": 1,
         "away": 1
       }
     },
@@ -460,8 +537,8 @@
       }
     },
     {
-      "id": 560600,
-      "kickoff_utc": "2026-10-10T16:30:00Z",
+      "id": 560593,
+      "kickoff_utc": "2026-10-10T11:30:00Z",
       "status": "finished",
       "matchday": 6,
       "half_time": {
@@ -469,31 +546,30 @@
         "away": 0
       },
       "venue": {
-        "name": "Old Trafford",
-        "city": "Manchester",
-        "lat": 53.4631,
-        "lon": -2.2913
+        "name": "Emirates Stadium",
+        "city": "London",
+        "lat": 51.5549,
+        "lon": -0.1084
       },
       "home": {
-        "id": 66,
-        "name": "Manchester United FC",
-        "logo": "https://crests.football-data.org/66.png"
+        "id": 57,
+        "name": "Arsenal FC",
+        "logo": "https://crests.football-data.org/57.png"
       },
       "away": {
-        "id": 73,
-        "name": "Tottenham Hotspur FC",
-        "logo": "https://crests.football-data.org/73.png"
+        "id": 341,
+        "name": "Leeds United FC",
+        "logo": "https://crests.football-data.org/341.png"
       },
       "probability": {
-        "home": 55,
-        "draw": 23,
-        "away": 22
+        "home": 66,
+        "draw": 21,
+        "away": 13
       },
       "score": {
-        "home": 1,
+        "home": 2,
         "away": 1
       }
     }
-  ],
-  "recent": []
+  ]
 }
