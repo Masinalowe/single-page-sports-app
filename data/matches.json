@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T16:28:06Z",
+  "generated_at": "2026-10-11T20:43:05Z",
   "season": 2026,
   "standings": [
     {
@@ -10,11 +10,11 @@
         "crest": "https://crests.football-data.org/65.png"
       },
       "played": 6,
-      "won": 5,
-      "draw": 1,
+      "won": 6,
+      "draw": 0,
       "lost": 0,
-      "gd": 8,
-      "points": 16
+      "gd": 11,
+      "points": 18
     },
     {
       "position": 2,
@@ -75,20 +75,6 @@
     {
       "position": 6,
       "team": {
-        "id": 64,
-        "name": "Liverpool",
-        "crest": "https://crests.football-data.org/64.png"
-      },
-      "played": 6,
-      "won": 2,
-      "draw": 4,
-      "lost": 0,
-      "gd": 3,
-      "points": 10
-    },
-    {
-      "position": 7,
-      "team": {
         "id": 61,
         "name": "Chelsea",
         "crest": "https://crests.football-data.org/61.png"
@@ -101,7 +87,7 @@
       "points": 10
     },
     {
-      "position": 8,
+      "position": 7,
       "team": {
         "id": 341,
         "name": "Leeds United",
@@ -115,7 +101,7 @@
       "points": 9
     },
     {
-      "position": 9,
+      "position": 8,
       "team": {
         "id": 322,
         "name": "Hull City",
@@ -126,6 +112,20 @@
       "draw": 3,
       "lost": 1,
       "gd": 2,
+      "points": 9
+    },
+    {
+      "position": 9,
+      "team": {
+        "id": 64,
+        "name": "Liverpool",
+        "crest": "https://crests.football-data.org/64.png"
+      },
+      "played": 6,
+      "won": 2,
+      "draw": 3,
+      "lost": 1,
+      "gd": 0,
       "points": 9
     },
     {
@@ -357,7 +357,7 @@
     {
       "id": 560598,
       "kickoff_utc": "2026-10-11T15:30:00Z",
-      "status": "live",
+      "status": "finished",
       "matchday": 6,
       "half_time": {
         "home": 0,
@@ -386,7 +386,7 @@
       },
       "score": {
         "home": 0,
-        "away": 0
+        "away": 3
       }
     }
   ],
