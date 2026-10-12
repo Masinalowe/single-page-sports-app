@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T13:37:36Z",
+  "generated_at": "2026-10-12T20:03:49Z",
   "season": 2026,
   "standings": [
     {
@@ -149,11 +149,11 @@
         "name": "Newcastle",
         "crest": "https://crests.football-data.org/67.png"
       },
-      "played": 5,
+      "played": 6,
       "won": 2,
       "draw": 2,
-      "lost": 1,
-      "gd": 0,
+      "lost": 2,
+      "gd": -1,
       "points": 8
     },
     {
@@ -187,6 +187,20 @@
     {
       "position": 14,
       "team": {
+        "id": 1076,
+        "name": "Coventry City",
+        "crest": "https://crests.football-data.org/1076.png"
+      },
+      "played": 6,
+      "won": 2,
+      "draw": 0,
+      "lost": 4,
+      "gd": -8,
+      "points": 6
+    },
+    {
+      "position": 15,
+      "team": {
         "id": 351,
         "name": "Nottingham",
         "crest": "https://crests.football-data.org/351.png"
@@ -199,7 +213,7 @@
       "points": 5
     },
     {
-      "position": 15,
+      "position": 16,
       "team": {
         "id": 58,
         "name": "Aston Villa",
@@ -213,7 +227,7 @@
       "points": 5
     },
     {
-      "position": 16,
+      "position": 17,
       "team": {
         "id": 71,
         "name": "Sunderland",
@@ -227,7 +241,7 @@
       "points": 4
     },
     {
-      "position": 17,
+      "position": 18,
       "team": {
         "id": 1044,
         "name": "Bournemouth",
@@ -241,7 +255,7 @@
       "points": 3
     },
     {
-      "position": 18,
+      "position": 19,
       "team": {
         "id": 73,
         "name": "Tottenham",
@@ -252,20 +266,6 @@
       "draw": 3,
       "lost": 3,
       "gd": -6,
-      "points": 3
-    },
-    {
-      "position": 19,
-      "team": {
-        "id": 1076,
-        "name": "Coventry City",
-        "crest": "https://crests.football-data.org/1076.png"
-      },
-      "played": 5,
-      "won": 1,
-      "draw": 0,
-      "lost": 4,
-      "gd": -9,
       "points": 3
     },
     {
@@ -287,9 +287,12 @@
     {
       "id": 560597,
       "kickoff_utc": "2026-10-12T19:00:00Z",
-      "status": "scheduled",
+      "status": "live",
       "matchday": 6,
-      "half_time": null,
+      "half_time": {
+        "home": 1,
+        "away": 0
+      },
       "venue": {
         "name": "Coventry Building Society Arena",
         "city": "Coventry",
@@ -311,7 +314,10 @@
         "draw": 27,
         "away": 44
       },
-      "score": null
+      "score": {
+        "home": 1,
+        "away": 0
+      }
     }
   ],
   "recent": []
