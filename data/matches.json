@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T20:03:49Z",
+  "generated_at": "2026-10-13T02:19:05Z",
   "season": 2026,
   "standings": [
     {
@@ -153,7 +153,7 @@
       "won": 2,
       "draw": 2,
       "lost": 2,
-      "gd": -1,
+      "gd": -3,
       "points": 8
     },
     {
@@ -195,7 +195,7 @@
       "won": 2,
       "draw": 0,
       "lost": 4,
-      "gd": -8,
+      "gd": -6,
       "points": 6
     },
     {
@@ -283,11 +283,12 @@
       "points": 2
     }
   ],
-  "today": [
+  "today": [],
+  "recent": [
     {
       "id": 560597,
       "kickoff_utc": "2026-10-12T19:00:00Z",
-      "status": "live",
+      "status": "finished",
       "matchday": 6,
       "half_time": {
         "home": 1,
@@ -315,10 +316,9 @@
         "away": 44
       },
       "score": {
-        "home": 1,
-        "away": 0
+        "home": 4,
+        "away": 1
       }
     }
-  ],
-  "recent": []
+  ]
 }
