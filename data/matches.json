@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T15:04:46Z",
+  "generated_at": "2026-10-16T19:46:14Z",
   "season": 2026,
   "standings": [
     {
@@ -284,5 +284,37 @@
     }
   ],
   "today": [],
-  "recent": []
+  "recent": [
+    {
+      "id": 560597,
+      "kickoff_utc": "2026-10-12T19:00:00Z",
+      "status": "finished",
+      "matchday": 6,
+      "half_time": {
+        "home": 1,
+        "away": 0
+      },
+      "venue": {
+        "name": "Coventry Building Society Arena",
+        "city": "Coventry",
+        "lat": 52.4481,
+        "lon": -1.4954
+      },
+      "home": {
+        "id": 1076,
+        "name": "Coventry City FC",
+        "logo": "https://crests.football-data.org/1076.png"
+      },
+      "away": {
+        "id": 67,
+        "name": "Newcastle United FC",
+        "logo": "https://crests.football-data.org/67.png"
+      },
+      "probability": null,
+      "score": {
+        "home": 4,
+        "away": 1
+      }
+    }
+  ]
 }
