@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T09:46:11Z",
+  "generated_at": "2026-10-17T13:59:44Z",
   "season": 2026,
   "standings": [
     {
@@ -47,6 +47,20 @@
     {
       "position": 4,
       "team": {
+        "id": 61,
+        "name": "Chelsea",
+        "crest": "https://crests.football-data.org/61.png"
+      },
+      "played": 7,
+      "won": 4,
+      "draw": 1,
+      "lost": 2,
+      "gd": 4,
+      "points": 13
+    },
+    {
+      "position": 5,
+      "team": {
         "id": 402,
         "name": "Brentford",
         "crest": "https://crests.football-data.org/402.png"
@@ -59,31 +73,17 @@
       "points": 10
     },
     {
-      "position": 5,
+      "position": 6,
       "team": {
         "id": 62,
         "name": "Everton",
         "crest": "https://crests.football-data.org/62.png"
       },
-      "played": 6,
+      "played": 7,
       "won": 2,
       "draw": 4,
-      "lost": 0,
-      "gd": 3,
-      "points": 10
-    },
-    {
-      "position": 6,
-      "team": {
-        "id": 61,
-        "name": "Chelsea",
-        "crest": "https://crests.football-data.org/61.png"
-      },
-      "played": 6,
-      "won": 3,
-      "draw": 1,
-      "lost": 2,
-      "gd": 2,
+      "lost": 1,
+      "gd": 1,
       "points": 10
     },
     {
@@ -287,9 +287,12 @@
     {
       "id": 560603,
       "kickoff_utc": "2026-10-17T11:30:00Z",
-      "status": "scheduled",
+      "status": "finished",
       "matchday": 7,
-      "half_time": null,
+      "half_time": {
+        "home": 0,
+        "away": 0
+      },
       "venue": {
         "name": "Hill Dickinson Stadium",
         "city": "Liverpool",
@@ -311,7 +314,10 @@
         "draw": 26,
         "away": 41
       },
-      "score": null
+      "score": {
+        "home": 0,
+        "away": 2
+      }
     },
     {
       "id": 560602,
