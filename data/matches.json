@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T23:09:56Z",
+  "generated_at": "2026-10-17T09:46:11Z",
   "season": 2026,
   "standings": [
     {
@@ -306,7 +306,11 @@
         "name": "Chelsea FC",
         "logo": "https://crests.football-data.org/61.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 33,
+        "draw": 26,
+        "away": 41
+      },
       "score": null
     },
     {
@@ -331,7 +335,11 @@
         "name": "Hull City AFC",
         "logo": "https://crests.football-data.org/322.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 58,
+        "draw": 24,
+        "away": 18
+      },
       "score": null
     },
     {
@@ -356,7 +364,11 @@
         "name": "Ipswich Town FC",
         "logo": "https://crests.football-data.org/349.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 77,
+        "draw": 14,
+        "away": 9
+      },
       "score": null
     },
     {
@@ -381,7 +393,11 @@
         "name": "Liverpool FC",
         "logo": "https://crests.football-data.org/64.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 40,
+        "draw": 26,
+        "away": 34
+      },
       "score": null
     },
     {
@@ -406,7 +422,11 @@
         "name": "Aston Villa FC",
         "logo": "https://crests.football-data.org/58.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 42,
+        "draw": 26,
+        "away": 32
+      },
       "score": null
     }
   ],
