@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T00:38:19Z",
+  "generated_at": "2026-10-19T11:20:49Z",
   "season": 2026,
   "standings": [
     {
@@ -306,7 +306,11 @@
         "name": "Coventry City FC",
         "logo": "https://crests.football-data.org/1076.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 62,
+        "draw": 21,
+        "away": 17
+      },
       "score": null
     }
   ],
