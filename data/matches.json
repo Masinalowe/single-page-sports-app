@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T11:20:49Z",
+  "generated_at": "2026-10-19T22:42:20Z",
   "season": 2026,
   "standings": [
     {
@@ -215,19 +215,33 @@
     {
       "position": 16,
       "team": {
-        "id": 1076,
-        "name": "Coventry City",
-        "crest": "https://crests.football-data.org/1076.png"
+        "id": 73,
+        "name": "Tottenham",
+        "crest": "https://crests.football-data.org/73.png"
       },
-      "played": 6,
-      "won": 2,
-      "draw": 0,
-      "lost": 4,
-      "gd": -6,
+      "played": 7,
+      "won": 1,
+      "draw": 3,
+      "lost": 3,
+      "gd": -4,
       "points": 6
     },
     {
       "position": 17,
+      "team": {
+        "id": 1076,
+        "name": "Coventry City",
+        "crest": "https://crests.football-data.org/1076.png"
+      },
+      "played": 7,
+      "won": 2,
+      "draw": 0,
+      "lost": 5,
+      "gd": -8,
+      "points": 6
+    },
+    {
+      "position": 18,
       "team": {
         "id": 63,
         "name": "Fulham",
@@ -241,7 +255,7 @@
       "points": 5
     },
     {
-      "position": 18,
+      "position": 19,
       "team": {
         "id": 351,
         "name": "Nottingham",
@@ -255,7 +269,7 @@
       "points": 5
     },
     {
-      "position": 19,
+      "position": 20,
       "team": {
         "id": 71,
         "name": "Sunderland",
@@ -267,29 +281,18 @@
       "lost": 5,
       "gd": -8,
       "points": 4
-    },
-    {
-      "position": 20,
-      "team": {
-        "id": 73,
-        "name": "Tottenham",
-        "crest": "https://crests.football-data.org/73.png"
-      },
-      "played": 6,
-      "won": 0,
-      "draw": 3,
-      "lost": 3,
-      "gd": -6,
-      "points": 3
     }
   ],
   "today": [
     {
       "id": 560606,
       "kickoff_utc": "2026-10-19T19:00:00Z",
-      "status": "scheduled",
+      "status": "finished",
       "matchday": 7,
-      "half_time": null,
+      "half_time": {
+        "home": 1,
+        "away": 0
+      },
       "venue": {
         "name": "Tottenham Hotspur Stadium",
         "city": "London",
@@ -311,7 +314,10 @@
         "draw": 21,
         "away": 17
       },
-      "score": null
+      "score": {
+        "home": 3,
+        "away": 1
+      }
     }
   ],
   "recent": []
