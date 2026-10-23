@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T20:09:36Z",
+  "generated_at": "2026-10-23T23:41:11Z",
   "season": 2026,
   "standings": [
     {
@@ -285,9 +285,111 @@
   ],
   "today": [
     {
+      "id": 560614,
+      "kickoff_utc": "2026-10-24T11:30:00Z",
+      "status": "scheduled",
+      "matchday": 8,
+      "half_time": null,
+      "venue": {
+        "name": "Villa Park",
+        "city": "Birmingham",
+        "lat": 52.5092,
+        "lon": -1.8848
+      },
+      "home": {
+        "id": 58,
+        "name": "Aston Villa FC",
+        "logo": "https://crests.football-data.org/58.png"
+      },
+      "away": {
+        "id": 65,
+        "name": "Manchester City FC",
+        "logo": "https://crests.football-data.org/65.png"
+      },
+      "probability": null,
+      "score": null
+    },
+    {
+      "id": 560616,
+      "kickoff_utc": "2026-10-24T14:00:00Z",
+      "status": "scheduled",
+      "matchday": 8,
+      "half_time": null,
+      "venue": {
+        "name": "Emirates Stadium",
+        "city": "London",
+        "lat": 51.5549,
+        "lon": -0.1084
+      },
+      "home": {
+        "id": 57,
+        "name": "Arsenal FC",
+        "logo": "https://crests.football-data.org/57.png"
+      },
+      "away": {
+        "id": 62,
+        "name": "Everton FC",
+        "logo": "https://crests.football-data.org/62.png"
+      },
+      "probability": null,
+      "score": null
+    },
+    {
+      "id": 560618,
+      "kickoff_utc": "2026-10-24T14:00:00Z",
+      "status": "scheduled",
+      "matchday": 8,
+      "half_time": null,
+      "venue": {
+        "name": "Coventry Building Society Arena",
+        "city": "Coventry",
+        "lat": 52.4481,
+        "lon": -1.4954
+      },
+      "home": {
+        "id": 1076,
+        "name": "Coventry City FC",
+        "logo": "https://crests.football-data.org/1076.png"
+      },
+      "away": {
+        "id": 63,
+        "name": "Fulham FC",
+        "logo": "https://crests.football-data.org/63.png"
+      },
+      "probability": null,
+      "score": null
+    },
+    {
+      "id": 560617,
+      "kickoff_utc": "2026-10-24T16:30:00Z",
+      "status": "scheduled",
+      "matchday": 8,
+      "half_time": null,
+      "venue": {
+        "name": "Stamford Bridge",
+        "city": "London",
+        "lat": 51.4817,
+        "lon": -0.191
+      },
+      "home": {
+        "id": 61,
+        "name": "Chelsea FC",
+        "logo": "https://crests.football-data.org/61.png"
+      },
+      "away": {
+        "id": 73,
+        "name": "Tottenham Hotspur FC",
+        "logo": "https://crests.football-data.org/73.png"
+      },
+      "probability": null,
+      "score": null
+    }
+  ],
+  "recent": [
+    {
       "id": 560620,
       "kickoff_utc": "2026-10-23T19:00:00Z",
-      "status": "live",
+      "status": "finished",
       "matchday": 8,
       "half_time": {
         "home": 1,
@@ -318,9 +420,7 @@
         "home": 1,
         "away": 1
       }
-    }
-  ],
-  "recent": [
+    },
     {
       "id": 560606,
       "kickoff_utc": "2026-10-19T19:00:00Z",
