@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T23:47:28Z",
+  "generated_at": "2026-10-23T10:35:03Z",
   "season": 2026,
   "standings": [
     {
@@ -306,7 +306,11 @@
         "name": "Nottingham Forest FC",
         "logo": "https://crests.football-data.org/351.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 31,
+        "draw": 28,
+        "away": 41
+      },
       "score": null
     }
   ],
