@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T23:41:11Z",
+  "generated_at": "2026-10-24T09:52:40Z",
   "season": 2026,
   "standings": [
     {
@@ -306,7 +306,11 @@
         "name": "Manchester City FC",
         "logo": "https://crests.football-data.org/65.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 20,
+        "draw": 22,
+        "away": 58
+      },
       "score": null
     },
     {
@@ -331,7 +335,11 @@
         "name": "Everton FC",
         "logo": "https://crests.football-data.org/62.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 66,
+        "draw": 21,
+        "away": 13
+      },
       "score": null
     },
     {
@@ -356,7 +364,11 @@
         "name": "Fulham FC",
         "logo": "https://crests.football-data.org/63.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 30,
+        "draw": 27,
+        "away": 43
+      },
       "score": null
     },
     {
@@ -381,7 +393,11 @@
         "name": "Tottenham Hotspur FC",
         "logo": "https://crests.football-data.org/73.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 50,
+        "draw": 25,
+        "away": 25
+      },
       "score": null
     }
   ],
