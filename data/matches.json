@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T14:11:01Z",
+  "generated_at": "2026-10-24T17:43:41Z",
   "season": 2026,
   "standings": [
     {
@@ -27,7 +27,7 @@
       "won": 7,
       "draw": 0,
       "lost": 1,
-      "gd": 7,
+      "gd": 8,
       "points": 21
     },
     {
@@ -51,12 +51,12 @@
         "name": "Chelsea",
         "crest": "https://crests.football-data.org/61.png"
       },
-      "played": 7,
+      "played": 8,
       "won": 4,
-      "draw": 1,
+      "draw": 2,
       "lost": 2,
       "gd": 4,
-      "points": 13
+      "points": 14
     },
     {
       "position": 5,
@@ -125,7 +125,7 @@
       "won": 2,
       "draw": 4,
       "lost": 2,
-      "gd": 0,
+      "gd": -1,
       "points": 10
     },
     {
@@ -159,6 +159,20 @@
     {
       "position": 12,
       "team": {
+        "id": 63,
+        "name": "Fulham",
+        "crest": "https://crests.football-data.org/63.png"
+      },
+      "played": 8,
+      "won": 2,
+      "draw": 2,
+      "lost": 4,
+      "gd": -2,
+      "points": 8
+    },
+    {
+      "position": 13,
+      "team": {
         "id": 67,
         "name": "Newcastle",
         "crest": "https://crests.football-data.org/67.png"
@@ -171,7 +185,7 @@
       "points": 8
     },
     {
-      "position": 13,
+      "position": 14,
       "team": {
         "id": 66,
         "name": "Man United",
@@ -185,7 +199,21 @@
       "points": 7
     },
     {
-      "position": 14,
+      "position": 15,
+      "team": {
+        "id": 73,
+        "name": "Tottenham",
+        "crest": "https://crests.football-data.org/73.png"
+      },
+      "played": 8,
+      "won": 1,
+      "draw": 4,
+      "lost": 3,
+      "gd": -4,
+      "points": 7
+    },
+    {
+      "position": 16,
       "team": {
         "id": 354,
         "name": "Crystal Palace",
@@ -197,34 +225,6 @@
       "lost": 4,
       "gd": -8,
       "points": 7
-    },
-    {
-      "position": 15,
-      "team": {
-        "id": 1076,
-        "name": "Coventry City",
-        "crest": "https://crests.football-data.org/1076.png"
-      },
-      "played": 8,
-      "won": 2,
-      "draw": 1,
-      "lost": 5,
-      "gd": -8,
-      "points": 7
-    },
-    {
-      "position": 16,
-      "team": {
-        "id": 63,
-        "name": "Fulham",
-        "crest": "https://crests.football-data.org/63.png"
-      },
-      "played": 8,
-      "won": 1,
-      "draw": 3,
-      "lost": 4,
-      "gd": -3,
-      "points": 6
     },
     {
       "position": 17,
@@ -255,17 +255,17 @@
       "points": 6
     },
     {
-      "position": 18,
+      "position": 19,
       "team": {
-        "id": 73,
-        "name": "Tottenham",
-        "crest": "https://crests.football-data.org/73.png"
+        "id": 1076,
+        "name": "Coventry City",
+        "crest": "https://crests.football-data.org/1076.png"
       },
-      "played": 7,
-      "won": 1,
-      "draw": 3,
-      "lost": 3,
-      "gd": -4,
+      "played": 8,
+      "won": 2,
+      "draw": 0,
+      "lost": 6,
+      "gd": -9,
       "points": 6
     },
     {
@@ -316,7 +316,7 @@
     {
       "id": 560616,
       "kickoff_utc": "2026-10-24T14:00:00Z",
-      "status": "live",
+      "status": "scheduled",
       "matchday": 8,
       "half_time": null,
       "venue": {
@@ -340,15 +340,12 @@
         "draw": 21,
         "away": 13
       },
-      "score": {
-        "home": 0,
-        "away": 0
-      }
+      "score": null
     },
     {
       "id": 560618,
       "kickoff_utc": "2026-10-24T14:00:00Z",
-      "status": "live",
+      "status": "scheduled",
       "matchday": 8,
       "half_time": null,
       "venue": {
@@ -372,10 +369,7 @@
         "draw": 27,
         "away": 43
       },
-      "score": {
-        "home": 0,
-        "away": 0
-      }
+      "score": null
     },
     {
       "id": 560617,
