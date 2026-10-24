@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T17:43:41Z",
+  "generated_at": "2026-10-24T21:20:19Z",
   "season": 2026,
   "standings": [
     {
@@ -53,10 +53,10 @@
       },
       "played": 8,
       "won": 4,
-      "draw": 2,
-      "lost": 2,
-      "gd": 4,
-      "points": 14
+      "draw": 1,
+      "lost": 3,
+      "gd": 2,
+      "points": 13
     },
     {
       "position": 5,
@@ -159,6 +159,20 @@
     {
       "position": 12,
       "team": {
+        "id": 73,
+        "name": "Tottenham",
+        "crest": "https://crests.football-data.org/73.png"
+      },
+      "played": 8,
+      "won": 2,
+      "draw": 3,
+      "lost": 3,
+      "gd": -2,
+      "points": 9
+    },
+    {
+      "position": 13,
+      "team": {
         "id": 63,
         "name": "Fulham",
         "crest": "https://crests.football-data.org/63.png"
@@ -171,7 +185,7 @@
       "points": 8
     },
     {
-      "position": 13,
+      "position": 14,
       "team": {
         "id": 67,
         "name": "Newcastle",
@@ -185,7 +199,7 @@
       "points": 8
     },
     {
-      "position": 14,
+      "position": 15,
       "team": {
         "id": 66,
         "name": "Man United",
@@ -196,20 +210,6 @@
       "draw": 4,
       "lost": 2,
       "gd": 0,
-      "points": 7
-    },
-    {
-      "position": 15,
-      "team": {
-        "id": 73,
-        "name": "Tottenham",
-        "crest": "https://crests.football-data.org/73.png"
-      },
-      "played": 8,
-      "won": 1,
-      "draw": 4,
-      "lost": 3,
-      "gd": -4,
       "points": 7
     },
     {
