@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T20:22:10Z",
+  "generated_at": "2026-10-31T23:52:13Z",
   "season": 2026,
   "standings": [
     {
@@ -532,9 +532,12 @@
     {
       "id": 560628,
       "kickoff_utc": "2026-10-31T20:00:00Z",
-      "status": "live",
+      "status": "finished",
       "matchday": 9,
-      "half_time": null,
+      "half_time": {
+        "home": 1,
+        "away": 0
+      },
       "venue": {
         "name": "Villa Park",
         "city": "Birmingham",
@@ -557,8 +560,8 @@
         "away": 28
       },
       "score": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 1
       }
     }
   ],
