@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T16:57:48Z",
+  "generated_at": "2026-11-01T20:57:36Z",
   "season": 2026,
   "standings": [
     {
@@ -287,9 +287,12 @@
     {
       "id": 560631,
       "kickoff_utc": "2026-11-01T16:30:00Z",
-      "status": "scheduled",
+      "status": "finished",
       "matchday": 9,
-      "half_time": null,
+      "half_time": {
+        "home": 0,
+        "away": 1
+      },
       "venue": {
         "name": "Anfield",
         "city": "Liverpool",
@@ -311,7 +314,10 @@
         "draw": 28,
         "away": 38
       },
-      "score": null
+      "score": {
+        "home": 0,
+        "away": 1
+      }
     }
   ],
   "recent": [
