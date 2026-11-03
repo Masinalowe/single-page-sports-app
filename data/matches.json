@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T20:35:33Z",
+  "generated_at": "2026-11-03T02:43:40Z",
   "season": 2026,
   "standings": [
     {
@@ -89,6 +89,20 @@
     {
       "position": 7,
       "team": {
+        "id": 62,
+        "name": "Everton",
+        "crest": "https://crests.football-data.org/62.png"
+      },
+      "played": 9,
+      "won": 3,
+      "draw": 4,
+      "lost": 2,
+      "gd": 0,
+      "points": 13
+    },
+    {
+      "position": 8,
+      "team": {
         "id": 1044,
         "name": "Bournemouth",
         "crest": "https://crests.football-data.org/bournemouth.png"
@@ -101,7 +115,7 @@
       "points": 12
     },
     {
-      "position": 8,
+      "position": 9,
       "team": {
         "id": 73,
         "name": "Tottenham",
@@ -112,20 +126,6 @@
       "draw": 3,
       "lost": 3,
       "gd": 0,
-      "points": 12
-    },
-    {
-      "position": 9,
-      "team": {
-        "id": 67,
-        "name": "Newcastle",
-        "crest": "https://crests.football-data.org/67.png"
-      },
-      "played": 9,
-      "won": 3,
-      "draw": 3,
-      "lost": 3,
-      "gd": -2,
       "points": 12
     },
     {
@@ -173,15 +173,15 @@
     {
       "position": 13,
       "team": {
-        "id": 62,
-        "name": "Everton",
-        "crest": "https://crests.football-data.org/62.png"
+        "id": 67,
+        "name": "Newcastle",
+        "crest": "https://crests.football-data.org/67.png"
       },
       "played": 9,
-      "won": 2,
-      "draw": 5,
-      "lost": 2,
-      "gd": -1,
+      "won": 3,
+      "draw": 2,
+      "lost": 4,
+      "gd": -3,
       "points": 11
     },
     {
@@ -283,13 +283,17 @@
       "points": 5
     }
   ],
-  "today": [
+  "today": [],
+  "recent": [
     {
       "id": 560622,
       "kickoff_utc": "2026-11-02T20:00:00Z",
-      "status": "live",
+      "status": "finished",
       "matchday": 9,
-      "half_time": null,
+      "half_time": {
+        "home": 0,
+        "away": 0
+      },
       "venue": {
         "name": "St James' Park",
         "city": "Newcastle upon Tyne",
@@ -313,9 +317,8 @@
       },
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       }
     }
-  ],
-  "recent": []
+  ]
 }
