@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T02:43:40Z",
+  "generated_at": "2026-11-06T13:17:58Z",
   "season": 2026,
   "standings": [
     {
@@ -283,7 +283,37 @@
       "points": 5
     }
   ],
-  "today": [],
+  "today": [
+    {
+      "id": 560634,
+      "kickoff_utc": "2026-11-06T20:00:00Z",
+      "status": "scheduled",
+      "matchday": 10,
+      "half_time": null,
+      "venue": {
+        "name": "Hill Dickinson Stadium",
+        "city": "Liverpool",
+        "lat": 53.4478,
+        "lon": -3.0083
+      },
+      "home": {
+        "id": 62,
+        "name": "Everton FC",
+        "logo": "https://crests.football-data.org/62.png"
+      },
+      "away": {
+        "id": 1076,
+        "name": "Coventry City FC",
+        "logo": "https://crests.football-data.org/1076.png"
+      },
+      "probability": {
+        "home": 57,
+        "draw": 24,
+        "away": 19
+      },
+      "score": null
+    }
+  ],
   "recent": [
     {
       "id": 560622,
