@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T23:35:47Z",
+  "generated_at": "2026-11-07T11:57:53Z",
   "season": 2026,
   "standings": [
     {
@@ -285,6 +285,124 @@
   ],
   "today": [
     {
+      "id": 560632,
+      "kickoff_utc": "2026-11-07T12:30:00Z",
+      "status": "scheduled",
+      "matchday": 10,
+      "half_time": null,
+      "venue": {
+        "name": "Elland Road",
+        "city": "Leeds",
+        "lat": 53.7778,
+        "lon": -1.5722
+      },
+      "home": {
+        "id": 341,
+        "name": "Leeds United FC",
+        "logo": "https://crests.football-data.org/341.png"
+      },
+      "away": {
+        "id": 73,
+        "name": "Tottenham Hotspur FC",
+        "logo": "https://crests.football-data.org/73.png"
+      },
+      "probability": {
+        "home": 35,
+        "draw": 28,
+        "away": 37
+      },
+      "score": null
+    },
+    {
+      "id": 560640,
+      "kickoff_utc": "2026-11-07T15:00:00Z",
+      "status": "scheduled",
+      "matchday": 10,
+      "half_time": null,
+      "venue": {
+        "name": "Emirates Stadium",
+        "city": "London",
+        "lat": 51.5549,
+        "lon": -0.1084
+      },
+      "home": {
+        "id": 57,
+        "name": "Arsenal FC",
+        "logo": "https://crests.football-data.org/57.png"
+      },
+      "away": {
+        "id": 322,
+        "name": "Hull City AFC",
+        "logo": "https://crests.football-data.org/322.png"
+      },
+      "probability": {
+        "home": 83,
+        "draw": 12,
+        "away": 5
+      },
+      "score": null
+    },
+    {
+      "id": 560633,
+      "kickoff_utc": "2026-11-07T15:00:00Z",
+      "status": "scheduled",
+      "matchday": 10,
+      "half_time": null,
+      "venue": {
+        "name": "Craven Cottage",
+        "city": "London",
+        "lat": 51.4749,
+        "lon": -0.2217
+      },
+      "home": {
+        "id": 63,
+        "name": "Fulham FC",
+        "logo": "https://crests.football-data.org/63.png"
+      },
+      "away": {
+        "id": 67,
+        "name": "Newcastle United FC",
+        "logo": "https://crests.football-data.org/67.png"
+      },
+      "probability": {
+        "home": 47,
+        "draw": 26,
+        "away": 27
+      },
+      "score": null
+    },
+    {
+      "id": 560641,
+      "kickoff_utc": "2026-11-07T17:30:00Z",
+      "status": "scheduled",
+      "matchday": 10,
+      "half_time": null,
+      "venue": {
+        "name": "The City Ground",
+        "city": "Nottingham",
+        "lat": 52.94,
+        "lon": -1.1329
+      },
+      "home": {
+        "id": 351,
+        "name": "Nottingham Forest FC",
+        "logo": "https://crests.football-data.org/351.png"
+      },
+      "away": {
+        "id": 65,
+        "name": "Manchester City FC",
+        "logo": "https://crests.football-data.org/65.png"
+      },
+      "probability": {
+        "home": 21,
+        "draw": 24,
+        "away": 55
+      },
+      "score": null
+    }
+  ],
+  "recent": [
+    {
       "id": 560634,
       "kickoff_utc": "2026-11-06T20:00:00Z",
       "status": "finished",
@@ -318,9 +436,7 @@
         "home": 3,
         "away": 1
       }
-    }
-  ],
-  "recent": [
+    },
     {
       "id": 560622,
       "kickoff_utc": "2026-11-02T20:00:00Z",
