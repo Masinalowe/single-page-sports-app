@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T11:57:53Z",
+  "generated_at": "2026-11-07T16:41:17Z",
   "season": 2026,
   "standings": [
     {
@@ -9,12 +9,12 @@
         "name": "Arsenal",
         "crest": "https://crests.football-data.org/57.png"
       },
-      "played": 9,
-      "won": 8,
+      "played": 10,
+      "won": 9,
       "draw": 0,
       "lost": 1,
-      "gd": 9,
-      "points": 24
+      "gd": 10,
+      "points": 27
     },
     {
       "position": 2,
@@ -103,6 +103,34 @@
     {
       "position": 8,
       "team": {
+        "id": 341,
+        "name": "Leeds United",
+        "crest": "https://crests.football-data.org/341.png"
+      },
+      "played": 10,
+      "won": 3,
+      "draw": 5,
+      "lost": 2,
+      "gd": 2,
+      "points": 14
+    },
+    {
+      "position": 9,
+      "team": {
+        "id": 67,
+        "name": "Newcastle",
+        "crest": "https://crests.football-data.org/67.png"
+      },
+      "played": 10,
+      "won": 4,
+      "draw": 2,
+      "lost": 4,
+      "gd": -2,
+      "points": 14
+    },
+    {
+      "position": 10,
+      "team": {
         "id": 1044,
         "name": "Bournemouth",
         "crest": "https://crests.football-data.org/bournemouth.png"
@@ -115,21 +143,21 @@
       "points": 12
     },
     {
-      "position": 9,
+      "position": 11,
       "team": {
         "id": 73,
         "name": "Tottenham",
         "crest": "https://crests.football-data.org/73.png"
       },
-      "played": 9,
+      "played": 10,
       "won": 3,
       "draw": 3,
-      "lost": 3,
-      "gd": 0,
+      "lost": 4,
+      "gd": -1,
       "points": 12
     },
     {
-      "position": 10,
+      "position": 12,
       "team": {
         "id": 58,
         "name": "Aston Villa",
@@ -143,45 +171,17 @@
       "points": 12
     },
     {
-      "position": 11,
+      "position": 13,
       "team": {
         "id": 322,
         "name": "Hull City",
         "crest": "https://crests.football-data.org/322.png"
       },
-      "played": 9,
+      "played": 10,
       "won": 2,
       "draw": 5,
-      "lost": 2,
-      "gd": 1,
-      "points": 11
-    },
-    {
-      "position": 12,
-      "team": {
-        "id": 341,
-        "name": "Leeds United",
-        "crest": "https://crests.football-data.org/341.png"
-      },
-      "played": 9,
-      "won": 2,
-      "draw": 5,
-      "lost": 2,
-      "gd": 1,
-      "points": 11
-    },
-    {
-      "position": 13,
-      "team": {
-        "id": 67,
-        "name": "Newcastle",
-        "crest": "https://crests.football-data.org/67.png"
-      },
-      "played": 9,
-      "won": 3,
-      "draw": 2,
-      "lost": 4,
-      "gd": -3,
+      "lost": 3,
+      "gd": 0,
       "points": 11
     },
     {
@@ -205,11 +205,11 @@
         "name": "Fulham",
         "crest": "https://crests.football-data.org/63.png"
       },
-      "played": 9,
+      "played": 10,
       "won": 2,
       "draw": 3,
-      "lost": 4,
-      "gd": -2,
+      "lost": 5,
+      "gd": -3,
       "points": 9
     },
     {
@@ -287,9 +287,12 @@
     {
       "id": 560632,
       "kickoff_utc": "2026-11-07T12:30:00Z",
-      "status": "scheduled",
+      "status": "finished",
       "matchday": 10,
-      "half_time": null,
+      "half_time": {
+        "home": 0,
+        "away": 0
+      },
       "venue": {
         "name": "Elland Road",
         "city": "Leeds",
@@ -311,14 +314,20 @@
         "draw": 28,
         "away": 37
       },
-      "score": null
+      "score": {
+        "home": 1,
+        "away": 0
+      }
     },
     {
       "id": 560640,
       "kickoff_utc": "2026-11-07T15:00:00Z",
-      "status": "scheduled",
+      "status": "live",
       "matchday": 10,
-      "half_time": null,
+      "half_time": {
+        "home": 0,
+        "away": 0
+      },
       "venue": {
         "name": "Emirates Stadium",
         "city": "London",
@@ -340,14 +349,20 @@
         "draw": 12,
         "away": 5
       },
-      "score": null
+      "score": {
+        "home": 1,
+        "away": 0
+      }
     },
     {
       "id": 560633,
       "kickoff_utc": "2026-11-07T15:00:00Z",
-      "status": "scheduled",
+      "status": "live",
       "matchday": 10,
-      "half_time": null,
+      "half_time": {
+        "home": 0,
+        "away": 0
+      },
       "venue": {
         "name": "Craven Cottage",
         "city": "London",
@@ -369,7 +384,10 @@
         "draw": 26,
         "away": 27
       },
-      "score": null
+      "score": {
+        "home": 0,
+        "away": 0
+      }
     },
     {
       "id": 560641,
