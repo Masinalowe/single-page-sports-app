@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T12:16:32Z",
+  "generated_at": "2026-11-08T16:52:33Z",
   "season": 2026,
   "standings": [
     {
@@ -19,6 +19,20 @@
     {
       "position": 2,
       "team": {
+        "id": 397,
+        "name": "Brighton Hove",
+        "crest": "https://crests.football-data.org/397.png"
+      },
+      "played": 10,
+      "won": 7,
+      "draw": 1,
+      "lost": 2,
+      "gd": 19,
+      "points": 22
+    },
+    {
+      "position": 3,
+      "team": {
         "id": 65,
         "name": "Man City",
         "crest": "https://crests.football-data.org/65.png"
@@ -31,35 +45,35 @@
       "points": 21
     },
     {
-      "position": 3,
+      "position": 4,
       "team": {
-        "id": 397,
-        "name": "Brighton Hove",
-        "crest": "https://crests.football-data.org/397.png"
+        "id": 64,
+        "name": "Liverpool",
+        "crest": "https://crests.football-data.org/64.png"
       },
-      "played": 9,
-      "won": 6,
-      "draw": 1,
+      "played": 10,
+      "won": 5,
+      "draw": 3,
       "lost": 2,
-      "gd": 17,
-      "points": 19
+      "gd": 4,
+      "points": 18
     },
     {
-      "position": 4,
+      "position": 5,
       "team": {
         "id": 61,
         "name": "Chelsea",
         "crest": "https://crests.football-data.org/61.png"
       },
-      "played": 9,
+      "played": 10,
       "won": 5,
       "draw": 1,
-      "lost": 3,
-      "gd": 4,
+      "lost": 4,
+      "gd": 3,
       "points": 16
     },
     {
-      "position": 5,
+      "position": 6,
       "team": {
         "id": 62,
         "name": "Everton",
@@ -73,35 +87,49 @@
       "points": 16
     },
     {
-      "position": 6,
+      "position": 7,
       "team": {
-        "id": 64,
-        "name": "Liverpool",
-        "crest": "https://crests.football-data.org/64.png"
+        "id": 1044,
+        "name": "Bournemouth",
+        "crest": "https://crests.football-data.org/bournemouth.png"
       },
-      "played": 9,
+      "played": 10,
       "won": 4,
       "draw": 3,
-      "lost": 2,
+      "lost": 3,
       "gd": 2,
       "points": 15
     },
     {
-      "position": 7,
+      "position": 8,
+      "team": {
+        "id": 58,
+        "name": "Aston Villa",
+        "crest": "https://crests.football-data.org/58.png"
+      },
+      "played": 10,
+      "won": 4,
+      "draw": 3,
+      "lost": 3,
+      "gd": -2,
+      "points": 15
+    },
+    {
+      "position": 9,
       "team": {
         "id": 402,
         "name": "Brentford",
         "crest": "https://crests.football-data.org/402.png"
       },
-      "played": 9,
+      "played": 10,
       "won": 3,
       "draw": 5,
-      "lost": 1,
-      "gd": 7,
+      "lost": 2,
+      "gd": 5,
       "points": 14
     },
     {
-      "position": 8,
+      "position": 10,
       "team": {
         "id": 341,
         "name": "Leeds United",
@@ -115,21 +143,7 @@
       "points": 14
     },
     {
-      "position": 9,
-      "team": {
-        "id": 1044,
-        "name": "Bournemouth",
-        "crest": "https://crests.football-data.org/bournemouth.png"
-      },
-      "played": 9,
-      "won": 3,
-      "draw": 3,
-      "lost": 3,
-      "gd": 1,
-      "points": 12
-    },
-    {
-      "position": 10,
+      "position": 11,
       "team": {
         "id": 73,
         "name": "Tottenham",
@@ -143,7 +157,7 @@
       "points": 12
     },
     {
-      "position": 11,
+      "position": 12,
       "team": {
         "id": 67,
         "name": "Newcastle",
@@ -153,20 +167,6 @@
       "won": 3,
       "draw": 3,
       "lost": 4,
-      "gd": -3,
-      "points": 12
-    },
-    {
-      "position": 12,
-      "team": {
-        "id": 58,
-        "name": "Aston Villa",
-        "crest": "https://crests.football-data.org/58.png"
-      },
-      "played": 9,
-      "won": 3,
-      "draw": 3,
-      "lost": 3,
       "gd": -3,
       "points": 12
     },
@@ -191,11 +191,11 @@
         "name": "Ipswich Town",
         "crest": "https://crests.football-data.org/349.png"
       },
-      "played": 9,
+      "played": 10,
       "won": 3,
       "draw": 2,
-      "lost": 4,
-      "gd": -4,
+      "lost": 5,
+      "gd": -5,
       "points": 11
     },
     {
@@ -243,53 +243,56 @@
     {
       "position": 18,
       "team": {
-        "id": 66,
-        "name": "Man United",
-        "crest": "https://crests.football-data.org/66.png"
+        "id": 71,
+        "name": "Sunderland",
+        "crest": "https://crests.football-data.org/71.png"
       },
-      "played": 9,
-      "won": 1,
-      "draw": 4,
-      "lost": 4,
-      "gd": -5,
-      "points": 7
+      "played": 10,
+      "won": 2,
+      "draw": 2,
+      "lost": 6,
+      "gd": -9,
+      "points": 8
     },
     {
       "position": 19,
       "team": {
-        "id": 354,
-        "name": "Crystal Palace",
-        "crest": "https://crests.football-data.org/354.png"
+        "id": 66,
+        "name": "Man United",
+        "crest": "https://crests.football-data.org/66.png"
       },
-      "played": 9,
-      "won": 2,
-      "draw": 1,
-      "lost": 6,
-      "gd": -12,
+      "played": 10,
+      "won": 1,
+      "draw": 4,
+      "lost": 5,
+      "gd": -6,
       "points": 7
     },
     {
       "position": 20,
       "team": {
-        "id": 71,
-        "name": "Sunderland",
-        "crest": "https://crests.football-data.org/71.png"
+        "id": 354,
+        "name": "Crystal Palace",
+        "crest": "https://crests.football-data.org/354.png"
       },
-      "played": 9,
-      "won": 1,
-      "draw": 2,
-      "lost": 6,
-      "gd": -10,
-      "points": 5
+      "played": 10,
+      "won": 2,
+      "draw": 1,
+      "lost": 7,
+      "gd": -14,
+      "points": 7
     }
   ],
   "today": [
     {
       "id": 560635,
       "kickoff_utc": "2026-11-08T14:00:00Z",
-      "status": "scheduled",
+      "status": "finished",
       "matchday": 10,
-      "half_time": null,
+      "half_time": {
+        "home": 0,
+        "away": 1
+      },
       "venue": {
         "name": "Selhurst Park",
         "city": "London",
@@ -311,14 +314,20 @@
         "draw": 21,
         "away": 61
       },
-      "score": null
+      "score": {
+        "home": 1,
+        "away": 3
+      }
     },
     {
       "id": 560636,
       "kickoff_utc": "2026-11-08T14:00:00Z",
-      "status": "scheduled",
+      "status": "finished",
       "matchday": 10,
-      "half_time": null,
+      "half_time": {
+        "home": 1,
+        "away": 0
+      },
       "venue": {
         "name": "Stadium of Light",
         "city": "Sunderland",
@@ -340,14 +349,20 @@
         "draw": 25,
         "away": 50
       },
-      "score": null
+      "score": {
+        "home": 1,
+        "away": 0
+      }
     },
     {
       "id": 560637,
       "kickoff_utc": "2026-11-08T14:00:00Z",
-      "status": "scheduled",
+      "status": "finished",
       "matchday": 10,
-      "half_time": null,
+      "half_time": {
+        "home": 0,
+        "away": 1
+      },
       "venue": {
         "name": "Portman Road",
         "city": "Ipswich",
@@ -369,14 +384,20 @@
         "draw": 26,
         "away": 49
       },
-      "score": null
+      "score": {
+        "home": 1,
+        "away": 2
+      }
     },
     {
       "id": 560638,
       "kickoff_utc": "2026-11-08T14:00:00Z",
-      "status": "scheduled",
+      "status": "finished",
       "matchday": 10,
-      "half_time": null,
+      "half_time": {
+        "home": 2,
+        "away": 0
+      },
       "venue": {
         "name": "Amex Stadium",
         "city": "Brighton",
@@ -398,12 +419,15 @@
         "draw": 24,
         "away": 25
       },
-      "score": null
+      "score": {
+        "home": 2,
+        "away": 0
+      }
     },
     {
       "id": 560639,
       "kickoff_utc": "2026-11-08T16:30:00Z",
-      "status": "scheduled",
+      "status": "live",
       "matchday": 10,
       "half_time": null,
       "venue": {
@@ -427,7 +451,10 @@
         "draw": 25,
         "away": 31
       },
-      "score": null
+      "score": {
+        "home": 0,
+        "away": 2
+      }
     }
   ],
   "recent": [
