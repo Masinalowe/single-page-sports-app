@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T00:05:58Z",
+  "generated_at": "2026-11-08T12:16:32Z",
   "season": 2026,
   "standings": [
     {
@@ -306,7 +306,11 @@
         "name": "Liverpool FC",
         "logo": "https://crests.football-data.org/64.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 18,
+        "draw": 21,
+        "away": 61
+      },
       "score": null
     },
     {
@@ -331,7 +335,11 @@
         "name": "Chelsea FC",
         "logo": "https://crests.football-data.org/61.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 25,
+        "draw": 25,
+        "away": 50
+      },
       "score": null
     },
     {
@@ -356,7 +364,11 @@
         "name": "AFC Bournemouth",
         "logo": "https://crests.football-data.org/bournemouth.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 25,
+        "draw": 26,
+        "away": 49
+      },
       "score": null
     },
     {
@@ -381,7 +393,11 @@
         "name": "Brentford FC",
         "logo": "https://crests.football-data.org/402.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 51,
+        "draw": 24,
+        "away": 25
+      },
       "score": null
     },
     {
@@ -406,7 +422,11 @@
         "name": "Aston Villa FC",
         "logo": "https://crests.football-data.org/58.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 44,
+        "draw": 25,
+        "away": 31
+      },
       "score": null
     }
   ],
