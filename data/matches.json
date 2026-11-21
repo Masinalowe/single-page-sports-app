@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T13:46:12Z",
+  "generated_at": "2026-11-21T17:50:15Z",
   "season": 2026,
   "standings": [
     {
@@ -9,12 +9,12 @@
         "name": "Arsenal",
         "crest": "https://crests.football-data.org/57.png"
       },
-      "played": 10,
+      "played": 11,
       "won": 9,
-      "draw": 0,
+      "draw": 1,
       "lost": 1,
       "gd": 10,
-      "points": 27
+      "points": 28
     },
     {
       "position": 2,
@@ -39,13 +39,27 @@
       },
       "played": 11,
       "won": 7,
-      "draw": 0,
-      "lost": 4,
-      "gd": 7,
-      "points": 21
+      "draw": 1,
+      "lost": 3,
+      "gd": 8,
+      "points": 22
     },
     {
       "position": 4,
+      "team": {
+        "id": 1044,
+        "name": "Bournemouth",
+        "crest": "https://crests.football-data.org/bournemouth.png"
+      },
+      "played": 11,
+      "won": 5,
+      "draw": 3,
+      "lost": 3,
+      "gd": 4,
+      "points": 18
+    },
+    {
+      "position": 5,
       "team": {
         "id": 64,
         "name": "Liverpool",
@@ -59,21 +73,21 @@
       "points": 18
     },
     {
-      "position": 5,
+      "position": 6,
       "team": {
-        "id": 61,
-        "name": "Chelsea",
-        "crest": "https://crests.football-data.org/61.png"
+        "id": 341,
+        "name": "Leeds United",
+        "crest": "https://crests.football-data.org/341.png"
       },
-      "played": 10,
-      "won": 5,
-      "draw": 1,
-      "lost": 4,
-      "gd": 3,
-      "points": 16
+      "played": 11,
+      "won": 4,
+      "draw": 5,
+      "lost": 2,
+      "gd": 5,
+      "points": 17
     },
     {
-      "position": 6,
+      "position": 7,
       "team": {
         "id": 62,
         "name": "Everton",
@@ -87,21 +101,35 @@
       "points": 16
     },
     {
-      "position": 7,
+      "position": 8,
       "team": {
-        "id": 1044,
-        "name": "Bournemouth",
-        "crest": "https://crests.football-data.org/bournemouth.png"
+        "id": 61,
+        "name": "Chelsea",
+        "crest": "https://crests.football-data.org/61.png"
       },
-      "played": 10,
+      "played": 11,
+      "won": 5,
+      "draw": 1,
+      "lost": 5,
+      "gd": 0,
+      "points": 16
+    },
+    {
+      "position": 9,
+      "team": {
+        "id": 73,
+        "name": "Tottenham",
+        "crest": "https://crests.football-data.org/73.png"
+      },
+      "played": 11,
       "won": 4,
       "draw": 3,
-      "lost": 3,
-      "gd": 2,
+      "lost": 4,
+      "gd": 1,
       "points": 15
     },
     {
-      "position": 8,
+      "position": 10,
       "team": {
         "id": 402,
         "name": "Brentford",
@@ -115,73 +143,45 @@
       "points": 14
     },
     {
-      "position": 9,
-      "team": {
-        "id": 341,
-        "name": "Leeds United",
-        "crest": "https://crests.football-data.org/341.png"
-      },
-      "played": 10,
-      "won": 3,
-      "draw": 5,
-      "lost": 2,
-      "gd": 2,
-      "points": 14
-    },
-    {
-      "position": 10,
-      "team": {
-        "id": 63,
-        "name": "Fulham",
-        "crest": "https://crests.football-data.org/63.png"
-      },
-      "played": 11,
-      "won": 3,
-      "draw": 4,
-      "lost": 4,
-      "gd": -1,
-      "points": 13
-    },
-    {
       "position": 11,
       "team": {
         "id": 58,
         "name": "Aston Villa",
         "crest": "https://crests.football-data.org/58.png"
       },
-      "played": 10,
+      "played": 11,
       "won": 3,
-      "draw": 4,
+      "draw": 5,
       "lost": 3,
       "gd": -3,
-      "points": 13
+      "points": 14
     },
     {
       "position": 12,
-      "team": {
-        "id": 73,
-        "name": "Tottenham",
-        "crest": "https://crests.football-data.org/73.png"
-      },
-      "played": 10,
-      "won": 3,
-      "draw": 3,
-      "lost": 4,
-      "gd": -1,
-      "points": 12
-    },
-    {
-      "position": 13,
       "team": {
         "id": 67,
         "name": "Newcastle",
         "crest": "https://crests.football-data.org/67.png"
       },
-      "played": 10,
+      "played": 11,
       "won": 3,
-      "draw": 3,
+      "draw": 4,
       "lost": 4,
       "gd": -3,
+      "points": 13
+    },
+    {
+      "position": 13,
+      "team": {
+        "id": 1076,
+        "name": "Coventry City",
+        "crest": "https://crests.football-data.org/1076.png"
+      },
+      "played": 11,
+      "won": 4,
+      "draw": 0,
+      "lost": 7,
+      "gd": -8,
       "points": 12
     },
     {
@@ -201,47 +201,61 @@
     {
       "position": 15,
       "team": {
-        "id": 349,
-        "name": "Ipswich Town",
-        "crest": "https://crests.football-data.org/349.png"
+        "id": 63,
+        "name": "Fulham",
+        "crest": "https://crests.football-data.org/63.png"
       },
-      "played": 10,
-      "won": 3,
-      "draw": 2,
-      "lost": 5,
-      "gd": -5,
+      "played": 11,
+      "won": 2,
+      "draw": 5,
+      "lost": 4,
+      "gd": -2,
       "points": 11
     },
     {
       "position": 16,
       "team": {
-        "id": 351,
-        "name": "Nottingham",
-        "crest": "https://crests.football-data.org/351.png"
+        "id": 349,
+        "name": "Ipswich Town",
+        "crest": "https://crests.football-data.org/349.png"
       },
-      "played": 10,
-      "won": 2,
-      "draw": 3,
-      "lost": 5,
-      "gd": -4,
-      "points": 9
+      "played": 11,
+      "won": 3,
+      "draw": 2,
+      "lost": 6,
+      "gd": -7,
+      "points": 11
     },
     {
       "position": 17,
       "team": {
-        "id": 1076,
-        "name": "Coventry City",
-        "crest": "https://crests.football-data.org/1076.png"
+        "id": 351,
+        "name": "Nottingham",
+        "crest": "https://crests.football-data.org/351.png"
       },
-      "played": 10,
-      "won": 3,
-      "draw": 0,
-      "lost": 7,
-      "gd": -9,
+      "played": 11,
+      "won": 2,
+      "draw": 3,
+      "lost": 6,
+      "gd": -6,
       "points": 9
     },
     {
       "position": 18,
+      "team": {
+        "id": 71,
+        "name": "Sunderland",
+        "crest": "https://crests.football-data.org/71.png"
+      },
+      "played": 11,
+      "won": 2,
+      "draw": 3,
+      "lost": 6,
+      "gd": -9,
+      "points": 9
+    },
+    {
+      "position": 19,
       "team": {
         "id": 66,
         "name": "Man United",
@@ -255,31 +269,17 @@
       "points": 8
     },
     {
-      "position": 19,
-      "team": {
-        "id": 71,
-        "name": "Sunderland",
-        "crest": "https://crests.football-data.org/71.png"
-      },
-      "played": 10,
-      "won": 2,
-      "draw": 2,
-      "lost": 6,
-      "gd": -9,
-      "points": 8
-    },
-    {
       "position": 20,
       "team": {
         "id": 354,
         "name": "Crystal Palace",
         "crest": "https://crests.football-data.org/354.png"
       },
-      "played": 10,
+      "played": 11,
       "won": 2,
       "draw": 1,
-      "lost": 7,
-      "gd": -14,
+      "lost": 8,
+      "gd": -15,
       "points": 7
     }
   ],
@@ -287,7 +287,7 @@
     {
       "id": 560643,
       "kickoff_utc": "2026-11-21T12:30:00Z",
-      "status": "live",
+      "status": "finished",
       "matchday": 11,
       "half_time": {
         "home": 0,
@@ -315,16 +315,19 @@
         "away": 26
       },
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 1
       }
     },
     {
       "id": 560642,
       "kickoff_utc": "2026-11-21T15:00:00Z",
-      "status": "scheduled",
+      "status": "finished",
       "matchday": 11,
-      "half_time": null,
+      "half_time": {
+        "home": 1,
+        "away": 1
+      },
       "venue": {
         "name": "Stamford Bridge",
         "city": "London",
@@ -346,14 +349,20 @@
         "draw": 27,
         "away": 26
       },
-      "score": null
+      "score": {
+        "home": 1,
+        "away": 4
+      }
     },
     {
       "id": 560644,
       "kickoff_utc": "2026-11-21T15:00:00Z",
-      "status": "scheduled",
+      "status": "finished",
       "matchday": 11,
-      "half_time": null,
+      "half_time": {
+        "home": 0,
+        "away": 0
+      },
       "venue": {
         "name": "Villa Park",
         "city": "Birmingham",
@@ -375,14 +384,20 @@
         "draw": 25,
         "away": 20
       },
-      "score": null
+      "score": {
+        "home": 0,
+        "away": 0
+      }
     },
     {
       "id": 560647,
       "kickoff_utc": "2026-11-21T15:00:00Z",
-      "status": "scheduled",
+      "status": "finished",
       "matchday": 11,
-      "half_time": null,
+      "half_time": {
+        "home": 2,
+        "away": 0
+      },
       "venue": {
         "name": "Vitality Stadium",
         "city": "Bournemouth",
@@ -404,14 +419,20 @@
         "draw": 27,
         "away": 25
       },
-      "score": null
+      "score": {
+        "home": 2,
+        "away": 0
+      }
     },
     {
       "id": 560648,
       "kickoff_utc": "2026-11-21T15:00:00Z",
-      "status": "scheduled",
+      "status": "finished",
       "matchday": 11,
-      "half_time": null,
+      "half_time": {
+        "home": 1,
+        "away": 0
+      },
       "venue": {
         "name": "Tottenham Hotspur Stadium",
         "city": "London",
@@ -433,14 +454,20 @@
         "draw": 21,
         "away": 16
       },
-      "score": null
+      "score": {
+        "home": 2,
+        "away": 0
+      }
     },
     {
       "id": 560650,
       "kickoff_utc": "2026-11-21T15:00:00Z",
-      "status": "scheduled",
+      "status": "finished",
       "matchday": 11,
-      "half_time": null,
+      "half_time": {
+        "home": 2,
+        "away": 2
+      },
       "venue": {
         "name": "Coventry Building Society Arena",
         "city": "Coventry",
@@ -462,12 +489,15 @@
         "draw": 28,
         "away": 34
       },
-      "score": null
+      "score": {
+        "home": 3,
+        "away": 2
+      }
     },
     {
       "id": 560651,
       "kickoff_utc": "2026-11-21T17:30:00Z",
-      "status": "scheduled",
+      "status": "live",
       "matchday": 11,
       "half_time": null,
       "venue": {
@@ -491,7 +521,10 @@
         "draw": 23,
         "away": 60
       },
-      "score": null
+      "score": {
+        "home": 0,
+        "away": 0
+      }
     }
   ],
   "recent": []
