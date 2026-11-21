@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T17:50:15Z",
+  "generated_at": "2026-11-21T23:38:45Z",
   "season": 2026,
   "standings": [
     {
@@ -287,12 +287,9 @@
     {
       "id": 560643,
       "kickoff_utc": "2026-11-21T12:30:00Z",
-      "status": "finished",
+      "status": "scheduled",
       "matchday": 11,
-      "half_time": {
-        "home": 0,
-        "away": 1
-      },
+      "half_time": null,
       "venue": {
         "name": "Etihad Stadium",
         "city": "Manchester",
@@ -314,20 +311,14 @@
         "draw": 32,
         "away": 26
       },
-      "score": {
-        "home": 1,
-        "away": 1
-      }
+      "score": null
     },
     {
       "id": 560642,
       "kickoff_utc": "2026-11-21T15:00:00Z",
-      "status": "finished",
+      "status": "scheduled",
       "matchday": 11,
-      "half_time": {
-        "home": 1,
-        "away": 1
-      },
+      "half_time": null,
       "venue": {
         "name": "Stamford Bridge",
         "city": "London",
@@ -349,20 +340,14 @@
         "draw": 27,
         "away": 26
       },
-      "score": {
-        "home": 1,
-        "away": 4
-      }
+      "score": null
     },
     {
       "id": 560644,
       "kickoff_utc": "2026-11-21T15:00:00Z",
-      "status": "finished",
+      "status": "scheduled",
       "matchday": 11,
-      "half_time": {
-        "home": 0,
-        "away": 0
-      },
+      "half_time": null,
       "venue": {
         "name": "Villa Park",
         "city": "Birmingham",
@@ -384,20 +369,14 @@
         "draw": 25,
         "away": 20
       },
-      "score": {
-        "home": 0,
-        "away": 0
-      }
+      "score": null
     },
     {
       "id": 560647,
       "kickoff_utc": "2026-11-21T15:00:00Z",
-      "status": "finished",
+      "status": "scheduled",
       "matchday": 11,
-      "half_time": {
-        "home": 2,
-        "away": 0
-      },
+      "half_time": null,
       "venue": {
         "name": "Vitality Stadium",
         "city": "Bournemouth",
@@ -419,20 +398,14 @@
         "draw": 27,
         "away": 25
       },
-      "score": {
-        "home": 2,
-        "away": 0
-      }
+      "score": null
     },
     {
       "id": 560648,
       "kickoff_utc": "2026-11-21T15:00:00Z",
-      "status": "finished",
+      "status": "scheduled",
       "matchday": 11,
-      "half_time": {
-        "home": 1,
-        "away": 0
-      },
+      "half_time": null,
       "venue": {
         "name": "Tottenham Hotspur Stadium",
         "city": "London",
@@ -454,20 +427,14 @@
         "draw": 21,
         "away": 16
       },
-      "score": {
-        "home": 2,
-        "away": 0
-      }
+      "score": null
     },
     {
       "id": 560650,
       "kickoff_utc": "2026-11-21T15:00:00Z",
-      "status": "finished",
+      "status": "scheduled",
       "matchday": 11,
-      "half_time": {
-        "home": 2,
-        "away": 2
-      },
+      "half_time": null,
       "venue": {
         "name": "Coventry Building Society Arena",
         "city": "Coventry",
@@ -489,15 +456,12 @@
         "draw": 28,
         "away": 34
       },
-      "score": {
-        "home": 3,
-        "away": 2
-      }
+      "score": null
     },
     {
       "id": 560651,
       "kickoff_utc": "2026-11-21T17:30:00Z",
-      "status": "live",
+      "status": "scheduled",
       "matchday": 11,
       "half_time": null,
       "venue": {
@@ -521,10 +485,7 @@
         "draw": 23,
         "away": 60
       },
-      "score": {
-        "home": 0,
-        "away": 0
-      }
+      "score": null
     }
   ],
   "recent": []
