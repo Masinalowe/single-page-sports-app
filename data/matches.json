@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T18:09:46Z",
+  "generated_at": "2026-11-22T23:56:53Z",
   "season": 2026,
   "standings": [
     {
@@ -55,7 +55,7 @@
       "won": 6,
       "draw": 3,
       "lost": 2,
-      "gd": 7,
+      "gd": 8,
       "points": 21
     },
     {
@@ -265,7 +265,7 @@
       "won": 1,
       "draw": 5,
       "lost": 5,
-      "gd": -8,
+      "gd": -9,
       "points": 8
     },
     {
@@ -322,7 +322,7 @@
     {
       "id": 560645,
       "kickoff_utc": "2026-11-22T16:30:00Z",
-      "status": "live",
+      "status": "finished",
       "matchday": 11,
       "half_time": {
         "home": 2,
@@ -350,7 +350,7 @@
         "away": 22
       },
       "score": {
-        "home": 3,
+        "home": 4,
         "away": 0
       }
     }
