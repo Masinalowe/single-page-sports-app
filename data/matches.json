@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T15:41:07Z",
+  "generated_at": "2026-11-28T03:00:10Z",
   "season": 2026,
   "standings": [
     {
@@ -107,11 +107,11 @@
         "name": "Chelsea",
         "crest": "https://crests.football-data.org/61.png"
       },
-      "played": 11,
+      "played": 12,
       "won": 5,
       "draw": 1,
-      "lost": 5,
-      "gd": 0,
+      "lost": 6,
+      "gd": -1,
       "points": 16
     },
     {
@@ -187,6 +187,20 @@
     {
       "position": 14,
       "team": {
+        "id": 351,
+        "name": "Nottingham",
+        "crest": "https://crests.football-data.org/351.png"
+      },
+      "played": 12,
+      "won": 3,
+      "draw": 3,
+      "lost": 6,
+      "gd": -5,
+      "points": 12
+    },
+    {
+      "position": 15,
+      "team": {
         "id": 1076,
         "name": "Coventry City",
         "crest": "https://crests.football-data.org/1076.png"
@@ -199,7 +213,7 @@
       "points": 12
     },
     {
-      "position": 15,
+      "position": 16,
       "team": {
         "id": 63,
         "name": "Fulham",
@@ -213,7 +227,7 @@
       "points": 11
     },
     {
-      "position": 16,
+      "position": 17,
       "team": {
         "id": 349,
         "name": "Ipswich Town",
@@ -225,20 +239,6 @@
       "lost": 6,
       "gd": -7,
       "points": 11
-    },
-    {
-      "position": 17,
-      "team": {
-        "id": 351,
-        "name": "Nottingham",
-        "crest": "https://crests.football-data.org/351.png"
-      },
-      "played": 11,
-      "won": 2,
-      "draw": 3,
-      "lost": 6,
-      "gd": -6,
-      "points": 9
     },
     {
       "position": 18,
@@ -285,11 +285,91 @@
   ],
   "today": [
     {
-      "id": 560658,
-      "kickoff_utc": "2026-11-27T20:00:00Z",
+      "id": 560652,
+      "kickoff_utc": "2026-11-28T15:00:00Z",
       "status": "scheduled",
       "matchday": 12,
       "half_time": null,
+      "venue": {
+        "name": "Elland Road",
+        "city": "Leeds",
+        "lat": 53.7778,
+        "lon": -1.5722
+      },
+      "home": {
+        "id": 341,
+        "name": "Leeds United FC",
+        "logo": "https://crests.football-data.org/341.png"
+      },
+      "away": {
+        "id": 1076,
+        "name": "Coventry City FC",
+        "logo": "https://crests.football-data.org/1076.png"
+      },
+      "probability": null,
+      "score": null
+    },
+    {
+      "id": 560655,
+      "kickoff_utc": "2026-11-28T15:00:00Z",
+      "status": "scheduled",
+      "matchday": 12,
+      "half_time": null,
+      "venue": {
+        "name": "Old Trafford",
+        "city": "Manchester",
+        "lat": 53.4631,
+        "lon": -2.2913
+      },
+      "home": {
+        "id": 66,
+        "name": "Manchester United FC",
+        "logo": "https://crests.football-data.org/66.png"
+      },
+      "away": {
+        "id": 402,
+        "name": "Brentford FC",
+        "logo": "https://crests.football-data.org/402.png"
+      },
+      "probability": null,
+      "score": null
+    },
+    {
+      "id": 560653,
+      "kickoff_utc": "2026-11-28T17:30:00Z",
+      "status": "scheduled",
+      "matchday": 12,
+      "half_time": null,
+      "venue": {
+        "name": "Portman Road",
+        "city": "Ipswich",
+        "lat": 52.055,
+        "lon": 1.145
+      },
+      "home": {
+        "id": 349,
+        "name": "Ipswich Town FC",
+        "logo": "https://crests.football-data.org/349.png"
+      },
+      "away": {
+        "id": 58,
+        "name": "Aston Villa FC",
+        "logo": "https://crests.football-data.org/58.png"
+      },
+      "probability": null,
+      "score": null
+    }
+  ],
+  "recent": [
+    {
+      "id": 560658,
+      "kickoff_utc": "2026-11-27T20:00:00Z",
+      "status": "finished",
+      "matchday": 12,
+      "half_time": {
+        "home": 1,
+        "away": 0
+      },
       "venue": {
         "name": "The City Ground",
         "city": "Nottingham",
@@ -311,10 +391,11 @@
         "draw": 28,
         "away": 32
       },
-      "score": null
-    }
-  ],
-  "recent": [
+      "score": {
+        "home": 3,
+        "away": 2
+      }
+    },
     {
       "id": 560649,
       "kickoff_utc": "2026-11-23T20:00:00Z",
