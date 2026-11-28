@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T03:00:10Z",
+  "generated_at": "2026-11-28T14:36:46Z",
   "season": 2026,
   "standings": [
     {
@@ -306,7 +306,11 @@
         "name": "Coventry City FC",
         "logo": "https://crests.football-data.org/1076.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 65,
+        "draw": 21,
+        "away": 14
+      },
       "score": null
     },
     {
@@ -331,7 +335,11 @@
         "name": "Brentford FC",
         "logo": "https://crests.football-data.org/402.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 42,
+        "draw": 25,
+        "away": 33
+      },
       "score": null
     },
     {
@@ -356,7 +364,11 @@
         "name": "Aston Villa FC",
         "logo": "https://crests.football-data.org/58.png"
       },
-      "probability": null,
+      "probability": {
+        "home": 28,
+        "draw": 25,
+        "away": 47
+      },
       "score": null
     }
   ],
